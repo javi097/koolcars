@@ -92,24 +92,24 @@ KoolCars
               <div class="team-player">
                 <img src="../img/fotosWelcome/portapapeles.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
                 <h4 class="title" style="color: white">Amplio Catálogo</h4>
-                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                  <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                <p class="description">Aquí encontrarás un amplio catálogo de marcas de coches con sus modelos correspondientes. Cada año nuestro catálogo se renueva para poder mostrar las últimas novedades de las
+                  marcas para sus vehículos.</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="team-player">
                 <img src="../img/fotosWelcome/setting.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
                 <h4 class="title" style="color: white">Fácil de usar</h4>
-                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                  <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                <p class="description">Siempre que quieras y desde donde estés. Añade filtros, guarda tus favoritos, descubre toda la información sobre tu próximo coche
+                  y configúralo a tu gusto!.</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="team-player">
                 <img src="../img/fotosWelcome/checked.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
                 <h4 class="title" style="color: white">Transparencia</h4>
-                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                  <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                <p class="description">No te lleves sorpresas, nuestras publicaciones incluyen información clara y detallada, asi siempre sabrás a la perfección todo lo
+                  importante sobre tu próximo coche.</p>
               </div>
             </div>
           </div>
