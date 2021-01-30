@@ -25,11 +25,11 @@ KoolCars
                  @auth
                     <a href="{{ url('/home') }}" class="text-sm text-gray underline">Home</a>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray underline">Login</a>
+                <button class="btn btn-default btn-round" type="button"disabled><i class="now-ui-icons users_single-02"></i> <a href="{{ route('login') }}" class="text-sm text-gray underline">Mi cuenta</a></button>
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                @endif
+                {{-- @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Regístrate</a>
+                @endif --}}
             @endauth
             </div>
             @endif

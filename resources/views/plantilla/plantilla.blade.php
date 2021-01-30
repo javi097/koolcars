@@ -8,7 +8,7 @@
     <link href="{{asset('kitUI/assets/css/now-ui-kit.css')}}" rel="stylesheet" />
     <title>@yield('titulo')</title>
 </head>
-<body style="background-color: #10101A">
+<body style="background-color:  #1a1a1a">
     {{-- <h3 class="text-center mt-3">@yield('cabecera')</h3> --}}
     {{-- <div class="container mt-3"> --}}
         @yield('contenido')
