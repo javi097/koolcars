@@ -9,11 +9,7 @@
     <title>@yield('titulo')</title>
 </head>
 <body style="background-color:  #1a1a1a">
-    {{-- <h3 class="text-center mt-3">@yield('cabecera')</h3> --}}
-    {{-- <div class="container mt-3"> --}}
-        @yield('contenido')
-    {{-- </div> --}}
-
+    @yield('contenido')
     {{-- Scripts para el Kit de la Interfaz de Usuario --}}
     <script src="{{asset('kitUI/assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('kitUI/assets/js/core/popper.min.js')}}" type="text/javascript"></script>
