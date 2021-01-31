@@ -4,32 +4,21 @@ KoolCars
 @endsection
 @section('contenido')
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark fixed-top" color-on-scroll="400">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-transparent " color-on-scroll="400">
+{{-- <nav class="navbar navbar-expand-lg bg-dark fixed-top" color-on-scroll="400"> --}}
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html">
+        <a class="navbar-brand" href="{{route('welcome')}}">
           KoolCars
         </a>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation">
-        {{-- <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Back to Kit</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/creativetimofficial/now-ui-kit/issues">Have an issue?</a>
-          </li>
-        </ul> --}}
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                  @auth
                     <a href="{{ url('/home') }}" class="text-sm text-gray underline">Home</a>
                 @else
                 <button class="btn btn-default btn-round" type="button"disabled><i class="now-ui-icons users_single-02"></i> <a href="{{ route('login') }}" class="text-sm text-gray underline" style="text-decoration: none">Mi cuenta</a></button>
-
-                {{-- @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Regístrate</a>
-                @endif --}}
             @endauth
             </div>
             @endif
@@ -37,7 +26,7 @@ KoolCars
       </div>
     </div>
   </nav>
-  <!-- End Navbar -->
+  <!-- Final del Navbar-->
   <div class="wrapper">
     <div class="page-header page-header-small">
       <div class="page-header-image" data-parallax="true" style="background-image: url('../img/fotosWelcome/banda_welcome.jpg');">
@@ -45,17 +34,6 @@ KoolCars
       <div class="content-center">
         <div class="container">
           <h1 class="title">KoolCars</h1>
-          {{-- <div class="text-center">
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-google-plus"></i>
-            </a>
-          </div> --}}
         </div>
       </div>
     </div>
@@ -71,12 +49,12 @@ KoolCars
         <div class="section-story-overview">
           <div class="row">
             <div class="col-md-6">
+                   <!-- Imagen de la izquierda -->
               <div class="image-container image-left" style="background-image: url('../img/fotosWelcome/fotoIzq.png')">
-                <!-- First image on the left side -->
               </div>
             </div>
             <div class="col-md-5">
-              <!-- First image on the right side, above the article -->
+              <!-- Imagen de la derecha -->
               <div class="image-container image-right" style="background-image: url('../img/fotosWelcome/fotoDere2.png')"></div>
             </div>
           </div>

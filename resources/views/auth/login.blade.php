@@ -1,22 +1,20 @@
-{{-- @extends('layouts.app')
-
-@section('content') --}}
 @extends('plantilla.plantilla')
 @section('titulo')
 KoolCars
 @endsection
 @section('contenido')
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html">
+            <a class="navbar-brand" href="{{route('welcome')}}">
                 KoolCars
             </a>
         </div>
 
     </div>
 </nav>
-<!-- End Navbar -->
+<!-- Final del Navbar -->
 <div class="page-header clear-filter" filter-color=" #1a1a1a">
     <div class="page-header-image" style="background-image:url(../assets/img/login.jpg)"></div>
     <div class="content">
@@ -92,49 +90,3 @@ KoolCars
     </div>
 </footer>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
