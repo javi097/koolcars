@@ -7,9 +7,7 @@ KoolCars
 <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="{{route('welcome')}}">
-                KoolCars
-            </a>
+            <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}" href="{{route('welcome')}}">
         </div>
 
     </div>
