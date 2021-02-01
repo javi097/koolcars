@@ -8,7 +8,9 @@ KoolCars
 {{-- <nav class="navbar navbar-expand-lg bg-dark fixed-top" color-on-scroll="400"> --}}
     <div class="container">
       <div class="navbar-translate">
-        <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}" href="{{route('welcome')}}">
+          <a href="{{route('welcome')}}">
+          <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}">
+          </a>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation">
         @if (Route::has('login'))
