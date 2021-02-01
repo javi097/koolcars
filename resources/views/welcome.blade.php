@@ -33,7 +33,9 @@ KoolCars
       </div>
       <div class="content-center">
         <div class="container">
-          <h1 class="title">KoolCars</h1>
+          {{-- <div class="image-container image-center" style="background-image: url('../img/fotosWelcome/logo_coche.png')"></div> --}}
+          <img src="../img/fotosWelcome/logo_coche.png" >
+          {{-- <h1 class="title">KoolCars</h1> --}}
         </div>
       </div>
     </div>
