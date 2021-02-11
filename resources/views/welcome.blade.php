@@ -27,6 +27,8 @@ KoolCars
     </div>
   </nav>
   <!-- Final del Navbar-->
+  
+  {{-- Contenido --}}
   <div class="wrapper">
     <div class="page-header page-header-small">
       <div class="page-header-image" data-parallax="true" style="background-image: url('../img/fotosWelcome/banda_welcome.jpg');">
@@ -39,7 +41,7 @@ KoolCars
         </div>
       </div>
     </div>
-    <div class="section section-about-us" style="background-color: #1a1a1a">
+    <div class="#" style="background-color: #1a1a1a">
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
@@ -96,6 +98,7 @@ KoolCars
         </div>
       </div>
     </div>
+    {{-- Footer --}}
     <footer class="footer footer-default" style="background-color: #1a1a1a">
       <div class=" container text-center">
         <div class="copyright" id="copyright" style="color:white;">
@@ -106,4 +109,7 @@ KoolCars
         </div>
       </div>
     </footer>
+    {{-- Final del Contenido --}}
   </div>
+  {{-- Final del Contenido --}}
+  @endsection
