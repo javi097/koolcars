@@ -109,7 +109,7 @@ KoolCars
         </div>
       </div>
     </footer>
-    {{-- Final del Contenido --}}
+    {{-- Final del Footer --}}
   </div>
   {{-- Final del Contenido --}}
   @endsection

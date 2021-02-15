@@ -4,7 +4,7 @@ KoolCars || Home
 @endsection
 @section('content')
 
-
+<!-- Navbar -->
 <nav class="navbar navbar-expand-md fixed-top" id="navbar">
     <div class="navbar-translate" id="logoHome">
         <a href="{{route('welcome')}}">
@@ -50,10 +50,12 @@ KoolCars || Home
 
     </div>
 </nav>
+  <!-- Final del Navbar-->
 
+  {{-- Contenido --}}
 <div id="wrap">
     <div id="main" class="container clear-top">
-        <div class="container text-center" style="width: 800px; height: 4 00px; ">
+        <div class="container text-center" >
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -79,42 +81,49 @@ KoolCars || Home
             </div>
         </div>
         <br> 
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque id erat
-            porttitor, ut aliquet purus malesuada. Sed consequat sit amet mi eget euismod. Nulla in venenatis magna.
-            Donec tempus elementum euismod. Proin sit amet viverra sapien, in luctus metus. Integer euismod, velit sit
-            amet aliquam aliquet, justo arcu pellentesque elit, non tincidunt nibh elit vitae augue. Duis risus lacus,
-            rutrum vel ipsum sit amet, aliquet convallis tortor. Etiam at pulvinar diam, vitae semper risus. Ut a
-            fermentum nisi, id venenatis nibh.
+        <br> 
+        <br> 
+        <br> 
+        <h1 id="textoProx">TU PRÓXIMO COCHE <span id="aqui">ESTÁ AQUÍ</span> </h1>
+        <p id="textoVida">Un coche para cada estilo de vida</p>
+        <br>    
+        <table id="tabla1">
+            <tr>
+                <td>
+                    <img src="{{asset('img/fotosTipo/compacto.png')}}" class="rounded float-left" id="compacto">
+                    <p id="tipoCoche">COMPACTOS</p>
+                    <a class="btn btn-secondary" id="boton" href="#" role="button">VER TODOS</a>
+                </td>
 
-            Sed dignissim dui vel tortor commodo, et maximus sapien efficitur. Pellentesque eget sodales diam. Curabitur
-            sagittis, felis quis aliquam eleifend, magna nibh cursus elit, sed efficitur justo sapien a arcu. Nunc
-            tristique a augue sit amet egestas. Sed ac velit convallis, fringilla dolor ac, pellentesque neque. Donec
-            blandit mi a ultricies ultricies. Mauris ut auctor lorem, eget fringilla metus.
+                <td>
+                    <img src="{{asset('img/fotosTipo/coupe.png')}}" class="rounded float-left" id="coupe">
+                    <p id="tipoCoche">CABRIOS Y COUPES</p>
+                    <a class="btn btn-secondary" id="boton" href="#" role="button">VER TODOS</a>
+                </td>
 
-            Proin sodales nunc felis, eu auctor tortor placerat eu. Donec volutpat ac libero in viverra. Curabitur
-            gravida nec libero at suscipit. Vestibulum interdum auctor tristique. Integer nec tempus diam. In aliquet
-            tristique tristique. Cras augue enim, tristique sit amet elementum et, elementum id sapien. Cras at nisi et
-            sapien euismod pharetra. Sed eu interdum diam. Nam tempor vehicula ligula, sit amet venenatis orci. Aenean
-            elementum dignissim lectus, et aliquet felis rhoncus a. Aenean elementum dapibus quam, sit amet suscipit
-            lorem egestas quis. Nullam feugiat nisl ipsum, eget ultricies erat efficitur ut. Proin eget tortor iaculis,
-            lobortis ex nec, blandit dolor.
+                <td>
+                    <img src="{{asset('img/fotosTipo/4x4.png')}}" class="rounded float-left" id="suv">
+                    <p id="tipoCoche">SUVS Y 4X4</p>
+                    <a class="btn btn-secondary" id="boton" href="#" role="button">VER TODOS</a>
+                </td>
 
-            Vestibulum condimentum laoreet ultrices. Maecenas sit amet ullamcorper nunc. Nulla condimentum ornare urna
-            laoreet dapibus. Vestibulum sit amet sem sed risus porta ullamcorper. Etiam ex justo, gravida a mauris at,
-            placerat hendrerit nibh. Morbi semper aliquet accumsan. Sed varius, purus at sagittis malesuada, lorem justo
-            auctor libero, vel dapibus lacus sem sit amet ligula. Curabitur velit felis, tempus a sapien et, volutpat
-            pellentesque nunc. Nunc imperdiet fermentum blandit. Quisque posuere id neque et gravida. Nulla et ante est.
-            Etiam non elit sem. Pellentesque ac nulla eget neque luctus sagittis eu non libero. Quisque at consequat
-            mauris, a imperdiet neque. Aliquam accumsan neque quis rhoncus scelerisque. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.
+                <td>
+                    <img src="{{asset('img/fotosTipo/familiares.png')}}" class="rounded float-left" id="fam">
+                    <p id="tipoCoche">FAMILIARES</p>
+                    <a class="btn btn-secondary" id="boton" href="#" role="button">VER TODOS</a>
+                </td>
 
-            Pellentesque consectetur, nisi eu pellentesque consectetur, metus lorem aliquam magna, at bibendum eros
-            justo vel elit. Aliquam lacus felis, pellentesque quis orci sed, sollicitudin pellentesque diam. Nam et
-            metus sapien. Sed a metus sed urna accumsan mollis. Pellentesque pharetra egestas eros non aliquet. Proin
-            laoreet, diam mattis consectetur rhoncus, diam nisi varius lectus, quis tristique ipsum erat interdum magna.
-            Mauris at sodales lacus, vitae placerat arcu.</p>
+                <td>
+                    <img src="{{asset('img/fotosTipo/monovolumen.png')}}" class="rounded float-left" id="mono">
+                    <p id="tipoCoche">MONOVOLÚMENES</p>
+                    <a class="btn btn-secondary" id="boton" href="#" role="button">VER TODOS</a>
+                </td>
+            </tr>
+            
+        </table>
+
     </div>
+    {{-- Footer --}}
 
     <footer class="footer">
         <div class="container">
@@ -127,8 +136,7 @@ KoolCars || Home
             </div>
         </div>
     </footer>
+    {{-- Final del Footer --}}
 </div>
-
-
-
+{{-- Final del Contenido --}}
 @endsection
