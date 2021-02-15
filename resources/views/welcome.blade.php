@@ -16,7 +16,7 @@ KoolCars
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                  @auth
-                    <a href="{{ url('/home') }}" class="text-sm text-gray underline">Home</a>
+                 <button class="btn btn-default btn-round" type="button"disabled><a href="{{ url('/home') }}" class="text-sm text-gray underline" style="text-decoration: none">Home</a></button>
                 @else
                 <button class="btn btn-default btn-round" type="button"disabled><i class="now-ui-icons users_single-02"></i> <a href="{{ route('login') }}" class="text-sm text-gray underline" style="text-decoration: none">Mi cuenta</a></button>
             @endauth
