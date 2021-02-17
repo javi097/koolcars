@@ -25,7 +25,7 @@ KoolCars
                         @csrf
                         <div class="card-header text-center">
                             <div class="logo-container">
-                                <img src="{{asset('img/fotoPerfil/logo_coche.png')}}" alt="">
+                                <img src="{{asset('img/fotoPerfil/logo_coche.png')}}" width="220pxpx" height="100px">
                             </div>
                         </div>
                         <div class="card-body">

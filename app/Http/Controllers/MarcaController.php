@@ -14,7 +14,9 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        //
+        $marca = Marca::orderBy('nombre')->get();
+    
+        return view('marcas.marca', compact('marca'));
     }
 
     /**

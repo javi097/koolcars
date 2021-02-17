@@ -59,7 +59,9 @@ KoolCars || Home
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches.jpg')}}" alt="First slide" style="border-radius: 10px; ">
+                        <a href="{{route('marcas.index')}}">
+                            <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches.jpg')}}" alt="First slide" style="border-radius: 10px; ">
+                        </a>
                     </div>
                     <div class="carousel-item">
                         <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide"

@@ -24,15 +24,12 @@ class CreateCochesTable extends Migration
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-                $table->foreignId('user_id')
-                ->constrained()
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
             $table->string('combustible');
             $table->string('cambio');
             $table->integer('potencia');
             $table->float('precio');
             $table->integer('plazas');
+            $table->string('foto')->default('/img/fotosCoches/default.jpg');
             $table->timestamps();
         });
     }

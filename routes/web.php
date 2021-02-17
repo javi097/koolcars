@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CarroceriaController;
+use App\Http\Controllers\CocheController;
+use App\Http\Controllers\MarcaController;
 use App\Models\Carroceria;
 use App\Models\Coche;
 use App\Models\Marca;
@@ -22,8 +25,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('carrocerias', CarroceriaController::class);
+Route::resource('marcas', MarcaController::class);
+Route::resource('coches', CocheController::class);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('carrocerias', Carroceria::class);
-Route::resource('marcas', Marca::class);
-Route::resource('coches', Coche::class);
+
+
 
