@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Carroceria;
+use App\Models\Coche;
+use App\Models\Marca;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +23,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('carrocerias', Carroceria::class);
+Route::resource('marcas', Marca::class);
+Route::resource('coches', Coche::class);
+
