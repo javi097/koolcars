@@ -107,9 +107,17 @@ width: 180px;
   align-items: center;
 }
 
+/* Tarjetas*/
+
 #marcaCard{
   width: 12rem;
 }
+
+#car {
+  height: 172px;
+  width: 252px;
+}
+
 
  
 

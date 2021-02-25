@@ -29,7 +29,7 @@ class CreateCochesTable extends Migration
             $table->string('combustible');
             $table->string('cambio');
             $table->integer('potencia');
-            $table->float('precio');
+            $table->string('precio');
             $table->integer('plazas');
             $table->string('foto')->default('/img/fotosCoches/default.jpg');
             $table->timestamps();

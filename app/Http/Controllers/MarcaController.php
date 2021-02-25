@@ -48,21 +48,9 @@ class MarcaController extends Controller
      */
     public function show(Marca $marca)
     {   
-        $cocheCompacto = $marca->coches()->get();
-        $cocheFamiliar = $marca->coches()->get();
-        $cocheCoupe = $marca->coches()->get();
-        $cocheMonovolumen = $marca->coches()->get();
-        $cocheSuv = $marca->coches()->get();
+        $coches = $marca->coches()->get();
 
-
-        $compactoResult = json_decode($cocheCompacto, true);
-        $familiarResult = json_decode($cocheFamiliar, true);
-        $coupeResult = json_decode($cocheCoupe, true);
-        $monovolumenResult = json_decode($cocheMonovolumen, true);
-        $suvResult = json_decode($cocheSuv, true);
-        $marcaJson = json_decode($marca, true);
-
-        return view('marcas.modelo', compact('marca', 'compactoResult','familiarResult' ,'coupeResult', 'monovolumenResult', 'suvResult', 'marcaJson'));
+        return view('marcas.modelo', compact('marca', 'coches'));
     }
 
     /**

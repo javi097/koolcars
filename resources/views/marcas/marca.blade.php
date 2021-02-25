@@ -57,7 +57,7 @@ KoolCars || Home
     <div id="main" class="container clear-top text-center w-50 mx-auto">
         <div class="row">
             @foreach ($marcas as $marca)
-            <div class="col-md-4 mb-5" data-aos="fade-down">
+            <div class="col-md-4 mb-5 animate__animated animate__fadeInLeft" fadeInLeft>
                 <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
                     <a href="{{route('marcas.show', $marca)}}">
                         <img src="{{ asset($marca->logo) }}" alt="">
@@ -66,6 +66,7 @@ KoolCars || Home
                 </div>
             </div>
             @endforeach
+           
         </div>
     </div>
     {{-- Footer --}}
