@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Coche;
 use Illuminate\Http\Request;
+use App\Models\Carroceria;
 
 class CocheController extends Controller
 {
@@ -82,4 +83,8 @@ class CocheController extends Controller
     {
         //
     }
+
+    //---------------------------------------------------------------------
+
+    
 }

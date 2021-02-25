@@ -62,9 +62,9 @@ KoolCars || Home
     <div id="main" class="container clear-top text-center w-50 mx-auto">
 
 
-        {{-- @php
-                     echo("<script>console.log('PHP: " . $key.'=>'.$value . "');</script>");
-                 @endphp    --}}
+         @php
+                     echo("<script>console.log('PHP: " . $marcaJson['id'] . "');</script>");
+                 @endphp    
 
         @php
             $count = 0;
@@ -72,19 +72,23 @@ KoolCars || Home
             $count2 = 0;
             $count3= 0;
             $count4= 0;
+            $nombre = '';
         @endphp
 
         {{-- Búsqueda para los Compactos --}}
                 @foreach ($compactoResult as $coche)
                     @foreach ($coche as $key => $value)
                         @php
+                        if ($key == 'nombre') {
+                            $nombre = $value;
+                        }
+                        // echo("<script>console.log('PHP: " . $nombre . "');</script>");
                         if($count == 1) break;
-                        @endphp
-                            @php if ($key == 'carroceria_id' && $value == '1'){
-                               
+
+                         if (($key == 'carroceria_id' && $value == '1') ) {   
                             echo '
                                 <h3>Compactos de '.$marca->nombre.'</h3>
-                                <a href="'.route('coches.show', $value).'">
+                                <a href="'.route('carrocerias.coche', $marcaJson['id']).'">
                                     <img src="'.asset($coche['foto']).'" alt="">
                                 </a>
                             ';
