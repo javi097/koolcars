@@ -50,28 +50,38 @@ KoolCars || Home
 
     </div>
 </nav>
-  <!-- Final del Navbar-->
+<!-- Final del Navbar-->
 
-  {{-- Contenido --}}
+{{-- Contenido --}}
 <div id="wrap">
-    <div id="main" class="container clear-top">
-        
-
+    <div id="main" class="container clear-top text-center w-50 mx-auto">
+        <div class="row">
+            @foreach ($marcas as $marca)
+            <div class="col-md-4 mb-5" data-aos="fade-down">
+                <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
+                    <a href="{{route('marcas.show', $marca)}}">
+                        <img src="{{ asset($marca->logo) }}" alt="">
+                    </a>
+                    <p>{{$marca->nombre}}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
     {{-- Footer --}}
-
-    <footer class="footer">
-        <div class="container">
-            <div class="copyright" id="copyright">
-                &copy;
-                <script>
-                    document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-
-                </script> KoolCars, All rights reserved
-            </div>
-        </div>
-    </footer>
-    {{-- Final del Footer --}}
 </div>
+<footer class="footer">
+    <div class="container">
+        <div class="copyright" id="copyright">
+            &copy;
+            <script>
+                document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+
+            </script> KoolCars, All rights reserved
+        </div>
+    </div>
+    <div class="push"></div>
+</footer>
+{{-- Final del Footer --}}
 {{-- Final del Contenido --}}
 @endsection

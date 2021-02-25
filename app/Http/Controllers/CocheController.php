@@ -57,7 +57,7 @@ class CocheController extends Controller
      */
     public function edit(Coche $coche)
     {
-        //
+        
     }
 
     /**

@@ -135,20 +135,24 @@ KoolCars || Home
         </table>
 
     </div>
-    {{-- Footer --}}
 
-    <footer class="footer">
-        <div class="container">
-            <div class="copyright" id="copyright">
-                &copy;
-                <script>
-                    document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-
-                </script> KoolCars, All rights reserved
-            </div>
-        </div>
-    </footer>
-    {{-- Final del Footer --}}
 </div>
+<br><br><br><br>
+{{-- Footer --}}
+<footer class="footer">
+    <div class="container">
+        <div class="copyright" id="copyright">
+            &copy;
+            <script>
+                document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+
+            </script> KoolCars, All rights reserved
+        </div>
+    </div>
+    <div class="push"></div>
+
+</footer>
+{{-- Final del Footer --}}
+
 {{-- Final del Contenido --}}
 @endsection

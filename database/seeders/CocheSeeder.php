@@ -17,9 +17,9 @@ class CocheSeeder extends Seeder
         //ALFA ROMEO GIULIA
         
         Coche::create([
-            'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 118kW 160CV Super RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 58kW 160CV Super RWD',
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>160,
@@ -29,9 +29,9 @@ class CocheSeeder extends Seeder
         ]);
 
         Coche::create([
-            'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 118kW 160CV Sprint RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 58kW 160CV Sprint RWD',
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>160,
@@ -42,8 +42,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 140kW 190CV Sprint RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>190,
@@ -54,8 +54,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.0 Gasolina 147kW 200CV Sprint RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>200,
@@ -66,8 +66,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 140kW 190CV TI RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>190,
@@ -78,8 +78,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.0 Gasolina 147kW 200CV TI RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>200,
@@ -90,8 +90,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 154kW 210CV Veloce Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>210,
@@ -102,8 +102,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.0 Gasolina 206kW 280CV Veloce Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>280,
@@ -114,8 +114,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.9T V6 375kW 510CV Quadrifoglio AT',
-            'marcas_id'=>24,
-            'carroceria_id'=>9,
+            'marca_id'=>1,
+            'carroceria_id'=>3,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>510,
@@ -128,8 +128,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulietta 1.4 TB 88kW 120CV Super',
-            'marcas_id'=>24,
-            'carroceria_id'=>7,
+            'marca_id'=>1,
+            'carroceria_id'=>1,
             'combustible'=>'Gasolina',
             'cambio'=>'Manual',
             'potencia'=>120,
@@ -140,32 +140,32 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulietta 1.6 JTD 88kW 120CV Super',
-            'marcas_id'=>24,
-            'carroceria_id'=>7,
+            'marca_id'=>1,
+            'carroceria_id'=>1,
             'combustible'=>'Diesel',
             'cambio'=>'Manual',
             'potencia'=>120,
-            'precio'=>24.995,
+            'precio'=>1.995,
             'plazas'=>5,
             'foto'=>'img/fotosCoches/alfaRomeo/giulietta.jpg'
         ]);
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulietta 1.4 TB 88kW 120CV Sport',
-            'marcas_id'=>24,
-            'carroceria_id'=>7,
+            'marca_id'=>1,
+            'carroceria_id'=>1,
             'combustible'=>'Gasolina',
             'cambio'=>'Manual',
             'potencia'=>120,
-            'precio'=>24.995,
+            'precio'=>1.995,
             'plazas'=>5,
             'foto'=>'img/fotosCoches/alfaRomeo/giulietta.jpg'
         ]);
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulietta 1.6 JTD 88kW 120CV Sport',
-            'marcas_id'=>24,
-            'carroceria_id'=>7,
+            'marca_id'=>1,
+            'carroceria_id'=>1,
             'combustible'=>'Diesel',
             'cambio'=>'Manual',
             'potencia'=>120,
@@ -178,8 +178,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.2 Diesel 140kW 190CV Super RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>190,
@@ -190,8 +190,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.2 Diesel 140kW 190CV Sprint RWD',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>190,
@@ -202,8 +202,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.0 Gasolina 147kW 200CV Sprint Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>200,
@@ -214,8 +214,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.2 Diesel 140kW 190CV Sprint Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>190,
@@ -226,8 +226,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.2 Diesel 154kW 210CV Veloce Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>210,
@@ -238,8 +238,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.2 Diesel 154kW 210CV TI Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Diesel',
             'cambio'=>'Automatico',
             'potencia'=>210,
@@ -250,8 +250,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.0 Gasolina 206kW 280CV Veloce Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>280,
@@ -262,8 +262,8 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.0 Gasolina 206kW 280CV TI Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>280,
@@ -274,12 +274,12 @@ class CocheSeeder extends Seeder
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Stelvio 2.9 Gasolina 375kW 510CV Quadrifogl Q4',
-            'marcas_id'=>24,
-            'carroceria_id'=>11,
+            'marca_id'=>1,
+            'carroceria_id'=>5,
             'combustible'=>'Gasolina',
             'cambio'=>'Automatico',
             'potencia'=>510,
-            'precio'=>113.750,
+            'precio'=>53.750,
             'plazas'=>5,
             'foto'=>'img/fotosCoches/alfaRomeo/stelvio.jpg'
         ]);

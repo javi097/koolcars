@@ -6,6 +6,7 @@ use App\Http\Controllers\MarcaController;
 use App\Models\Carroceria;
 use App\Models\Coche;
 use App\Models\Marca;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*

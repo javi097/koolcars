@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Marca;
+use App\Models\Coche;
 use Illuminate\Http\Request;
 
 class MarcaController extends Controller
@@ -14,9 +14,9 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        $marca = Marca::orderBy('nombre')->get();
+        $marcas = Marca::orderBy('nombre')->get();
     
-        return view('marcas.marca', compact('marca'));
+        return view('marcas.marca', compact('marcas'));
     }
 
     /**
@@ -47,8 +47,28 @@ class MarcaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Marca $marca)
-    {
-        //
+    {   
+        $cocheCompacto = $marca->coches()->get();
+        $cocheFamiliar = $marca->coches()->get();
+        $cocheCoupe = $marca->coches()->get();
+        $cocheMonovolumen = $marca->coches()->get();
+        $cocheSuv = $marca->coches()->get();
+
+
+
+        $compacto = \DB::table('coches')->where('carroceria_id', '=', '1')->get();
+        $familiar = \DB::table('coches')->where('carroceria_id', '=', '2')->get();
+        $coupe = \DB::table('coches')->where('carroceria_id', '=', '3')->get();
+        $monovolumen = \DB::table('coches')->where('carroceria_id', '=', '4')->get();
+        $suv = \DB::table('coches')->where('carroceria_id', '=', '5')->get();
+
+        $compactoResult = json_decode($cocheCompacto, true);
+        $familiarResult = json_decode($cocheFamiliar, true);
+        $coupeResult = json_decode($cocheCoupe, true);
+        $monovolumenResult = json_decode($cocheMonovolumen, true);
+        $suvResult = json_decode($cocheSuv, true);
+
+        return view('marcas.modelo', compact('marca', 'compactoResult','familiarResult' ,'coupeResult', 'monovolumenResult', 'suvResult'));
     }
 
     /**
