@@ -74,7 +74,7 @@ KoolCars || Home
             $count4= 0;
         @endphp
 
-        {{-- Busqueda para los Compactos --}}
+        {{-- Búsqueda para los Compactos --}}
                 @foreach ($compactoResult as $coche)
                     @foreach ($coche as $key => $value)
                         @php
@@ -95,10 +95,10 @@ KoolCars || Home
                     @endforeach
                 @endforeach
                             
-        <br><br><br><br><br>
+        <br><br><br><br>
         
         
-        {{-- Busqueda para los Familiares --}}
+        {{-- Búsqueda para los Familiares --}}
 
         @foreach ($familiarResult as $coche)
                     @foreach ($coche as $key => $value)
@@ -119,9 +119,9 @@ KoolCars || Home
                             
                     @endforeach
                 @endforeach
-        <br><br><br><br><br>
+        <br><br><br><br>
 
-        {{-- Busqueda para los Coupes --}}
+        {{-- Búsqueda para los Coupes --}}
        
 
         @foreach ($coupeResult as $coche)
@@ -143,9 +143,9 @@ KoolCars || Home
                             
                     @endforeach
                 @endforeach
-        <br><br><br><br><br>
+        <br><br><br><br>
 
-        {{-- Busqueda para los Monovolúmenes --}}
+        {{-- Búsqueda para los Monovolúmenes --}}
       
         @foreach ($monovolumenResult as $coche)
                     @foreach ($coche as $key => $value)
@@ -167,8 +167,8 @@ KoolCars || Home
                     @endforeach
                 @endforeach
 
-        <br><br><br><br><br>
-        {{-- Busqueda para los SUVs --}}
+        <br><br><br><br>
+        {{-- Búsqueda para los SUVs --}}
         
         @foreach ($suvResult as $coche)
                     @foreach ($coche as $key => $value)

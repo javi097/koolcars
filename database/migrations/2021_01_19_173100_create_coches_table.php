@@ -16,6 +16,7 @@ class CreateCochesTable extends Migration
         Schema::create('coches', function (Blueprint $table) {
             $table->id();
             $table->string('modelo')->unique();
+            $table->string('nombre');
             $table->foreignId('marca_id')
                 ->references('id')
                 ->on('marcas')

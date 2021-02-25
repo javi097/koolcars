@@ -55,13 +55,6 @@ class MarcaController extends Controller
         $cocheSuv = $marca->coches()->get();
 
 
-
-        $compacto = \DB::table('coches')->where('carroceria_id', '=', '1')->get();
-        $familiar = \DB::table('coches')->where('carroceria_id', '=', '2')->get();
-        $coupe = \DB::table('coches')->where('carroceria_id', '=', '3')->get();
-        $monovolumen = \DB::table('coches')->where('carroceria_id', '=', '4')->get();
-        $suv = \DB::table('coches')->where('carroceria_id', '=', '5')->get();
-
         $compactoResult = json_decode($cocheCompacto, true);
         $familiarResult = json_decode($cocheFamiliar, true);
         $coupeResult = json_decode($cocheCoupe, true);
