@@ -77,6 +77,12 @@ class MarcaSeeder extends Seeder
         Marca::create([
 
             'nombre'=>'Mazda',
+            'logo'=>'img/logoMarca/logo_mazda.jpg'
+        ]);
+
+        Marca::create([
+
+            'nombre'=>'Mercedes-Benz',
             'logo'=>'img/logoMarca/logo_mercedes.jpg'
         ]);
 
