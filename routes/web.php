@@ -32,8 +32,6 @@ Route::resource('carrocerias', CarroceriaController::class);
 Route::resource('marcas', MarcaController::class);
 Route::resource('coches', CocheController::class);
 
-Route::get('carrocerias/{carroceria}', [App\Http\Controllers\MarcaController::class, 'cochesCarroceria'])->name('carrocerias.coche');
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
