@@ -13,6 +13,8 @@ class Marca extends Model
         'nombre','logo'
     ];
 
+    //Relación 1:N entre Coches y Marcas
+    // Una marca puede tener varios coches
 
     public function coches(){
         return $this->hasMany(Coche::class);

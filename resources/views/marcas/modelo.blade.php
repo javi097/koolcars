@@ -61,84 +61,55 @@ KoolCars || Home
     </div>
     <div id="main" class="container clear-top text-center w-50 mx-auto">
         @foreach ($coches as $coche)
-        {{-- <div class="col-md-4 mb-5" data-aos="fade-down">
-            <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
-                <a href="#">
-                    <img src="{{ asset($coche->foto) }}" alt="">
-        </a>
-        <p>{{$coche->modelo}}</p>
-    </div>
-
-
-    <div class="form-row">
-        <div class="col">
-            <label for="nom" class="col-form-label">Nombre</label>
-            <input type="text" class="form-control" name="nombre" value="{{$articulo->nombre}}" id="nom" required>
-        </div>
-        <div class="col">
-            <label for="stock" class="col-form-label">Stock</label>
-            <input type="number" class="form-control" name="stock" value="{{$articulo->stock}}" id="stock" min="1"
-                step="1" required>
-        </div>
-    </div>
-
-    <ul>
-        <li>Combustible: {{$coche->combustible}}</li>
-        <li>Caja de cambios: {{$coche->cambio}}</li>
-        <li>Nº de plazas: {{$coche->plazas}}</li>
-        <li>Potencia máxima: {{$coche->potencia}}CV</li>
-    </ul>
-
-</div> --}}
-
-<div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn " style="max-width: 840px;">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-            <a href="#">
-                <img src="{{ asset($coche->foto) }}" id="car">
-            </a>
-        </div>
-        <div class="col-md-8">
-            <div class="card-body ">
-                <div class="row">
-                    <h5 class="card-title">
-                        <b>{{$coche->modelo}}</b>
-                    </h5>
-                </div>
-                <div class="row mb-3">
-                    <h5 class="card-text float-right font-bold">Precio: <span class="font-weight-bold">{{$coche->precio}}€</span></h5>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>
-                            <span class="font-weight-bold">Combustible: </span>{{$coche->combustible}}
-                        </p>
-                    </div>
-                    <div class="col">
-                       <p>
-                        <span class="font-weight-bold">Caja de cambios: </span>
-                           {{$coche->cambio}}
-                        </p>
+        
+                <div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn " style="max-width: 840px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <a href="#">
+                                <img src="{{ asset($coche->foto) }}" id="car">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <h5 class="card-title">
+                                        <b>{{$coche->modelo}}</b>
+                                    </h5>
+                                </div>
+                                <div class="row mb-3">
+                                    <h5 class="card-text float-right font-bold">Desde: <span class="font-weight-bold">{{$coche->precio}}€</span></h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            <span class="font-weight-bold">Combustible: </span>{{$coche->combustible}}
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                    <p>
+                                        <span class="font-weight-bold">Caja de cambios: </span>
+                                        {{$coche->cambio}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            <span class="font-weight-bold">Nº de plazas: </span>
+                                            {{$coche->plazas}}
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                    <p>
+                                        <span class="font-weight-bold">Potencia máxima: </span>
+                                        {{$coche->potencia}}CV
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p>
-                            <span class="font-weight-bold">Nº de plazas: </span>
-                            {{$coche->plazas}}
-                        </p>
-                    </div>
-                    <div class="col">
-                       <p>
-                           <span class="font-weight-bold">Potencia máxima: </span>
-                           {{$coche->potencia}}CV
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endforeach
 </div>
 </div>

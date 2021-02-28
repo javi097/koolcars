@@ -21,6 +21,9 @@ class Coche extends Model
         'foto'
     ];
 
+    //Relación 1:N entre Coches y Marcas
+    // Un coche solo puede ser de una marca
+
    public function marca(){
        return $this->belongsTo(Marca::class);
    }

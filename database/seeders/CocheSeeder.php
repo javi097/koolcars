@@ -2645,20 +2645,1875 @@ class CocheSeeder extends Seeder
         //--------------------------------------------------------------------------------------------------------------
         //--------------------------------------------------------------------------------------------------------------
 
-        // Nissan Leaf
+        // Nissan Micra
 
         Coche::create([
-            'modelo'=>'MITSUBISHI OUTLANDER 200 MPI Kaiteki CVT 4WD',
-            'nombre'=>'Outlander',
-            'marca_id'=>37,
+            'modelo'=>'NISSAN MICRA IGT 68 kW E6DF Acenta',
+            'nombre'=>'Micra',
+            'marca_id'=>38,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>92,
+            'precio'=>'19.528',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/nissan/micra.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'NISSAN MICRA IGT 68 kW E6DF CVT Tekna',
+            'nombre'=>'Micra',
+            'marca_id'=>38,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>92,
+            'precio'=>'23.809',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/nissan/micra.jpg'
+        ]);
+
+        // Nissan Juke
+
+
+        Coche::create([
+            'modelo'=>'NISSAN JUKE DIGT 84 kW 6MT Acenta',
+            'nombre'=>'Juke',
+            'marca_id'=>38,
             'carroceria_id'=>5,
             'combustible'=>'Gasolina',
             'cambio'=>'Manual',
-            'potencia'=>150,
-            'precio'=>'40.600',
-            'plazas'=>7,
-            'foto'=>'img/fotosCoches/mitsubishi/out.jpg'
+            'potencia'=>114,
+            'precio'=>'22.687',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/nissan/juke.jpg'
         ]);
+
+        Coche::create([
+            'modelo'=>'NISSAN JUKE DIGT 84 kW DCT 7 Vel. Tekna',
+            'nombre'=>'Juke',
+            'marca_id'=>38,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>114,
+            'precio'=>'28.299',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/nissan/juke.jpg'
+        ]);
+
+
+        // Nissan Qashqai
+
+        Coche::create([
+            'modelo'=>'NISSAN QASHQAI dCi 85 kW E6D VISIA',
+            'nombre'=>'Qashqai',
+            'marca_id'=>38,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>115,
+            'precio'=>'25.750',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/nissan/qashqai.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'NISSAN QASHQAI DIGT 116 kW E6D DCT NCONNECTA',
+            'nombre'=>'Juke',
+            'marca_id'=>38,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>158,
+            'precio'=>'32.600',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/nissan/qashqai.jpg'
+        ]);
+
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+
+        // Opel Corsa
+
+        Coche::create([
+            'modelo'=>'OPEL CORSA 1.5D DT 74kW Edition',
+            'nombre'=>'Corsa',
+            'marca_id'=>39,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>102,
+            'precio'=>'20.600',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/corsa.jpg'
+        ]);
+
+
+        Coche::create([
+            'modelo'=>'OPEL CORSA 1.2T XHL 74kW Ultimate Auto',
+            'nombre'=>'Corsa',
+            'marca_id'=>39,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>130,
+            'precio'=>'27.436',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/corsa.jpg'
+        ]);
+
+
+        // Opel Astra
+
+        Coche::create([
+            'modelo'=>'OPEL ASTRA 1.5D DVC 77kW Edition',
+            'nombre'=>'Astra',
+            'marca_id'=>39,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>105,
+            'precio'=>'24.500',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/astra.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'OPEL ASTRA 1.4T SHT 107kW Ultimate CVT',
+            'nombre'=>'Astra',
+            'marca_id'=>39,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>145,
+            'precio'=>'31.541',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/astra.jpg'
+        ]);
+
+
+        // Opel Insignia Familiar
+
+
+        Coche::create([
+            'modelo'=>'OPEL INSIGNIA ST GS Line 1.5D DVH 90kW MT6',
+            'nombre'=>'Insignia Familiar',
+            'marca_id'=>39,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>122,
+            'precio'=>'38.764',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/insigfa.jpg'
+        ]);
+        
+        Coche::create([
+            'modelo'=>'OPEL INSIGNIA ST GS Line Plus 2.0T SHT 149kW AT9',
+            'nombre'=>'Insignia Familiar',
+            'marca_id'=>39,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>200,
+            'precio'=>'49.493',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/insigfa.jpg'
+        ]);
+
+        // Opel Insignia
+
+
+        Coche::create([
+            'modelo'=>'OPEL INSIGNIA GS Business Edition 1.5D DVH 90kW MT6',
+            'nombre'=>'Insignia',
+            'marca_id'=>39,
+            'carroceria_id'=>3,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>122,
+            'precio'=>'36.374',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/insig.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'OPEL INSIGNIA GS GS Line Plus 2.0T SHT 125kW AT9',
+            'nombre'=>'Insignia',
+            'marca_id'=>39,
+            'carroceria_id'=>3,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>170,
+            'precio'=>'46.373',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/insig.jpg'
+        ]);
+
+
+        // Opel Combo
+
+
+        Coche::create([
+            'modelo'=>'OPEL COMBO LIFE 1.5 TD 75kW SS Life L',
+            'nombre'=>'Combo',
+            'marca_id'=>39,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>102,
+            'precio'=>'24.921',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/combo.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'OPEL COMBO LIFE 1.2 T 96kW SS Elegance L Auto',
+            'nombre'=>'Combo',
+            'marca_id'=>39,
+            'carroceria_id'=>4,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>130,
+            'precio'=>'28.200',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/combo.jpg'
+        ]);
+
+
+        // Opel Zafira Life
+
+
+        Coche::create([
+            'modelo'=>'OPEL ZAFIRA LIFE 2.0 Diesel 107kW M Business Edition',
+            'nombre'=>'Zafira Life',
+            'marca_id'=>39,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>145,
+            'precio'=>'44.273',
+            'plazas'=>9,
+            'foto'=>'img/fotosCoches/opel/zafira.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'OPEL ZAFIRA LIFE 2.0 Diesel 130kW L Business Edition AT',
+            'nombre'=>'Zafira Life',
+            'marca_id'=>39,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>177,
+            'precio'=>'49.441',
+            'plazas'=>9,
+            'foto'=>'img/fotosCoches/opel/zafira.jpg'
+        ]);
+
+        // Opel Crossland
+
+
+        Coche::create([
+            'modelo'=>'OPEL CROSSLAND 1.5D 81kW Edition',
+            'nombre'=>'Crossland',
+            'marca_id'=>39,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'21.250',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/cross.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'OPEL CROSSLAND 1.2 96kW Ultimate Auto',
+            'nombre'=>'Crossland',
+            'marca_id'=>39,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>130,
+            'precio'=>'21.250',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/cross.jpg'
+        ]);
+
+        // Opel GRANDLAND X
+
+        Coche::create([
+            'modelo'=>'OPEL GRANDLAND X 1.5 CDTi Edition',
+            'nombre'=>'Grandland X',
+            'marca_id'=>39,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>130,
+            'precio'=>'30.164',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/grand.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'OPEL GRANDLAND X 1.6 Turbo Ultimate Auto',
+            'nombre'=>'Grandland X',
+            'marca_id'=>39,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>181,
+            'precio'=>'36.705',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/opel/grand.jpg'
+        ]);
+
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Peugeot 108
+
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 108 Allure VTi 52kW',
+            'nombre'=>'108',
+            'marca_id'=>40,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>72,
+            'precio'=>'15.390',
+            'plazas'=>4,
+            'foto'=>'img/fotosCoches/peugeot/108.jpg'
+        ]);
+
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 108 TOP Collection VTi 52kW',
+            'nombre'=>'108',
+            'marca_id'=>40,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>72,
+            'precio'=>'16.910',
+            'plazas'=>4,
+            'foto'=>'img/fotosCoches/peugeot/108.jpg'
+        ]);
+
+
+        // Peugeot 208
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 208 PureTech 55kWBusiness Line',
+            'nombre'=>'208',
+            'marca_id'=>40,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>75,
+            'precio'=>'18.000',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/208.jpg'
+        ]);
+
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 208 BlueHDi 73kW GT Pack',
+            'nombre'=>'208',
+            'marca_id'=>40,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>100,
+            'precio'=>'25.000',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/208.jpg'
+        ]);
+
+
+        // Peugeot 308
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 308 5p Active BlueHDi SS',
+            'nombre'=>'308',
+            'marca_id'=>40,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>130,
+            'precio'=>'26.761',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/308.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 308 5P GT Pack PureTech SS EAT8',
+            'nombre'=>'308',
+            'marca_id'=>40,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>130,
+            'precio'=>'33.100',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/308.jpg'
+        ]);
+
+
+        // Peugeot 508 Familiar
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 508 SW Active BlueHDi SS EAT8',
+            'nombre'=>'508 Familiar',
+            'marca_id'=>40,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>130,
+            'precio'=>'36.218',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/508fa.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 508 SW GT Pack PureTech SS EAT8',
+            'nombre'=>'508 Familiar',
+            'marca_id'=>40,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>225,
+            'precio'=>'50.116',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/508fa.jpg'
+        ]);
+
+
+        // Peugeot Rifter
+
+        Coche::create([
+            'modelo'=>'PEUGEOT RIFTER Active Standard BlueHDi 73kW',
+            'nombre'=>'Rifter',
+            'marca_id'=>40,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>100,
+            'precio'=>'25.545',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/rifter.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'PEUGEOT RIFTER Active Long BlueHDi 73kW',
+            'nombre'=>'Rifter',
+            'marca_id'=>40,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>100,
+            'precio'=>'27.104',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/rifter.jpg'
+        ]);
+
+
+        // Peugeot 2008
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 2008 Active BlueHDI 81kW',
+            'nombre'=>'2008',
+            'marca_id'=>40,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'23.600',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/2008.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 2008 GT Puretech SS EAT8',
+            'nombre'=>'2008',
+            'marca_id'=>40,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>155,
+            'precio'=>'31.489',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/2008.jpg'
+        ]);
+
+
+        // Peugeot 3008
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 3008 1.6 PureTech 132KW SS GT EAT8',
+            'nombre'=>'3008',
+            'marca_id'=>40,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>180,
+            'precio'=>'39.900',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/3008.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 3008 1.5 BlueHDi 96kW SS Active',
+            'nombre'=>'3008',
+            'marca_id'=>40,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>130,
+            'precio'=>'31.645',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/3008.jpg'
+        ]);
+
+        // Peugeot 5008
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 5008 1.5 BlueHDi 96kW SS Active',
+            'nombre'=>'5008',
+            'marca_id'=>40,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>130,
+            'precio'=>'33.568',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/5008.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'PEUGEOT 5008 1.6 PureTech 132KW SS GT Pack EAT8',
+            'nombre'=>'5008',
+            'marca_id'=>40,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>180,
+            'precio'=>'46.061',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/peugeot/5008.jpg'
+        ]);
+
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Renault Clio
+
+        Coche::create([
+            'modelo'=>'RENAULT CLIO Intens SCE 49 kW',
+            'nombre'=>'Clio',
+            'marca_id'=>41,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>65,
+            'precio'=>'16.710',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/clio.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT CLIO Zen TCe 67 kW',
+            'nombre'=>'Clio',
+            'marca_id'=>41,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>90,
+            'precio'=>'19.560',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/clio.jpg'
+        ]);
+
+
+        // Renault Megane
+
+
+        Coche::create([
+            'modelo'=>'RENAULT MEGANE Business Blue dCi 85 kW',
+            'nombre'=>'Megane',
+            'marca_id'=>41,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>115,
+            'precio'=>'26.265',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/megane.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT MEGANE R.S.Line TCe 117 kW EDC GPF',
+            'nombre'=>'Megane',
+            'marca_id'=>41,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>160,
+            'precio'=>'32.004',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/megane.jpg'
+        ]);
+
+        // Renault Talisman Familiar
+
+        Coche::create([
+            'modelo'=>'RENAULT TALISMAN S.T. Executive Blue dCi 110kW SS',
+            'nombre'=>'Talisman Familiar',
+            'marca_id'=>41,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'35.980',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/talisman.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT TALISMAN S.T. Zen TCe 165 kW EDC GPF SS',
+            'nombre'=>'Talisman Familiar',
+            'marca_id'=>41,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>225,
+            'precio'=>'43.680',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/talisman.jpg'
+        ]);
+
+        // Renault Espace
+
+        Coche::create([
+            'modelo'=>'RENAULT ESPACE Zen Blue dCi 118 kW EDC',
+            'nombre'=>'Espace',
+            'marca_id'=>41,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>160,
+            'precio'=>'46.384',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/espace.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT ESPACE Ini. P. Blue dCi 139 kW EDC',
+            'nombre'=>'Espace',
+            'marca_id'=>41,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>190,
+            'precio'=>'58.185',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/espace.jpg'
+        ]);
+
+
+        // Renault Grand Scenic
+
+        Coche::create([
+            'modelo'=>'RENAULT GRAND SCENIC Zen TCe 103 kW GPF',
+            'nombre'=>'Grand Scenic',
+            'marca_id'=>41,
+            'carroceria_id'=>4,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>140,
+            'precio'=>'30.620',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/renault/grands.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT GRAND SCENIC Black Edition TCe 116kW EDC',
+            'nombre'=>'Grand Scenic',
+            'marca_id'=>41,
+            'carroceria_id'=>4,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>160,
+            'precio'=>'35.200',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/renault/grands.jpg'
+        ]);
+
+        // Renault Captur
+
+        Coche::create([
+            'modelo'=>'RENAULT CAPTUR Intens TCe',
+            'nombre'=>'Captur',
+            'marca_id'=>41,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>90,
+            'precio'=>'20.490',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/captur.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT CAPTUR Zen TCe 140 EDC GPF Micro Hibrido',
+            'nombre'=>'Captur',
+            'marca_id'=>41,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>140,
+            'precio'=>'26.215',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/renault/captur.jpg'
+        ]);
+
+        //Renault Koleos
+
+
+        Coche::create([
+            'modelo'=>'RENAULT KOLEOS Zen Blue dCi 135kW XTronic',
+            'nombre'=>'Koleos',
+            'marca_id'=>41,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>184,
+            'precio'=>'39.570',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/koleos.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'RENAULT KOLEOS Initiale Paris TCe 118kW EDC',
+            'nombre'=>'Koleos',
+            'marca_id'=>41,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>160,
+            'precio'=>'41.656',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/renault/koleos.jpg'
+        ]);
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Seat Ibiza
+
+        Coche::create([
+            'modelo'=>'SEAT IBIZA 1.0 MPI 59kW Reference Business',
+            'nombre'=>'Ibiza',
+            'marca_id'=>42,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>80,
+            'precio'=>'16.620',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/ibiza.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SEAT IBIZA 1.5 TSI 110kW DSG FR',
+            'nombre'=>'Ibiza',
+            'marca_id'=>42,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'25.910',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/ibiza.jpg'
+        ]);
+
+        // Seat Leon
+
+
+        Coche::create([
+            'modelo'=>'SEAT LEON 2.0 TDI 85kW SS Reference Go',
+            'nombre'=>'Leon',
+            'marca_id'=>42,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>115,
+            'precio'=>'25.450',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/leon.jpg'
+        ]);
+
+
+        Coche::create([
+            'modelo'=>'SEAT LEON 1.5 TSI 110kW SS Xcellence',
+            'nombre'=>'Leon',
+            'marca_id'=>42,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'26.670',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/leon.jpg'
+        ]);
+
+
+        // Seat Leon Familiar
+
+        Coche::create([
+            'modelo'=>'SEAT LEON SP 2.0 TDI 110kW DSG Style',
+            'nombre'=>'Leon Familiar',
+            'marca_id'=>42,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'30.750',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/leonfa.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SEAT LEON SP 1.5 eTSI 110kW DSG SS FR Go XL',
+            'nombre'=>'Leon',
+            'marca_id'=>42,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'33.196',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/leonfa.jpg'
+        ]);
+
+        // Seat Alhambra
+
+        Coche::create([
+            'modelo'=>'SEAT ALHAMBRA 1.4 TSI 110kW SS Style',
+            'nombre'=>'Alhambra',
+            'marca_id'=>42,
+            'carroceria_id'=>4,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'42.904',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/seat/alhambra.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SEAT ALHAMBRA 1.4 TSI 110kW DSG SS Excellen GO',
+            'nombre'=>'Alhambra',
+            'marca_id'=>42,
+            'carroceria_id'=>4,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'46.628',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/seat/alhambra.jpg'
+        ]);
+
+
+        // Seat Arona
+
+        Coche::create([
+            'modelo'=>'SEAT ARONA 1.0 TSI 81kW Style Go2',
+            'nombre'=>'Arona',
+            'marca_id'=>42,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'21.560',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/arona.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SEAT ARONA 1.5 TSI 110kW DSG FR Go2',
+            'nombre'=>'Arona',
+            'marca_id'=>42,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'28.250',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/arona.jpg'
+        ]);
+
+
+        // Seat Ateca
+
+        Coche::create([
+            'modelo'=>'SEAT ATECA 2.0 TDI 85kW StSp Reference',
+            'nombre'=>'Ateca',
+            'marca_id'=>42,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>116,
+            'precio'=>'27.490',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/ateca.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SEAT ATECA 1.5 TSI 110kW DSG SS FR Go',
+            'nombre'=>'Ateca',
+            'marca_id'=>42,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'36.150',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/ateca.jpg'
+        ]);
+
+        // Seat Tarraco
+
+        Coche::create([
+            'modelo'=>'SEAT TARRACO 2.0 TDI 110kW SS Style GO',
+            'nombre'=>'Tarraco',
+            'marca_id'=>42,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'36.470',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/tarraco.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SEAT TARRACO 2.0 TSI 180kW SS FR GO DSG 4Drive',
+            'nombre'=>'Tarraco',
+            'marca_id'=>42,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>245,
+            'precio'=>'49.134',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/seat/tarraco.jpg'
+        ]);
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+
+        // Skoda Fabia
+
+        Coche::create([
+            'modelo'=>'SKODA FABIA 1.0 TSI 81KW Ambition',
+            'nombre'=>'Fabia',
+            'marca_id'=>43,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'18.020',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/fabia.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SKODA FABIA 1.0 TSI 81KW Monte Carlo',
+            'nombre'=>'Fabia',
+            'marca_id'=>43,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>110,
+            'precio'=>'20.410',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/fabia.jpg'
+        ]);
+
+        // Skoda Scala
+
+
+        Coche::create([
+            'modelo'=>'SKODA SCALA 1.0 TSI 81KW Ambition',
+            'nombre'=>'Scala',
+            'marca_id'=>43,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'23.050',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/scala.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SKODA SCALA 1.5 TSI 110 KW DSG Montecarlo',
+            'nombre'=>'Scala',
+            'marca_id'=>43,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'29.250',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/scala.jpg'
+        ]);
+
+        // Skoda SuperB
+
+        Coche::create([
+            'modelo'=>'SKODA SUPERB Combi 2.0 TDI 110kW Active',
+            'nombre'=>'Superb',
+            'marca_id'=>43,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'35.150',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/superb.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SKODA SUPERB Combi 2.0 TSI 206kW DSG 4x4 Sportline',
+            'nombre'=>'Superb',
+            'marca_id'=>43,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>280,
+            'precio'=>'48.350',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/superb.jpg'
+        ]);
+
+        // Skoda Octavia
+
+        Coche::create([
+            'modelo'=>'SKODA OCTAVIA 2.0 TDI 85kW Manual Active',
+            'nombre'=>'Octavia',
+            'marca_id'=>43,
+            'carroceria_id'=>3,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>115,
+            'precio'=>'26.790',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/octavia.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SKODA OCTAVIA 1.5 TSI mHEV 110kW DSG Ambition',
+            'nombre'=>'Octavia',
+            'marca_id'=>43,
+            'carroceria_id'=>3,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'29.390',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/octavia.jpg'
+        ]);
+
+
+        // Skoda Karoq
+
+
+        Coche::create([
+            'modelo'=>'SKODA KAROQ 2.0 TDI 85kW Active',
+            'nombre'=>'Karoq',
+            'marca_id'=>43,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>115,
+            'precio'=>'27.660',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/karoq.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SKODA KAROQ 2.0 TSI 140kW DSG 4X4 Sportline',
+            'nombre'=>'Karoq',
+            'marca_id'=>43,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>190,
+            'precio'=>'40.650',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/karoq.jpg'
+        ]);
+
+        // Skoda Kodiaq
+
+        Coche::create([
+            'modelo'=>'SKODA KODIAQ 2.0 TSI 140KW DSG 4x4 LK',
+            'nombre'=>'Kodiaq',
+            'marca_id'=>43,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>190,
+            'precio'=>'48.467',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/kodiaq.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SKODA KODIAQ 2.0 TDI 110KW DSG 4x2 Ambition',
+            'nombre'=>'Kodiaq',
+            'marca_id'=>43,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'35.667',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/skoda/kodiaq.jpg'
+        ]);
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Suzuki Swift
+
+        Coche::create([
+            'modelo'=>'SUZUKI SWIFT 1.2 GLE Mild Hybrid CVT',
+            'nombre'=>'Swift',
+            'marca_id'=>44,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>82,
+            'precio'=>'19.307',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/suzuki/swift.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SUZUKI SWIFT 1.4 T SPORT Mild Hybrid',
+            'nombre'=>'Swift',
+            'marca_id'=>44,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>129,
+            'precio'=>'24.513',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/suzuki/swift.jpg'
+        ]);
+
+        // Suzuki Vitara
+
+        Coche::create([
+            'modelo'=>'SUZUKI VITARA 1.4 T GLE Mid Hybrid',
+            'nombre'=>'Vitara',
+            'marca_id'=>44,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>129,
+            'precio'=>'26.057',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/suzuki/swift.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'SUZUKI VITARA 1.4 T GLX 4WD Mild Hybrid',
+            'nombre'=>'Vitara',
+            'marca_id'=>44,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>129,
+            'precio'=>'30.266',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/suzuki/vitara.jpg'
+        ]);
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Toyota Aygo
+
+        Coche::create([
+            'modelo'=>'TOYOTA AYGO 1.0 70 xplay',
+            'nombre'=>'Aygo',
+            'marca_id'=>45,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>72,
+            'precio'=>'14.450',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/aygo.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'TOYOTA AYGO 1.0 70 xstyle',
+            'nombre'=>'Aygo',
+            'marca_id'=>45,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>72,
+            'precio'=>'16.550',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/aygo.jpg'
+        ]);
+
+        // Toyota Corolla
+
+        Coche::create([
+            'modelo'=>'TOYOTA COROLLA 1.8 125H BUSINESS PLUS ECVT',
+            'nombre'=>'Corolla',
+            'marca_id'=>45,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>122,
+            'precio'=>'26.050',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/corolla.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'TOYOTA COROLLA 2.0 180H STYLE ECVT',
+            'nombre'=>'Corolla',
+            'marca_id'=>45,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>180,
+            'precio'=>'30.050',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/corolla.jpg'
+        ]);
+
+        // Toyota Yaris
+
+
+        Coche::create([
+            'modelo'=>'TOYOTA YARIS 1.5 120H Business Plus',
+            'nombre'=>'Yaris',
+            'marca_id'=>45,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>116,
+            'precio'=>'21.800',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/yaris.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'TOYOTA YARIS 1.5 120H Style P. Premier Edition',
+            'nombre'=>'Yaris',
+            'marca_id'=>45,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>116,
+            'precio'=>'26.700',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/yaris.jpg'
+        ]);
+
+
+        // Toyota Proace Verso
+
+        Coche::create([
+            'modelo'=>'TOYOTA PROACE VERSO 1.5D VX SHUTTLE 2PL 2PT L2',
+            'nombre'=>'Proace Verso',
+            'marca_id'=>45,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>120,
+            'precio'=>'36.000',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/proace.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'TOYOTA PROACE VERSO 2.0D FAMILY ADVANCE L1 AUTO',
+            'nombre'=>'Proace Verso',
+            'marca_id'=>45,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>140,
+            'precio'=>'50.000',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/proace.jpg'
+        ]);
+
+        // Toyota RAV4
+
+        Coche::create([
+            'modelo'=>'TOYOTA RAV4 2.5l 220H Advance',
+            'nombre'=>'RAV4',
+            'marca_id'=>45,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>218,
+            'precio'=>'38.550',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/rav4.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'TOYOTA RAV4 2.5l 220H Luxury 4WD',
+            'nombre'=>'RAV4',
+            'marca_id'=>45,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>222,
+            'precio'=>'49.400',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/rav4.jpg'
+        ]);
+
+
+        // Toyota Land Cruiser
+
+        Coche::create([
+            'modelo'=>'TOYOTA LAND CRUISER 2.8 D4D NX 5 Plazas',
+            'nombre'=>'Land Cruiser',
+            'marca_id'=>45,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>204,
+            'precio'=>'41.090',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/toyota/landcru.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'TOYOTA LAND CRUISER 2.8 D4D LIMITED AUTO',
+            'nombre'=>'Land Cruiser',
+            'marca_id'=>45,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>204,
+            'precio'=>'78.600',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/toyota/landcru.jpg'
+        ]);
+
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Volkswagen Golf
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN GOLF 2.0 TDI 85kW',
+            'nombre'=>'Golf',
+            'marca_id'=>46,
+            'carroceria_id'=>1,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>115,
+            'precio'=>'28.152',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/golf.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN GOLF R 2.0 TSI 235kW 4Motion DSG',
+            'nombre'=>'Golf',
+            'marca_id'=>46,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>320,
+            'precio'=>'51.296',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/golf.jpg'
+        ]);
+
+        // Volkswagen Polo
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN POLO Advance 1.0 TSI 70kW',
+            'nombre'=>'Polo',
+            'marca_id'=>46,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>95,
+            'precio'=>'18.652',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/polo.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN POLO RLine 1.0 TSI 81kW DSG',
+            'nombre'=>'Polo',
+            'marca_id'=>46,
+            'carroceria_id'=>1,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>110,
+            'precio'=>'23.843',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/polo.jpg'
+        ]);
+
+        // Volkswagen Passat Familiar
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN PASSAT Variant 2.0 TDI 90kW DSG',
+            'nombre'=>'Passat Familiar',
+            'marca_id'=>46,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>122,
+            'precio'=>'37.551',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/passatfa.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN PASSAT Alltrack 2.0 TSI 206kW 4Mot DSG',
+            'nombre'=>'Passat Familiar',
+            'marca_id'=>46,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>280,
+            'precio'=>'49.636',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/passatfa.jpg'
+        ]);
+
+
+        // Volkswagen Arteon Familiar
+
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN ARTEON 2.0 TDI 110kW Shooting Brake',
+            'nombre'=>'Arteon Familiar',
+            'marca_id'=>46,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'46.254',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/arteonfa.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN ARTEON Elegance 2.0 TSI 140kW DSG SB',
+            'nombre'=>'Arteon Familiar',
+            'marca_id'=>46,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>190,
+            'precio'=>'52.886',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/arteonfa.jpg'
+        ]);
+
+        // Volkswagen Arteon
+
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN ARTEON 2.0 TDI 110kW',
+            'nombre'=>'Arteon',
+            'marca_id'=>46,
+            'carroceria_id'=>3,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'46.057',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/arteon.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN ARTEON RLine Performance 2.0 TSI 200kW DSG 4M',
+            'nombre'=>'Arteon',
+            'marca_id'=>46,
+            'carroceria_id'=>3,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>272,
+            'precio'=>'60.556',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/arteon.jpg'
+        ]);
+
+        // Volkswagen Multivan
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN MULTIVAN Outdoor Corto 2.0 TDI 81kW BMT',
+            'nombre'=>'Multivan',
+            'marca_id'=>46,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'52.784',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/volkswagen/multivan.jpg'
+        ]);
+
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN MULTIVAN Panam.Corto 2.0 TDI 150kW BMT DSG 4Mot',
+            'nombre'=>'Multivan',
+            'marca_id'=>46,
+            'carroceria_id'=>4,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>204,
+            'precio'=>'52.784',
+            'plazas'=>7,
+            'foto'=>'img/fotosCoches/volkswagen/multivan.jpg'
+        ]);
+
+
+        // Volkswagen Tiguan
+
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN TIGUAN Tiguan 2.0 TDI 90kW',
+            'nombre'=>'Tiguan',
+            'marca_id'=>46,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>122,
+            'precio'=>'32.251',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/tiguan.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN TIGUAN R 2.0 TSI 235 kW DSG 4Motion',
+            'nombre'=>'Tiguan',
+            'marca_id'=>46,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>320,
+            'precio'=>'62.799',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/tiguan.jpg'
+        ]);
+
+        
+        // Volkswagen T-Cross
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN TCROSS Advance 1.0 TSI 81kW',
+            'nombre'=>'T-Cross',
+            'marca_id'=>46,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Manual',
+            'potencia'=>110,
+            'precio'=>'23.271',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/tcross.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN TCROSS Sport 1.5 TSI 110kW DSG',
+            'nombre'=>'T-Cross',
+            'marca_id'=>46,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'28.010',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/tcross.jpg'
+        ]);
+
+        // Volkswagen Touareg
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN TOUAREG Prem Atmos 3.0 V6 TDI 210kW Tip 4M',
+            'nombre'=>'Touareg',
+            'marca_id'=>46,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>286,
+            'precio'=>'80.106',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/touareg.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLKSWAGEN TOUAREG RLine Indiv Eleg 3.0 V6 TDI 210kW Tip 4M',
+            'nombre'=>'Touareg',
+            'marca_id'=>46,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>286,
+            'precio'=>'89.367',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volkswagen/touareg.jpg'
+        ]);
+
+        //--------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------
+
+        // Volvo V60
+
+        Coche::create([
+            'modelo'=>'VOLVO V60 2.0 D3 Auto',
+            'nombre'=>'V60',
+            'marca_id'=>47,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'40.599',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/v60.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLVO V60 2.0 B5 G RDesign Auto',
+            'nombre'=>'V60',
+            'marca_id'=>47,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>250,
+            'precio'=>'53.570',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/v60.jpg'
+        ]);
+
+        // Volvo V90
+
+
+        Coche::create([
+            'modelo'=>'VOLVO V90 2.0 D3 Business Plus Auto',
+            'nombre'=>'V90',
+            'marca_id'=>47,
+            'carroceria_id'=>2,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>150,
+            'precio'=>'54.465',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/v90.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLVO V90 2.0 B5 G RDesign Auto',
+            'nombre'=>'V90',
+            'marca_id'=>47,
+            'carroceria_id'=>2,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>250,
+            'precio'=>'66.240',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/v90.jpg'
+        ]);
+
+        // Volvo XC40
+
+        Coche::create([
+            'modelo'=>'VOLVO XC40 2.0 D3',
+            'nombre'=>'XC40',
+            'marca_id'=>47,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Manual',
+            'potencia'=>150,
+            'precio'=>'33.800',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/xc40.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLVO XC40 2.0 B5 G AWD Momentum Pro Auto',
+            'nombre'=>'XC40',
+            'marca_id'=>47,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>250,
+            'precio'=>'50.492',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/xc40.jpg'
+        ]);
+
+        // Volvo XC60
+
+        Coche::create([
+            'modelo'=>'VOLVO XC60 2.0 D4 Momentum Auto',
+            'nombre'=>'XC60',
+            'marca_id'=>47,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>190,
+            'precio'=>'48.765',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/xc60.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLVO XC60 2.0 B5 G AWD Inscription Auto',
+            'nombre'=>'XC60',
+            'marca_id'=>47,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>250,
+            'precio'=>'63.176',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/xc60.jpg'
+        ]);
+
+        // Volvo XC90
+    
+        Coche::create([
+            'modelo'=>'VOLVO XC90 2.0 B5 D AWD Momentum Auto',
+            'nombre'=>'XC90',
+            'marca_id'=>47,
+            'carroceria_id'=>5,
+            'combustible'=>'Diesel',
+            'cambio'=>'Automatico',
+            'potencia'=>235,
+            'precio'=>'70.350',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/xc90.jpg'
+        ]);
+
+        Coche::create([
+            'modelo'=>'VOLVO XC90 2.0 B5 G AWD RDesign Auto',
+            'nombre'=>'XC90',
+            'marca_id'=>47,
+            'carroceria_id'=>5,
+            'combustible'=>'Gasolina',
+            'cambio'=>'Automatico',
+            'potencia'=>250,
+            'precio'=>'79.495',
+            'plazas'=>5,
+            'foto'=>'img/fotosCoches/volvo/xc90.jpg'
+        ]);
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
