@@ -15,9 +15,13 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('js/mijs.js')}}"></script> --}}
 
+    {{-- Iconos --}}
+    <script src="https://kit.fontawesome.com/b3f72ddd9e.js" crossorigin="anonymous"></script>
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
 
     {{-- Link para librería Animate.css --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

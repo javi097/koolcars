@@ -55,23 +55,37 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
+    
     <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <div class="row">
-            @foreach ($marcas as $marca)
-            <div class="col-md-4 mb-5 animate__animated animate__fadeInLeft" fadeInLeft>
-                <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
-                    <a href="{{route('marcas.show', $marca)}}">
-                        <img src="{{ asset($marca->logo) }}" alt="">
-                    </a>
-                    <p>{{$marca->nombre}}</p>
-                </div>
-            </div>
-            @endforeach
-           
-        </div>
+        <table id="tabla1">
+            <tr>    
+                <th scope="col" class="align-middle">Imagen</th>
+                <th scope="col" class="align-middle">Nombre</th>
+                <th scope="col" class="align-middle">Borrar</th>
+            </tr>
+            <tbody>
+                @foreach ($marcas as $marca)
+                    <tr>
+                        <td class="align-middle">
+                            <img src="{{asset($marca->logo)}}" class="rounded-circle" id="fotoMarca">
+                        </td>
+                        <td class="align-middle">{{$marca->nombre}}</td>
+                        <td class="align-middle">
+                            <form name="borrarMarca" action="{{route('admin.marcas.destroy', $marca)}}">
+                                @csrf
+                                @method('Delete')
+                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar esta marca?')"></button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-    {{-- Footer --}}
 </div>
+
+{{-- Final del Contenido --}}
+{{-- Footer --}}
 <footer class="footer">
     <div class="container">
         <div class="copyright" id="copyright">
@@ -85,5 +99,4 @@ KoolCars || Home
     <div class="push"></div>
 </footer>
 {{-- Final del Footer --}}
-{{-- Final del Contenido --}}
 @endsection

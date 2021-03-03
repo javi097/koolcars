@@ -55,23 +55,43 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
+    
     <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <div class="row">
-            @foreach ($marcas as $marca)
-            <div class="col-md-4 mb-5 animate__animated animate__fadeInLeft" fadeInLeft>
-                <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
-                    <a href="{{route('marcas.show', $marca)}}">
-                        <img src="{{ asset($marca->logo) }}" alt="">
-                    </a>
-                    <p>{{$marca->nombre}}</p>
-                </div>
-            </div>
-            @endforeach
-           
-        </div>
+         
+        <table id="tabla1">
+            <tr>    
+                <th scope="col" class="align-middle">Foto de Perfil</th>
+                <th scope="col" class="align-middle">Nombre</th>
+                <th scope="col" class="align-middle">Nombre de Usuario</th>
+                <th scope="col" class="align-middle">Email</th>
+                <th scope="col" class="align-middle">Borrar</th>
+            </tr>
+
+            <tbody>
+                @foreach ($usuarios as $user)
+                    <tr>
+                        <td>
+                            <img src="{{asset($user->fotoPerfil)}}" class="rounded-circle" id="fotoPerfil1">
+                        </td>
+                        <td>{{$user->nombre}}</td>
+                        <td>{{$user->nombreUsuario}}</td>
+                        <td>{{$user->email}}</td>
+                        <td>
+                            <form name="borrarUsu" action="{{route('admin.users.destroy', $user)}}">
+                                @csrf
+                                @method('Delete')
+                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este usuario?')"></button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-    {{-- Footer --}}
 </div>
+
+{{-- Final del Contenido --}}
+{{-- Footer --}}
 <footer class="footer">
     <div class="container">
         <div class="copyright" id="copyright">
@@ -85,5 +105,4 @@ KoolCars || Home
     <div class="push"></div>
 </footer>
 {{-- Final del Footer --}}
-{{-- Final del Contenido --}}
 @endsection

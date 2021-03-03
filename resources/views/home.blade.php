@@ -34,33 +34,35 @@ KoolCars || Home
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                @role('admin')
+                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}
                 </a>
-
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
             </div>
-
             @endauth
         </div>
         @endif
 
     </div>
 </nav>
-  <!-- Final del Navbar-->
+<!-- Final del Navbar-->
 
-  {{-- Contenido --}}
+{{-- Contenido --}}
 <div id="wrap">
     <div id="main" class="container clear-top">
-        <div class="container text-center" >
+        <div class="container text-center">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="{{route('marcas.index')}}">
-                            <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches.jpg')}}" alt="First slide" style="border-radius: 10px; ">
+                            <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches.jpg')}}" alt="First slide"
+                                style="border-radius: 10px; ">
                         </a>
                     </div>
                     <div class="carousel-item">
@@ -82,14 +84,15 @@ KoolCars || Home
                 </a>
             </div>
         </div>
-        <br> 
-        <br> 
-        <br> 
-        <br> 
+        <br>
+        <br>
+        <br>
+        <br>
         <h1 id="textoProx">TU PRÓXIMO COCHE <span id="aqui">ESTÁ AQUÍ</span> </h1>
         <p id="textoVida">Un coche para cada estilo de vida</p>
-        <br>    
+        <br>
         <table id="tabla1">
+           
             <tr>
                 <td>
                     <img src="{{asset('img/fotosTipo/compacto.png')}}" class="rounded float-left" id="compacto">
@@ -131,7 +134,7 @@ KoolCars || Home
                     </div>
                 </td>
             </tr>
-            
+
         </table>
 
     </div>

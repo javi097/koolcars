@@ -118,7 +118,43 @@ width: 180px;
   width: 252px;
 }
 
+/* Foto Perfil */
 
+#fotoPerfil {
+  width: 210px;
+  height: 170px;
+}
+
+#fotoPerfil1{
+  width: 30px;
+  height: 30px;
+}
+
+#fotoMarca {
+  height: 30px;
+  width: 40px;
+}
+
+/* Texto Perfil*/
  
+#textoPerfil1 {
+  font-size: x-large;
+}
 
+#textoPerfil {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#textoPerfil2 {
+  text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
+  font-weight: bold;
+}
+
+/* Tabla para mostrar los datos del admin*/
+
+#tabla1 {
+  border-spacing: 10px;
+  border-collapse: separate;
+}
    

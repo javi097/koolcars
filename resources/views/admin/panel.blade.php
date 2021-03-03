@@ -55,23 +55,46 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <div class="row">
-            @foreach ($marcas as $marca)
-            <div class="col-md-4 mb-5 animate__animated animate__fadeInLeft" fadeInLeft>
-                <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
-                    <a href="{{route('marcas.show', $marca)}}">
-                        <img src="{{ asset($marca->logo) }}" alt="">
-                    </a>
-                    <p>{{$marca->nombre}}</p>
-                </div>
-            </div>
-            @endforeach
-           
-        </div>
+    <div class="text-center mb-5">
+        <h1>Panel del Administrador</h1><br>
+        <h4 class="text-center">Bienvenido al panel de administrador:  <span
+                class="font-weight-bold" id="textoPerfil1">{{Auth::user()->nombreUsuario}} </span> </h4>
     </div>
-    {{-- Footer --}}
+    <div id="main" class="container clear-top text-center w-50 mx-auto">
+            <div class="text-center mb-5">
+                <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="rounded-circle border-0" id="fotoPerfil"/>
+            </div>
+            <span class="font-weight-bold text-dark" id="textoPerfil">{{Auth::user()->nombre}}</span><br><br>
+            
+            <h3 id="textoPerfil2">Edita, crea o elimina</h3>
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile-tabs">
+                        <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.users') }}">
+                                    <i class="far fa-user"></i> Usuarios
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.coches') }}">
+                                    <i class="fas fa-car"></i> Coches
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.marcas') }}">
+                                    <i class="fas fa-image"></i> Marcas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+    </div>
 </div>
+
+{{-- Final del Contenido --}}
+{{-- Footer --}}
 <footer class="footer">
     <div class="container">
         <div class="copyright" id="copyright">
@@ -85,5 +108,4 @@ KoolCars || Home
     <div class="push"></div>
 </footer>
 {{-- Final del Footer --}}
-{{-- Final del Contenido --}}
 @endsection
