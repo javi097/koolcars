@@ -18,15 +18,16 @@ class AdminController extends Controller
         return view('admin.panel');
     }
 
-    /* Metodo para mostrar,borrar,crear y editar los USUARIOS*/
+    /* ----------------------USUARIOS*-------------------------------------------*/
 
+    //Metodo para mostrar los usuarios
     public function usuList(){
         $usuarios = User::orderBy('nombre')->simplePaginate(6);
         
         return view('admin.users', compact('usuarios'));
     }
 
-
+    /* Metodo para borrar un usuario*/
     public function usuDestroy(User $user){
 
         $user->delete();
@@ -35,16 +36,16 @@ class AdminController extends Controller
         return \Redirect::back();
     }
 
-    /* Metodo para mostrar,borrar,crear y editar los COCHES*/
+    /* --------------------------COCHES---------------------------------------------*/
 
+    //Metodo para mostrar los coches 
     public function cochesList(){
         $coches = Coche::orderBy('modelo')->simplePaginate(6);
 
         return view('admin.coches.coches', compact('coches'));
     }
 
-
-
+    //Metodo para eliminar un coche
     public function cochesDestroy(Coche $coch){
 
         $coch->delete();
@@ -53,12 +54,14 @@ class AdminController extends Controller
         return \Redirect::back();
     }
 
+    //Metodo para mostrar la pagina de creacion del coche
     public function cochesCreate(){
         $marcas=Marca::orderBy('nombre')->get();
         $carrocerias=Carroceria::orderBy('nombre')->get();
         return view('admin.coches.createCoche',compact('marcas','carrocerias'));
     }
 
+    //Metodo para crear un coche
     public function cochesStore(CocheRequest $request){
 
         $datos= $request->validated();
@@ -100,14 +103,14 @@ class AdminController extends Controller
         return view('admin.coches.coches', compact('coches'));
     }
 
-
+    //Metodo que envia a la vista de editar coche
     public function cochesEdit(Coche $coch){
         
         return view('admin.coches.editCoche', compact('coch'));
     }
 
+    //Metodo para editar un coche
     public function cochesUpdate(CocheRequest $request, Coche $coch){
-        
 
         $datos= $request->validated();
 
@@ -141,22 +144,21 @@ class AdminController extends Controller
             $coch->foto="img/$nom";
         }
 
-        $coch->update();
-        Alert::success('Coche modificado', 'El coche se ha modificado correctamente');
-
-        return redirect()->route('admin.coches');
-
+       $coch->update();
+       Alert::success('Coche modificado', 'El coche se ha modificado correctamente');
+       return redirect()->route('admin.coches');
     }
 
-    /* Metodos para mostrar,borrar,crear y editar las MARCAS*/
+    /* ------------------------MARCAS--------------------------------------------------*/
 
+    //Metodo para mostrar las marcas
     public function marcaList(){
         $marcas = Marca::orderBy('nombre')->simplePaginate(6);
 
         return view('admin.marcas.marcas', compact('marcas'));
     }
 
-
+    //Metodo para eliminar una marca
     public function marcaDestroy(Marca $marca){
 
         $marca->delete();
@@ -165,6 +167,12 @@ class AdminController extends Controller
         return \Redirect::back();
     }
 
+    //Metodo para mostrar la vista de creacion de la marca
+    public function marcasCreate(){
+        return view('admin.marcas.createMarca');
+    }
+
+    //Metodo para crear una marca
     public function marcaStore(MarcaRequest $request){
         $datos= $request->validated();
 
@@ -180,7 +188,7 @@ class AdminController extends Controller
         if(isset($datos['logo']) && $datos['logo']!=null){
 
             $file = $datos['logo'];
-             $nom = 'logoMarca'.time().'_'.$file->getClientOriginalName();
+             $nom = 'logoMarca/marcaNuevo/'.time().'_'.$file->getClientOriginalName();
             \Storage::disk('public')->put($nom, \File::get($file));
              $marca->logo="img/$nom";
         
@@ -192,16 +200,38 @@ class AdminController extends Controller
         return view('admin.marcas.marcas', compact('marcas'));
     }
 
-    public function marcasCreate(){
-        return view('admin.marcas.createMarca');
-    }
-
+   
+    //Metodo que muestra la vista para editar una marca
     public function marcaEdit(Marca $marca){
         
         return view('admin.marcas.editMarca',compact('marca'));
     }
 
-    public function marcaUpdate(Marca $marca){
+    //Metodo para editar una marca
+    public function marcaUpdate(MarcaRequest $request, Marca $marca){
+
+        $datos= $request->validated();
+
+        $marca->nombre=$datos['nombre'];
+     
+        //Foto
+        if(isset($datos['logo']) && $datos['logo']!=null){
+
+            $file = $datos['logo'];
+            $nom = 'logoMarca/marcaNuevo/'.time().'_'.$file->getClientOriginalName();
+            \Storage::disk('public')->put($nom, \File::get($file));
+
+            $imagenAntigua = $marca->logo;
+            if(basename($imagenAntigua)!="default.jpg"){
+                unlink($imagenAntigua);
+            }
+
+            $marca->logo="img/$nom";
+        }
+
+       $marca->update();
+       Alert::success('Marca modificada', 'La marca se ha modificado correctamente');
+       return redirect()->route('admin.marcas');
         
     }
 

@@ -68,7 +68,6 @@ KoolCars || Home
                 <div class="form-group">
                   <div class="col mt-1">
                       <b>Logo:</b>&nbsp;<input type='file' name='logo' accept="image/*">
-    
                   </div>
                 </div>
                 <div class="form-row mt-1">

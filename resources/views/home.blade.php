@@ -20,7 +20,7 @@ KoolCars || Home
     <div class="collapse navbar-collapse" id="textoNavbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#" id="textoNavbar">Encuetra tu coche</a>
+                <a class="nav-link" href="{{route('coches.index')}}" id="textoNavbar">Encuetra tu coche</a>
             </li>
         </ul>
 

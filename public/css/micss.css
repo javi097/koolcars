@@ -241,7 +241,19 @@ width: 180px;
   margin-bottom: 1%;
 }
 
+/* Titulo de Encuentra*/
 
+#titulo{
+  font-weight: bold;
+  text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Tabla para los filtros*/
+
+#tablaE{
+  margin-left: 12%;
+}
 
 
 

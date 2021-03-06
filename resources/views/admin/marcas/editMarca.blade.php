@@ -56,7 +56,28 @@ KoolCars || Home
 {{-- Contenido --}}
 <div id="wrap">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
-            
+        <form name="crearMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <input type="text" class="form-control" value="{{$marca->nombre}}" placeholder="Nombre" name='nombre' required>
+                        </div>
+                 
+                <div class="form-group">
+                  <div class="col mt-1">
+                    <img src="{{asset($marca->logo)}}" width="50px" height="50px" class="rounded-circle mr-4">
+                      <b>Logo:</b>&nbsp;<input type='file' name='logo' accept="image/*">
+                  </div>
+                </div>
+                <div class="form-row mt-1">
+                  <div class="col">
+                      <input type='submit' value='Guardar' class='btn btn-success mr-3'>
+                      <a href={{route('admin.marcas')}} class='btn btn-info'>Volver</a>
+                  </div>
+              </div>
+
+        </form>
     </div>
 </div>
 

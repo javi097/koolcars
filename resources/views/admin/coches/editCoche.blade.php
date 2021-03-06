@@ -57,7 +57,7 @@ KoolCars || Home
 <div id="wrap">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
 
-        <form name="crearCoche" method='POST' action="{{route('admin.coches.update', $coch)}}" enctype="multipart/form-data">
+        <form method='POST' action="{{ route('admin.coches.update', $coch) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             
@@ -72,7 +72,6 @@ KoolCars || Home
                     </div>
 
                     <div class="form-row mt-3">
-                    
 
                     <div class="col ml-3"><b>Combustible:</b>&nbsp;
                         <select name="combustible" class="form-control">
@@ -127,9 +126,7 @@ KoolCars || Home
                       <a href={{route('admin.coches')}} class='btn btn-info'>Volver</a>
                   </div>
               </div>
-
         </form>
-            
     </div>
 </div>
 

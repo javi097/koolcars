@@ -75,7 +75,7 @@ KoolCars || Home
                         <td id="td1">{{$coch->nombre}}</td>
                         <td id="td1">{{$coch->potencia}} CV</td>
                         <td id="td1">{{$coch->precio}} €</td>
-                        <td><a href="{{ route('admin.coches.edit', $coch) }}" class="btn btn-dark far fa-edit"></a></td>
+                        <td><a href="{{ route('admin.coches.edit',$coch) }}" class="btn btn-dark far fa-edit"></a></td>
                         <td>
                             <form name="borrarCoche" method='post' action="{{route('admin.coches.destroy', $coch)}}">
                                 @csrf

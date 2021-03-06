@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Marca;
 use App\Models\Coche;
 use Illuminate\Http\Request;
-use App\Models\Carroceria;
 
 class CocheController extends Controller
 {
@@ -15,7 +14,9 @@ class CocheController extends Controller
      */
     public function index()
     {
-        //
+        $coches = Coche::orderBy('modelo')->simplePaginate(6);
+
+        return view('coches.encuentra',compact('coches'));
     }
 
     /**
