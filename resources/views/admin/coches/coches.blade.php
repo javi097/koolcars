@@ -55,27 +55,29 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    
-    <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <table id="tabla1">
-            <tr>    
-                <th scope="col" class="align-middle">Imagen</th>
-                <th scope="col" class="align-middle">Nombre</th>
-                <th scope="col" class="align-middle">Potencia</th>
-                <th scope="col" class="align-middle">Precio</th>
-                <th scope="col" class="align-middle">Borrar</th>
+    <div id="main" class="container clear-top text-center">
+        <a href="{{ route('admin.coches.create') }}" class="btn btn-warning fas fa-plus-square" id="crear1"><b>Crear</b></a>
+        <table id="tabla2">
+            <tr id="tr1">    
+                <th scope="col" class="align-middle" id="td2">Imagen</th>
+                <th scope="col" class="align-middle" id="td2">Nombre</th>
+                <th scope="col" class="align-middle" id="td2">Potencia</th>
+                <th scope="col" class="align-middle" id="td2">Precio</th>
+                <th scope="col" class="align-middle" id="td2">Editar</th>
+                <th scope="col" class="align-middle" id="td2">Borrar</th>
             </tr>
             <tbody>
                 @foreach ($coches as $coch)
-                    <tr>
-                        <td>
+                    <tr id="tr1">
+                        <td id="td1">
                             <img src="{{asset($coch->foto)}}" class="rounded-circle" id="fotoMarca">
                         </td>
-                        <td>{{$coch->nombre}}</td>
-                        <td>{{$coch->potencia}} CV</td>
-                        <td>{{$coch->precio}} €</td>
+                        <td id="td1">{{$coch->nombre}}</td>
+                        <td id="td1">{{$coch->potencia}} CV</td>
+                        <td id="td1">{{$coch->precio}} €</td>
+                        <td><a href="{{ route('admin.coches.edit', $coch) }}" class="btn btn-dark far fa-edit"></a></td>
                         <td>
-                            <form name="borrarCoche" action="{{route('admin.coches.destroy', $coch)}}">
+                            <form name="borrarCoche" method='post' action="{{route('admin.coches.destroy', $coch)}}">
                                 @csrf
                                 @method('Delete')
                                 <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este coche?')"></button>
@@ -87,7 +89,8 @@ KoolCars || Home
         </table>
     </div>
 </div>
-
+<br>
+<div class="container text-center">{{ $coches->links() }}</div>
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

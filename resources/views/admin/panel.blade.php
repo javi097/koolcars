@@ -72,17 +72,17 @@ KoolCars || Home
                     <div class="profile-tabs">
                         <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.users') }}">
+                                <a class="nav-link" id="textoL" href="{{ route('admin.users') }}">
                                     <i class="far fa-user"></i> Usuarios
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.coches') }}">
+                                <a class="nav-link" id="textoL" href="{{ route('admin.coches') }}">
                                     <i class="fas fa-car"></i> Coches
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('admin.marcas') }}">
+                                <a class="nav-link" id="textoL" href="{{ route('admin.marcas') }}">
                                     <i class="fas fa-image"></i> Marcas
                                 </a>
                             </li>

@@ -114,6 +114,7 @@ KoolCars || Home
 @endforeach
 </div>
 </div>
+<div class="container text-center">{{ $coches->links() }}</div>
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

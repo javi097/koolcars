@@ -55,7 +55,7 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    <div id="main" class="container clear-top">
+    <div  class="container clear-top">
         <div class="container text-center">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -91,7 +91,7 @@ KoolCars || Home
         <h1 id="textoProx">TU PRÓXIMO COCHE <span id="aqui">ESTÁ AQUÍ</span> </h1>
         <p id="textoVida">Un coche para cada estilo de vida</p>
         <br>
-        <table id="tabla1">
+        <table id="tabla1" class="responsive">
            
             <tr>
                 <td>

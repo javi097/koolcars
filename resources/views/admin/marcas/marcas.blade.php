@@ -55,23 +55,26 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    
-    <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <table id="tabla1">
-            <tr>    
-                <th scope="col" class="align-middle">Imagen</th>
-                <th scope="col" class="align-middle">Nombre</th>
-                <th scope="col" class="align-middle">Borrar</th>
+    <a href="{{ route('admin.marcas.create') }}" class="btn btn-warning fas fa-plus-square" id="crear2"><b> Crear</b></a>
+
+    <div id="mainM" class="container clear-top text-center"> 
+        <table id="tabla2">
+            <tr id="tr1">    
+                <th scope="col" class="align-middle" id="td2">Imagen</th>
+                <th scope="col" class="align-middle" id="td2">Nombre</th>
+                <th scope="col" class="align-middle" id="td2">Editar</th>
+                <th scope="col" class="align-middle" id="td2">Borrar</th>
             </tr>
             <tbody>
                 @foreach ($marcas as $marca)
-                    <tr>
-                        <td class="align-middle">
+                    <tr id="tr1">
+                        <td class="align-middle" id="td1">
                             <img src="{{asset($marca->logo)}}" class="rounded-circle" id="fotoMarca">
                         </td>
-                        <td class="align-middle">{{$marca->nombre}}</td>
-                        <td class="align-middle">
-                            <form name="borrarMarca" action="{{route('admin.marcas.destroy', $marca)}}">
+                        <td class="align-middle" id="td1">{{$marca->nombre}}</td>
+                        <td><a href="{{ route('admin.marcas.edit', $marca) }}" class="btn btn-dark far fa-edit"></a></td>
+                        <td class="align-middle" id="td1">
+                            <form name="borrarMarca" method='post' action="{{route('admin.marcas.destroy', $marca)}}">
                                 @csrf
                                 @method('Delete')
                                 <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar esta marca?')"></button>
@@ -83,7 +86,8 @@ KoolCars || Home
         </table>
     </div>
 </div>
-
+<br>
+<div class="container text-center">{{ $marcas->links() }}</div>
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

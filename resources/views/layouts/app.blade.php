@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{asset('responsive-tables/src/responsivetables.js')}}"></script>
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{asset('js/mijs.js')}}"></script> --}}
 
@@ -28,7 +29,9 @@
 
     {{-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> --}}
 
-    
+    <link rel="stylesheet" href="{{asset('responsive-tables/src/responsivetables.css')}}" />
+
+
    
 
 
@@ -39,6 +42,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

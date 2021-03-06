@@ -42,15 +42,27 @@ Route::group(['middleware' => ['admin']], function () {
 
     //Rutas para manejar los usuarios
     Route::get('/home/admin/users', [AdminController::class, 'usuList'])->name('admin.users');
-    Route::get('/home/admin/users/{user}', [AdminController::class, 'usuDestroy'])->name('admin.users.destroy');
+    Route::delete('/home/admin/users/{user}', [AdminController::class, 'usuDestroy'])->name('admin.users.destroy');
 
     //Rutas para manejar los coches
     Route::get('/home/admin/coches', [AdminController::class, 'cochesList'])->name('admin.coches');
-    Route::get('/home/admin/coches/{coch}', [AdminController::class, 'cochesDestroy'])->name('admin.coches.destroy');
+    Route::delete('/home/admin/coches/{coch}', [AdminController::class, 'cochesDestroy'])->name('admin.coches.destroy');
+    Route::get('/home/admin/coches/create', [AdminController::class, 'cochesCreate'])->name('admin.coches.create');
+    Route::post('/home/admin/coches/create', [AdminController::class, 'cochesStore'])->name('admin.coches.store');
+    Route::get('/home/admin/coches/{coch}', [AdminController::class, 'cochesEdit'])->name('admin.coches.edit');
+    Route::put('/home/admin/coches/{coch}', [AdminController::class, 'cochesUpdate'])->name('admin.coches.update');
+
+
+    
 
     //Rutas para manejar las marcas
     Route::get('/home/admin/marcas', [AdminController::class, 'marcaList'])->name('admin.marcas');
-    Route::get('/home/admin/marcas/{marca}', [AdminController::class, 'marcaDestroy'])->name('admin.marcas.destroy');
+    Route::delete('/home/admin/marcas/{marca}', [AdminController::class, 'marcaDestroy'])->name('admin.marcas.destroy');
+    Route::get('/home/admin/marcas/create', [AdminController::class, 'marcasCreate'])->name('admin.marcas.create');
+    Route::post('/home/admin/marcas/create', [AdminController::class, 'marcaStore'])->name('admin.marcas.store');
+    Route::get('/home/admin/marcas/{marca}', [AdminController::class, 'marcaEdit'])->name('admin.marcas.edit');
+    Route::put('/home/admin/marcas/{marca}', [AdminController::class, 'marcaUpdate'])->name('admin.marcas.update');
+
 
 
 });

@@ -55,42 +55,35 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
+    <div id="main" class="container clear-top text-center w-50 mx-auto">
+
+        <form name="crearMarca" method='POST' action="{{route('admin.marcas.store')}}" enctype="multipart/form-data">
+            @csrf
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre" name='nombre' required>
+                        </div>
+                 
+               
+                <div class="form-group">
+                  <div class="col mt-1">
+                      <b>Logo:</b>&nbsp;<input type='file' name='logo' accept="image/*">
     
-    <div id="mainU" class="container clear-top text-center">
-        <table id="tabla3" class="responsive">
-            <thead>
-                <tr id="tr1">    
-                    <th scope="col" class="align-middle" id="td2">Foto de Perfil</th>
-                    <th scope="col" class="align-middle" id="td2">Nombre</th>
-                    <th scope="col" class="align-middle" id="td2">Nombre de Usuario</th>
-                    <th scope="col" class="align-middle" id="td2">Email</th>
-                    <th scope="col" class="align-middle" id="td2">Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($usuarios as $user)
-                    <tr id="tr1">
-                        <td id="tr1">
-                            <img src="{{asset($user->fotoPerfil)}}" class="rounded-circle" id="fotoPerfil1">
-                        </td>
-                        <td id="tr1">{{$user->nombre}}</td>
-                        <td id="tr1">{{$user->nombreUsuario}}</td>
-                        <td id="tr1">{{$user->email}}</td>
-                        <td id="tr1">
-                            <form name="borrarUsu" method='post' action="{{route('admin.users.destroy', $user)}}">
-                                @csrf
-                                @method('Delete')
-                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este usuario?')"></button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+                  </div>
+                </div>
+                <div class="form-row mt-1">
+                  <div class="col">
+                      <input type='submit' value='Guardar' class='btn btn-success mr-3'>
+                      <input type='reset' value='Limpiar' class='btn btn-warning mr-3'>
+                      <a href={{route('admin.marcas')}} class='btn btn-info'>Volver</a>
+                  </div>
+              </div>
+
+        </form>
+            
     </div>
 </div>
-<br>
-<div class="container text-center">{{ $usuarios->links() }}</div>
+
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

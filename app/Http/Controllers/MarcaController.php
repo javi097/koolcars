@@ -48,7 +48,7 @@ class MarcaController extends Controller
      */
     public function show(Marca $marca)
     {   
-        $coches = $marca->coches()->get();
+        $coches = $marca->coches()->simplePaginate(6);
 
         return view('marcas.modelo', compact('marca', 'coches'));
     }
