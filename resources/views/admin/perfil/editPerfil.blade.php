@@ -58,40 +58,40 @@ KoolCars || Home
 <div id="wrap">
     
     <div id="mainU" class="container clear-top text-center">
-        <table id="tabla3" class="responsive">
-            <thead>
-                <tr id="tr1">    
-                    <th scope="col" class="align-middle" id="td2">Foto de Perfil</th>
-                    <th scope="col" class="align-middle" id="td2">Nombre</th>
-                    <th scope="col" class="align-middle" id="td2">Nombre de Usuario</th>
-                    <th scope="col" class="align-middle" id="td2">Email</th>
-                    <th scope="col" class="align-middle" id="td2">Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($usuarios as $user)
-                    <tr id="tr1">
-                        <td id="tr1">
-                            <img src="{{asset($user->fotoPerfil)}}" class="rounded-circle" id="fotoPerfil1">
-                        </td>
-                        <td id="tr1">{{$user->nombre}}</td>
-                        <td id="tr1">{{$user->nombreUsuario}}</td>
-                        <td id="tr1">{{$user->email}}</td>
-                        <td id="tr1">
-                            <form name="borrarUsu" method='post' action="{{route('admin.users.destroy', $user)}}">
-                                @csrf
-                                @method('Delete')
-                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este usuario?')"></button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
+                <h1 id="titulo">Mi Perfil</h1><br>
+                
+                    
+                    <form name="editPerfil" method='POST' action="{{route('admin.update', Auth::user())}}" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+                    <div class="card  p-3 mb-5  rounded" id="userCard">
+                        <div class="wrap">
+                            <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="main-profile-img" ><input type='file' accept="image/*" id="subir" name="fotoPerfil"hidden><label for="subir" ><i id="botonI"class="fas fa-edit"></i></label>
+                            <br><br>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col">Nombre:
+                            <input type="text" class="form-control" value="{{Auth::user()->nombre}}" placeholder="Nombre" name='nombre' required>
+                        </div><br>
+                        <div class="col">Nombre de Usuario:
+                            <input type="text" class="form-control" value="{{Auth::user()->nombreUsuario}}" placeholder="Nombre de Usuario" name='nombreUsuario' required>
+                        </div><br>
+                        <div class="col">
+                            <input type='submit' id="boton" value='Guardar Perfil' class='btn btn-dark mr-3'>
+                            <a href={{route('admin.perfil')}} class='btn btn-dark' id="boton2">Volver</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+         
+        </div>
     </div>
 </div>
 <br>
-<div class="container text-center">{{ $usuarios->links() }}</div>
+
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

@@ -11,6 +11,7 @@ use App\Http\Requests\CocheRequest;
 use App\Http\Requests\MarcaRequest;
 use App\Models\Carroceria;
 use Faker\Provider\Image;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -235,5 +236,73 @@ class AdminController extends Controller
         
     }
 
+    /*------------------ Perfil del Administrador--------------------------------*/
+
+    //Mostrar Perfil del Administrador
+    public function mostrarPerfil(){
+        
+        return view('admin.perfil.perfil');
+    }
+    
+    //Editar perfil del Administrador
+    public function editPerfil(User $user){
+
+        return view('admin.perfil.editPerfil', compact('user'));
+    }
+
+    //Actualizar perfil del Administrador
+    public function updatePerfil(Request $request, User $user){
+
+        $request->validate([
+            'nombre'=>['required'],
+            'nombreUsuario'=>['required'],
+            'fotoPerfil'=>['image']
+        ]);
+
+        // //compruebo si he subido archiivo
+        // if($request->has('fotoPerfil')){
+        //     $request->validate([
+        //         'fotoPerfil'=>['image']
+        //     ]);
+        //     //Todo bien hemos subido un archivo y es de imagen
+        //     $file=$request->file('fotoPerfil');
+        //     //Creo un nombre
+        //     $nombre='fotoPerfil/'.time().'_'.$file->getClientOriginalName();
+        //     //Guardo el archivo de imagen
+        //     Storage::disk('public')->put($nombre, \File::get($file));
+        //     if(basename($user->fotoPerfil!='default.jpg')){
+        //         unlink($user->fotoPerfil);
+        //     }
+        //     $user->update($request->all());
+        //     $user->update(['fotoPerfil'=>"img/$nombre"]);
+        // }
+        // else{
+        //     $user->update($request->all());
+        // }
+
+       
+        
+        $user->nombre = $request['nombre'];
+        $user->nombreUsuario = $request['nombreUsuario'];
+
+        if (isset($request['fotoPerfil'])) {
+            $file = $request['fotoPerfil'];
+            $nombre = 'fotoPerfil/'.time().'_'.$file->getClientOriginalName();
+            \Storage::disk('public')->put($nombre, \File::get($file));
+
+            $imagenOld = $user->fotoPerfil;
+            if (basename($imagenOld)!="default.jpg") {
+                unlink($imagenOld);
+            }
+
+            $user->fotoPerfil="img/$nombre";
+        }
+
+        $user->update();
+
+
+        Alert::success('Usuario modificado', 'El perfil se ha actualizado correctamente');
+        return redirect()->route('admin.perfil',compact('user'));
+    }
 
 }

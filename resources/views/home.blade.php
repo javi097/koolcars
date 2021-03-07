@@ -36,10 +36,11 @@ KoolCars || Home
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
                     <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                    {{ __('Cerrar Sesión') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
@@ -98,7 +99,7 @@ KoolCars || Home
                     <img src="{{asset('img/fotosTipo/compacto.png')}}" class="rounded float-left" id="compacto">
                     <p id="tipoCoche">COMPACTOS</p>
                     <div class="text-center">
-                        <a class="btn btn-secondary " id="boton" href="#" role="button">VER TODOS</a>
+                        <a class="btn btn-secondary " id="boton1" href="#" role="button">VER TODOS</a>
                     </div>
                 </td>
 
@@ -106,7 +107,7 @@ KoolCars || Home
                     <img src="{{asset('img/fotosTipo/coupe.png')}}" class="rounded float-left" id="coupe">
                     <p id="tipoCoche">CABRIOS Y COUPES</p>
                     <div class="text-center">
-                        <a class="btn btn-secondary " id="boton" href="#" role="button">VER TODOS</a>
+                        <a class="btn btn-secondary " id="boton1" href="#" role="button">VER TODOS</a>
                     </div>
                 </td>
 
@@ -114,7 +115,7 @@ KoolCars || Home
                     <img src="{{asset('img/fotosTipo/4x4.png')}}" class="rounded float-left" id="suv">
                     <p id="tipoCoche">SUVS Y 4X4</p>
                     <div class="text-center">
-                        <a class="btn btn-secondary " id="boton" href="#" role="button">VER TODOS</a>
+                        <a class="btn btn-secondary " id="boton1" href="#" role="button">VER TODOS</a>
                     </div>
                 </td>
 
@@ -122,7 +123,7 @@ KoolCars || Home
                     <img src="{{asset('img/fotosTipo/familiares.png')}}" class="rounded float-left" id="fam">
                     <p id="tipoCoche">FAMILIARES</p>
                     <div class="text-center">
-                        <a class="btn btn-secondary " id="boton" href="#" role="button">VER TODOS</a>
+                        <a class="btn btn-secondary " id="boton1" href="#" role="button">VER TODOS</a>
                     </div>
                 </td>
 
@@ -130,7 +131,7 @@ KoolCars || Home
                     <img src="{{asset('img/fotosTipo/monovolumen.png')}}" class="rounded float-left" id="mono">
                     <p id="tipoCoche">MONOVOLÚMENES</p>
                     <div class="text-center">
-                        <a class="btn btn-secondary " id="boton" href="#" role="button">VER TODOS</a>
+                        <a class="btn btn-secondary " id="boton1" href="#" role="button">VER TODOS</a>
                     </div>
                 </td>
             </tr>

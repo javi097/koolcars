@@ -4,6 +4,7 @@ use App\Http\Controllers\CarroceriaController;
 use App\Http\Controllers\CocheController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BuscadorController;
 use App\Http\Controllers\HomeController;
 use App\Models\Carroceria;
 use App\Models\Coche;
@@ -29,16 +30,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
-
 Route::resource('carrocerias', CarroceriaController::class);
 Route::resource('marcas', MarcaController::class);
 Route::resource('coches', CocheController::class);
+
+Route::get('/home/coches/buscador', [BuscadorController::class, 'indexBusqueda'])->name('coches.buscador');
 
 
 Route::group(['middleware' => ['admin']], function () {
     //Ruta para el panel del Administrador
     Route::get('/home/admin/panel', [AdminController::class, 'adminPanel'])->name('admin.panel');
+    //Ruta para el perfil del Administrador
+    Route::get('/home/admin/perfil', [AdminController::class, 'mostrarPerfil'])->name('admin.perfil');
+    Route::get('/home/admin/perfil/{user}', [AdminController::class, 'editPerfil'])->name('admin.edit');
+    Route::put('/home/admin/perfil/{user}', [AdminController::class, 'updatePerfil'])->name('admin.update');
 
     //Rutas para manejar los usuarios
     Route::get('/home/admin/users', [AdminController::class, 'usuList'])->name('admin.users');
@@ -53,8 +58,6 @@ Route::group(['middleware' => ['admin']], function () {
     Route::put('/home/admin/coches/{coch}', [AdminController::class, 'cochesUpdate'])->name('admin.coches.update');
 
 
-    
-
     //Rutas para manejar las marcas
     Route::get('/home/admin/marcas', [AdminController::class, 'marcaList'])->name('admin.marcas');
     Route::delete('/home/admin/marcas/{marca}', [AdminController::class, 'marcaDestroy'])->name('admin.marcas.destroy');
@@ -63,13 +66,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/home/admin/marcas/{marca}', [AdminController::class, 'marcaEdit'])->name('admin.marcas.edit');
     Route::put('/home/admin/marcas/{marca}', [AdminController::class, 'marcaUpdate'])->name('admin.marcas.update');
 
-
-
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
-
-
 

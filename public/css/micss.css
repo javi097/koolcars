@@ -124,12 +124,36 @@ width: 180px;
 
 #boton{
   align-items: center;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
+}
+#boton1{
+  align-items: center;
+}
+#boton2{
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
 }
 
 /* Tarjetas*/
 
 #marcaCard{
   width: 12rem;
+}
+
+#userCard{
+  width: 20rem;
+  margin-left: 5%;
+  background-color: #2c2c2c;
+  color: #ccff33;
+  box-shadow: 2px 6px 20px 5px #ccff33;
+}
+#cardPerfil{
+  margin-left: 13%;
+  margin-top: 5%;
 }
 
 #car {
@@ -183,7 +207,8 @@ width: 180px;
   border-collapse: separate;
   background-color: #2c2c2c;
   color: #ccff33;
-  box-shadow: 3px 3px 10px #ccff33;
+  box-shadow: 2px 6px 20px 5px #ccff33;
+
 }
 
 #tabla3 {
@@ -193,7 +218,8 @@ width: 180px;
   border-collapse: separate;
   background-color: #2c2c2c;
   color: #ccff33;
-  box-shadow: 3px 3px 10px #ccff33;
+  box-shadow: 2px 6px 20px 5px #ccff33;
+
 }
 
 /* #tr1 {
@@ -234,11 +260,17 @@ width: 180px;
 #crear1 {
   margin-bottom: 2%;
   margin-right: 95%;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
 }
 
 #crear2 {
   margin-left: 40%;
   margin-bottom: 1%;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
 }
 
 /* Titulo de Encuentra*/
@@ -255,6 +287,62 @@ width: 180px;
   margin-left: 12%;
 }
 
+/* .main-profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #ccff33;
+  box-shadow: 0 0 8px 3px #B8B8B8;
+  margin-left: 10%;
+} */
+
+.main-profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #ccff33;
+  box-shadow: 0 0 8px 3px #B8B8B8;
+   position: relative;
+}
+
+.wrap {
+  position: relative;
+}
+
+
+#botonF{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  top: 0;
+  left: 113px;
+  background: #2c2c2c;
+  color: #ccff33;
+  margin-left: 23%;
+}
+
+label {
+
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  top: 5  ;
+  left: 113px;
+  background: #2c2c2c;
+  color: #ccff33;
+  margin-left: 23%;
+  cursor: pointer;
+}
+
+#botonI{
+  margin-top: 20%;
+}
 
 
 

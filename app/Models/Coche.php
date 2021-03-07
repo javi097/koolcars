@@ -32,4 +32,11 @@ class Coche extends Model
        return $this->belongsTo(Carroceria::class);
    }
 
+   public function scopeModelo($query, $modelo)
+   {
+       if ($modelo) {
+           return $query->orWhere('modelo', 'LIKE', "%$modelo%");
+       }  
+    }
+
 }

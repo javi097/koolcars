@@ -20,7 +20,7 @@ KoolCars || Home
     <div class="collapse navbar-collapse" id="textoNavbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#" id="textoNavbar">Encuetra tu coche</a>
+                <a class="nav-link" href="{{route('coches.index')}}" id="textoNavbar">Encuetra tu coche</a>
             </li>
         </ul>
 
@@ -36,10 +36,11 @@ KoolCars || Home
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
                     <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                    {{ __('Cerrar Sesión') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
@@ -56,7 +57,7 @@ KoolCars || Home
 {{-- Contenido --}}
 <div id="wrap">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <form name="crearMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}" enctype="multipart/form-data">
+        <form name="editMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
                     <div class="form-row mt-3">

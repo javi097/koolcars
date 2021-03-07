@@ -58,40 +58,22 @@ KoolCars || Home
 <div id="wrap">
     
     <div id="mainU" class="container clear-top text-center">
-        <table id="tabla3" class="responsive">
-            <thead>
-                <tr id="tr1">    
-                    <th scope="col" class="align-middle" id="td2">Foto de Perfil</th>
-                    <th scope="col" class="align-middle" id="td2">Nombre</th>
-                    <th scope="col" class="align-middle" id="td2">Nombre de Usuario</th>
-                    <th scope="col" class="align-middle" id="td2">Email</th>
-                    <th scope="col" class="align-middle" id="td2">Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($usuarios as $user)
-                    <tr id="tr1">
-                        <td id="tr1">
-                            <img src="{{asset($user->fotoPerfil)}}" class="rounded-circle" id="fotoPerfil1">
-                        </td>
-                        <td id="tr1">{{$user->nombre}}</td>
-                        <td id="tr1">{{$user->nombreUsuario}}</td>
-                        <td id="tr1">{{$user->email}}</td>
-                        <td id="tr1">
-                            <form name="borrarUsu" method='post' action="{{route('admin.users.destroy', $user)}}">
-                                @csrf
-                                @method('Delete')
-                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este usuario?')"></button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
+                <h1 id="titulo">Mi Perfil</h1><br>
+                <div class="card  p-3 mb-5  rounded" id="userCard">
+                    <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" id="perfilAdmin" ><br> 
+                    <h3><b>{{Auth::user()->nombre}}</b></h3>
+                    <p>{{Auth::user()->nombreUsuario}}</p><br>
+                    <a class="btn btn-dark " id="boton" href="{{route('admin.edit',Auth::user())}}" role="button">Editar Perfil</a>
+                </div>
+            </div>
+         
+        </div>
     </div>
 </div>
 <br>
-<div class="container text-center">{{ $usuarios->links() }}</div>
+
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

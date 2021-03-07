@@ -19,5 +19,21 @@ class Marca extends Model
     public function coches(){
         return $this->hasMany(Coche::class);
     }
+
+    public function scopeMarcas($query,$v){
+        if($v=='%'){
+            return $query->where('nombre','like',$v)
+            ->orWhereNull('nombre');
+        }
+
+        if($v==-1){
+            return $query->whereNull('nombre');
+        }
+        if(!isset($v)){
+            return $query->where('nombre','like','%')
+            ->orWhereNull('nombre');
+        }
+        return $query->where('nombre',$v);
+    }
  
 }
