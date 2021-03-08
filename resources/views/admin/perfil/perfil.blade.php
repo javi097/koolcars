@@ -62,9 +62,10 @@ KoolCars || Home
             <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
                 <h1 id="titulo">Mi Perfil</h1><br>
                 <div class="card  p-3 mb-5  rounded" id="userCard">
-                    <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" id="perfilAdmin" ><br> 
+                    <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" id="perfilAdmin" width="286" height="286"><br> 
                     <h3><b>{{Auth::user()->nombre}}</b></h3>
                     <p>{{Auth::user()->nombreUsuario}}</p><br>
+                    <a class="btn btn-dark " id="boton2" href="{{route('coches.fav')}}" role="button">Favoritos</a><br>
                     <a class="btn btn-dark " id="boton" href="{{route('admin.edit',Auth::user())}}" role="button">Editar Perfil</a>
                 </div>
             </div>

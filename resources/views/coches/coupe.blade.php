@@ -61,10 +61,26 @@ KoolCars || Home
 {{-- Contenido --}}
 <div id="wrap">
     <div class="text-center mb-5">
-        <img src="{{asset($marca->logo)}}" alt="">
-        <h4 class="text-center">Fichas técnicas, fotos y precios de <span
-                class="font-weight-bold text-primary">{{$marca->nombre}} </span> por modelo</h4>
+        <h1 class="text-center" id="textoTi">Coupes</h1>
     </div>
+    <form class="form ml-auto" method="GET" action="{{ route('coches.coup') }}" id="form1">
+        <div class="form-row mt-3">
+            <div class="col">
+                <select name="marca_id" class="form-control">
+                    <option>Seleccione la marca</option>
+                    <option disabled>----------------</option>
+                    @foreach ($marcas as $marca)
+                        <option value="{{$marca->id}}">{{$marca->nombre}}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="form-row justify-content-center" id="botonBu">
+            <div class="text-center">
+                <input type="submit" class="btn btn-dark " id="boton"value="Buscar">
+            </div>
+        </div>
+    </form>
     <div id="main" class="container clear-top text-center w-50 mx-auto">
         @foreach ($coches as $coch)
         

@@ -157,6 +157,13 @@ width: 180px;
   color: #ccff33;
   box-shadow: 2px 6px 20px 5px #ccff33;
 }
+#userCard1{
+  width: 20rem;
+  margin-left: 60%;
+  background-color: #2c2c2c;
+  color: #ccff33;
+  box-shadow: 2px 6px 20px 5px #ccff33;
+}
 #cardPerfil{
   margin-left: 13%;
   margin-top: 5%;
@@ -193,11 +200,15 @@ width: 180px;
 #textoPerfil {
   font-size: 20px;
   font-weight: bold;
+  color: #ccff33;
 }
 
 #textoPerfil2 {
   text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
   font-weight: bold;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
 }
 
 /* Tabla para mostrar los datos del admin*/
@@ -254,12 +265,39 @@ width: 180px;
   margin-left: 40%;
   display: flex;
 }
-
+/* Textos */
 #textoL{
   font-size: x-large;
   text-decoration: none;
-  color: rgba(11, 12, 11, 0.808);
+  color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 0 0 greenyellow, -2px 0 0 greenyellow, 0 2px 0 greenyellow, 0 -2px 0 greenyellow, 1px 1px greenyellow, -1px -1px 0 greenyellow, 1px -1px 0 greenyellow, -1px 1px 0 greenyellow;
+  border-radius: 50%;
+}
+
+#textoL1{
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 0 0 orangered, -2px 0 0 orangered, 0 2px 0 orangered, 0 -2px 0 orangered, 1px 1px orangered, -1px -1px 0 orangered, 1px -1px 0 orangered, -1px 1px 0 orangered;
+  border-radius: 50%;
+}
+
+#textoL2{
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 2px 0 0 white, -2px 0 0 white, 0 2px 0 white, 0 -2px 0 white, 1px 1px white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+  border-radius: 50%;
+}
+#textoTi{
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 
 #mainU{
@@ -391,6 +429,25 @@ width: 180px;
   width: 286;
   height: 286;
 }
+
+/* Favoritos*/
+
+#fav1{
+  margin-left: 750px;
+}
+
+#form1{
+  height: 50px;
+  width: 180px;
+  margin-right: 900px;
+}
+
+#botonBu{
+margin-left: 230px;
+margin-top: -20%;
+}
+
+
 
 
 

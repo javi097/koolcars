@@ -58,14 +58,18 @@ KoolCars || Home
 <div id="wrap">
     <div class="text-center mb-5">
         <h1>Panel del Administrador</h1><br>
+        
         <h4 class="text-center">Bienvenido al panel de administrador:  <span
-                class="font-weight-bold" id="textoPerfil1">{{Auth::user()->nombreUsuario}} </span> </h4>
+            class="font-weight-bold" id="textoPerfil1">{{Auth::user()->nombreUsuario}} </span> </h4>
     </div>
     <div id="main" class="container clear-top text-center w-50 mx-auto">
+        <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
+            
+                <div class="card  p-3 mb-5  rounded" id="userCard1">
             <div class="text-center mb-5">
                 <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="rounded-circle border-0" id="fotoPerfil"/>
             </div>
-            <span class="font-weight-bold text-dark" id="textoPerfil">{{Auth::user()->nombre}}</span><br><br>
+            <span class="font-weight-bold" id="textoPerfil">{{Auth::user()->nombre}}</span><br><br>
             
             <h3 id="textoPerfil2">Edita, crea o elimina</h3>
             <div class="row">
@@ -73,17 +77,17 @@ KoolCars || Home
                     <div class="profile-tabs">
                         <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link" id="textoL" href="{{ route('admin.users') }}">
+                                <a class="nav-link btn btn-dark" id="textoL" href="{{ route('admin.users') }}">
                                     <i class="far fa-user"></i> Usuarios
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="textoL" href="{{ route('admin.coches') }}">
+                                <a class="nav-link btn btn-dark" id="textoL1" href="{{ route('admin.coches') }}">
                                     <i class="fas fa-car"></i> Coches
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="textoL" href="{{ route('admin.marcas') }}">
+                                <a class="nav-link btn btn-dark" id="textoL2" href="{{ route('admin.marcas') }}">
                                     <i class="fas fa-image"></i> Marcas
                                 </a>
                             </li>
@@ -91,9 +95,10 @@ KoolCars || Home
                     </div>
                 </div> 
             </div>
+        </div>
     </div>
 </div>
-
+</div>
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

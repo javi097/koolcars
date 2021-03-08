@@ -34,9 +34,30 @@ Auth::routes();
 Route::resource('carrocerias', CarroceriaController::class);
 Route::resource('marcas', MarcaController::class);
 Route::resource('coches', CocheController::class);
-Route::resource('users', UserController::class);
 
+//Rutas para usuarios
+Route::resource('users', UserController::class);
+Route::post('/home/coches/{coch}', [UserController::class, 'cochesfav'])->name('users.fav');
+Route::get('/home/users/favoritos', [UserController::class, 'mostrarFav'])->name('coches.fav');
+Route::delete('/home/coches/{coch}', [UserController::class, 'deletefav'])->name('coches.destroyFav');
+
+//Ruta para mostrar los coches por carrocerias
+Route::get('/home/coches/compactos', [CocheController::class, 'mostrarCompactos'])->name('coches.compac');
+Route::get('/home/coches/coupes', [CocheController::class, 'mostrarCoupe'])->name('coches.coupe');
+Route::get('/home/coches/familiares', [CocheController::class, 'mostrarFam'])->name('coches.fam');
+Route::get('/home/coches/suvs', [CocheController::class, 'mostrarSuv'])->name('coches.suv');
+Route::get('/home/coches/monovolumen', [CocheController::class, 'mostrarMono'])->name('coches.mono');
+
+
+
+//Ruta para buscar los coches
 Route::get('/home/coches/buscador', [BuscadorController::class, 'indexBusqueda'])->name('coches.buscador');
+Route::get('/home/coches/buscadorCompacto', [BuscadorController::class, 'compaMarca'])->name('coches.compa');
+Route::get('/home/coches/buscadorCoupe', [BuscadorController::class, 'coupeMarca'])->name('coches.coup');
+Route::get('/home/coches/buscadorFamiliar', [BuscadorController::class, 'famMarca'])->name('coches.fami');
+Route::get('/home/coches/buscadorMonovolumen', [BuscadorController::class, 'monoMarca'])->name('coches.mon');
+Route::get('/home/coches/buscadorSuv', [BuscadorController::class, 'suvMarca'])->name('coches.suvs');
+
 
 
 Route::group(['middleware' => ['admin']], function () {

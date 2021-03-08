@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Coche;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Faker\Provider\Image;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
+
 
 class UserController extends Controller
 {
@@ -111,6 +113,36 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+    }
+
+
+    public function cochesFav(Coche $coch){
+
+        $user= auth()->user();
+        $user->addFavorite($coch);
+        Alert::success('Favorito creado', 'El coche se ha guardado como favorito');
+        return \Redirect::back();
+
+        
+    }
+
+
+    public function mostrarFav(){
+
+        $user= auth()->user();
+        $coches = $user->favorite(Coche::class);
+
+        return view('coches.fav', compact('user', 'coches'));
+
+    }
+
+    public function deleteFav(Coche $coch){
+
+        $user = auth()->user();
+        $user->remoteFavorite($coch);
+        Alert::success('Favorito creado', 'El coche se ha guardado como favorito');
+
+        return redirect()->route('');
     }
 }

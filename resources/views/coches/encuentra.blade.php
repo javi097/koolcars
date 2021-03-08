@@ -93,7 +93,7 @@ KoolCars || Home
             </div>
             <div class="form-row justify-content-center mt-3 mr-4">
                 <div class="text-center">
-                    <input type="submit" class="btn btn-dark ml-5" value="Buscar">
+                    <input type="submit" class="btn btn-dark ml-5" id="boton"value="Buscar">
                 </div>
             </div>
     </form>
@@ -102,37 +102,54 @@ KoolCars || Home
     @if ($request->modelo)
     <p class="text-center">Resultados de la búsqueda <b><em>{{ $request->modelo }}</em></b></p>
     @endif
-    @forelse ($coches as $coche)
+    @forelse ($coches as $coch)
 
-    <div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn "
-        style="max-width: 840px;">
+    <div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn " style="max-width: 840px;">
+        <div class="text-center" id="fav1">
+            @if ($coch->isFavorited())
+            <form action="{{ route('coches.destroyFav', $coch) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-outline-info btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-html="true" title="<em>Coche guardado como favorito</em>" onclick="return confirm('¿Deseas borrar el coche de tus favoritos?')">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+            </form>
+            @else
+            <form action="{{ route('users.fav', $coch) }}" method="POST">
+                @csrf
+                <button class="btn btn-outline-info btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-html="true" title="<em>Guardar coche como favorito</em>" onclick="return confirm('¿Deseas guardar el coche como favorito?')">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+            </form>
+            @endif
+        </div>
         <div class="row no-gutters">
             <div class="col-md-4">
                 <a href="#">
-                    <img src="{{ asset($coche->foto) }}" id="car">
+                    <img src="{{ asset($coch->foto) }}" id="car">
                 </a>
             </div>
             <div class="col-md-8">
                 <div class="card-body ">
                     <div class="row">
                         <h5 class="card-title">
-                            <b>{{$coche->modelo}}</b>
+                            <b>{{$coch->modelo}}</b>
                         </h5>
                     </div>
                     <div class="row mb-3">
                         <h5 class="card-text float-right font-bold">Desde: <span
-                                class="font-weight-bold">{{$coche->precio}}€</span></h5>
+                                class="font-weight-bold">{{$coch->precio}}€</span></h5>
                     </div>
                     <div class="row">
                         <div class="col">
                             <p>
-                                <span class="font-weight-bold">Combustible: </span>{{$coche->combustible}}
+                                <span class="font-weight-bold">Combustible: </span>{{$coch->combustible}}
                             </p>
                         </div>
                         <div class="col">
                             <p>
                                 <span class="font-weight-bold">Caja de cambios: </span>
-                                {{$coche->cambio}}
+                                {{$coch->cambio}}
                             </p>
                         </div>
                     </div>
@@ -140,13 +157,13 @@ KoolCars || Home
                         <div class="col">
                             <p>
                                 <span class="font-weight-bold">Nº de plazas: </span>
-                                {{$coche->plazas}}
+                                {{$coch->plazas}}
                             </p>
                         </div>
                         <div class="col">
                             <p>
                                 <span class="font-weight-bold">Potencia máxima: </span>
-                                {{$coche->potencia}}CV
+                                {{$coch->potencia}}CV
                             </p>
                         </div>
                     </div>

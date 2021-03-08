@@ -51,7 +51,7 @@ class CocheController extends Controller
      */
     public function show(Coche $coche)
     {
-        //
+        
     }
 
     /**
@@ -86,6 +86,48 @@ class CocheController extends Controller
     public function destroy(Coche $coche)
     {
         //
+    }
+
+    public function mostrarCompactos(){
+
+        $coches = Coche::orderBy('modelo','DESC')->where([
+            ['carroceria_id','=',"1"]
+        ])->simplePaginate(6);
+        $marcas=Marca::orderBy('nombre')->get();
+        
+        return view('coches.compactos', compact('coches', 'marcas'));
+    }
+    public function mostrarCoupe(){
+        $coches = Coche::orderBy('modelo','DESC')->where([
+            ['carroceria_id','=',"3"]
+        ])->simplePaginate(6);
+        $marcas=Marca::orderBy('nombre')->get();
+
+        return view('coches.coupe',compact('coches','marcas'));
+    }
+    public function mostrarSuv(){
+        $coches = Coche::orderBy('modelo','DESC')->where([
+            ['carroceria_id','=',"5"]
+        ])->simplePaginate(6);
+        $marcas=Marca::orderBy('nombre')->get();
+
+        return view('coches.suv',compact('coches', 'marcas'));
+    }
+    public function mostrarFam(){
+        $coches = Coche::orderBy('modelo','DESC')->where([
+            ['carroceria_id','=',"2"]
+        ])->simplePaginate(6);
+        $marcas=Marca::orderBy('nombre')->get();
+
+        return view('coches.fam',compact('coches', 'marcas'));
+    }
+    public function mostrarMono(){
+        $coches = Coche::orderBy('modelo','DESC')->where([
+            ['carroceria_id','=',"4"]
+        ])->simplePaginate(6);
+        $marcas=Marca::orderBy('nombre')->get();
+
+        return view('coches.mono',compact('coches', 'marcas'));
     }
 
     //---------------------------------------------------------------------

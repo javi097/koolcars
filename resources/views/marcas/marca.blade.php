@@ -66,7 +66,7 @@ KoolCars || Home
             <div class="col-md-4 mb-5 animate__animated animate__fadeInLeft" fadeInLeft>
                 <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
                     <a href="{{route('marcas.show', $marca)}}">
-                        <img src="{{ asset($marca->logo) }}" alt="">
+                        <img src="{{ asset($marca->logo) }}" alt=""  width="146" height="89">
                     </a>
                     <p>{{$marca->nombre}}</p>
                 </div>

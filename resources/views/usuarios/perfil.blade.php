@@ -69,6 +69,7 @@ KoolCars || Home
                     <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" width="286" height="286"><br> 
                     <h3><b>{{Auth::user()->nombre}}</b></h3>
                     <p>{{Auth::user()->nombreUsuario}}</p><br>
+                    <a class="btn btn-dark " id="boton2" href="{{route('coches.fav')}}" role="button">Favoritos</a><br>
                     <a class="btn btn-dark " id="boton" href="{{route('users.edit',Auth::user())}}" role="button">Editar Perfil</a>
                 </div>
             </div>
