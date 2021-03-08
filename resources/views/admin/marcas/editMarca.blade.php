@@ -56,25 +56,25 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    <div id="main" class="container clear-top text-center w-50 mx-auto">
+    <div id="main" class="container clear-top text-center ">
         <form name="editMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
                     <div class="form-row mt-3">
-                        <div class="col">
+                        <div class="col mt-2">
                             <input type="text" class="form-control" value="{{$marca->nombre}}" placeholder="Nombre" name='nombre' required>
                         </div>
                  
                 <div class="form-group">
                   <div class="col mt-1">
-                    <img src="{{asset($marca->logo)}}" width="50px" height="50px" class="rounded-circle mr-4">
-                      <b>Logo:</b>&nbsp;<input type='file' name='logo' accept="image/*">
+                    <img src="{{asset($marca->logo)}}" width="80px" height="50px" class="rounded-circle mr-1 mb-2">
+                      &nbsp;<input type='file' name='logo' id="subirL" accept="image/*" hidden><label for="subirL" id="editM">Seleccione imagen</label>
                   </div>
                 </div>
                 <div class="form-row mt-1">
-                  <div class="col">
-                      <input type='submit' value='Guardar' class='btn btn-success mr-3'>
-                      <a href={{route('admin.marcas')}} class='btn btn-info'>Volver</a>
+                  <div class="col ml-5">
+                      <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
+                      <a href={{route('admin.marcas')}} id="boton2"class='btn btn-dark'>Volver</a>
                   </div>
               </div>
 

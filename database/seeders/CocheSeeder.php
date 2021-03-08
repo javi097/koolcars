@@ -16,31 +16,6 @@ class CocheSeeder extends Seeder
     {
         //ALFA ROMEO GIULIA
         
-        Coche::create([
-            'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 58kW Super RWD',
-            'nombre'=>'Giulia',
-            'marca_id'=>24,
-            'carroceria_id'=>3,
-            'combustible'=>'Diesel',
-            'cambio'=>'Automatico',
-            'potencia'=>160,
-            'precio'=>'44.750',
-            'plazas'=>5,
-            'foto'=>'img/fotosCoches/alfaRomeo/giulia.jpg'
-        ]);
-
-        Coche::create([
-            'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 58kW Sprint RWD',
-            'nombre'=>'Giulia',
-            'marca_id'=>24,
-            'carroceria_id'=>3,
-            'combustible'=>'Diesel',
-            'cambio'=>'Automatico',
-            'potencia'=>160,
-            'precio'=>'49.500',
-            'plazas'=>5,
-            'foto'=>'img/fotosCoches/alfaRomeo/giulia.jpg'
-        ]);
 
         Coche::create([
             'modelo'=>'ALFA ROMEO Giulia 2.2 Diesel 140kW Sprint RWD',

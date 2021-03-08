@@ -36,8 +36,12 @@ KoolCars || Home
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
                     <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
-                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
+                @if (Auth::user()->email == "svjaviergarcia@gmail.com")
+                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                @else
+                    <a href="{{route('users.index')}}" class="dropdown-item">Mi perfil</a>
+                @endif
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                     {{ __('Cerrar Sesión') }}
@@ -63,7 +67,7 @@ KoolCars || Home
                 <h1 id="titulo">Mi Perfil</h1><br>
                 
                     
-                    <form name="editPerfil" method='POST' action="{{route('admin.update', Auth::user())}}" enctype="multipart/form-data">
+                    <form name="editPerfil" method='POST' action="{{route('users.update', Auth::user())}}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                     <div class="card  p-3 mb-5  rounded" id="userCard">
@@ -81,7 +85,7 @@ KoolCars || Home
                         </div><br>
                         <div class="col">
                             <input type='submit' id="boton" value='Guardar Perfil' class='btn btn-dark mr-3'>
-                            <a href={{route('admin.perfil')}} class='btn btn-dark' id="boton2">Volver</a>
+                            <a href={{route('users.index')}} class='btn btn-dark' id="boton2">Volver</a>
                         </div>
                     </form>
                 </div>

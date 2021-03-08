@@ -56,7 +56,7 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    <div id="main" class="container clear-top text-center">
+    <div id="mainC" class="container clear-top text-center">
         <a href="{{ route('admin.coches.create') }}" class="btn btn-dark fas fa-plus-square" id="crear1"><b>Crear</b></a>
         <table id="tabla2">
             <tr id="tr1">    

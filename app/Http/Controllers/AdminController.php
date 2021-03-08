@@ -111,41 +111,36 @@ class AdminController extends Controller
     }
 
     //Metodo para editar un coche
-    public function cochesUpdate(CocheRequest $request, Coche $coch){
+    public function cochesUpdate(Request $request, Coche $coch){
 
-        $datos= $request->validated();
+         $request->validate([
+             'modelo'=>['required'],
+             'nombre'=>['required'],
+             'combustible'=>['required'],
+             'cambio'=>['required'],
+             'potencia'=>['required'],
+             'precio'=>['required'],
+             'plazas'=>['required'],
+             'foto' => ['image']
+         ]);
 
         //Modelo
-        $coch->modelo=$datos['modelo'];
+        $coch->modelo=$request['modelo'];
         //Nombre
-        $coch->nombre=$datos['nombre'];
+        $coch->nombre=$request['nombre'];
         //Combustible
-        $coch->combustible=$datos['combustible'];
+        $coch->combustible=$request['combustible'];
         //Cambio
-        $coch->cambio=$datos['cambio'];
+        $coch->cambio=$request['cambio'];
         //Potencia
-        $coch->potencia=$datos['potencia'];
+        $coch->potencia=$request['potencia'];
         //Precio
-        $coch->precio=$datos['precio'];
+        $coch->precio=$request['precio'];
         //Plazas
-        $coch->plazas=$datos['plazas'];
-        //Foto
-        
-        if(isset($datos['foto']) && $datos['foto']!=null){
+        $coch->plazas=$request['plazas'];
+    
 
-            $file = $datos['foto'];
-            $nom = 'fotosCoches/cochesNuevos/'.time().'_'.$file->getClientOriginalName();
-            \Storage::disk('public')->put($nom, \File::get($file));
-
-            $imagenAntigua = $coch->foto;
-            if(basename($imagenAntigua)!="default.jpg"){
-                unlink($imagenAntigua);
-            }
-
-            $coch->foto="img/$nom";
-        }
-
-       $coch->update();
+        $coch->update();
        Alert::success('Coche modificado', 'El coche se ha modificado correctamente');
        return redirect()->route('admin.coches');
     }
@@ -192,6 +187,8 @@ class AdminController extends Controller
              $nom = 'logoMarca/marcaNuevo/'.time().'_'.$file->getClientOriginalName();
             \Storage::disk('public')->put($nom, \File::get($file));
              $marca->logo="img/$nom";
+
+            
         
         }
 
@@ -209,28 +206,31 @@ class AdminController extends Controller
     }
 
     //Metodo para editar una marca
-    public function marcaUpdate(MarcaRequest $request, Marca $marca){
+    public function marcaUpdate(Request $request, Marca $marca){
 
-        $datos= $request->validated();
+            $request->validate([
+            'nombre'=>['required'],
+            'logo'=>['image']
+            ]);
 
-        $marca->nombre=$datos['nombre'];
-     
-        //Foto
-        if(isset($datos['logo']) && $datos['logo']!=null){
+            $marca->nombre = $request['nombre'];
 
-            $file = $datos['logo'];
-            $nom = 'logoMarca/marcaNuevo/'.time().'_'.$file->getClientOriginalName();
-            \Storage::disk('public')->put($nom, \File::get($file));
+        if (isset($request['logo'])) {
+            $file = $request['logo'];
+            $nombre = 'logoMarca/'.time().'_'.$file->getClientOriginalName();
+            \Storage::disk('public')->put($nombre, \File::get($file));
 
-            $imagenAntigua = $marca->logo;
-            if(basename($imagenAntigua)!="default.jpg"){
-                unlink($imagenAntigua);
+            $imagenOld = $marca->logo;
+            if (basename($imagenOld)!="default.jpg") {
+                unlink($imagenOld);
             }
 
-            $marca->logo="img/$nom";
+            $marca->logo="img/$nombre";
         }
 
-       $marca->update();
+        $marca->update();
+     
+        
        Alert::success('Marca modificada', 'La marca se ha modificado correctamente');
        return redirect()->route('admin.marcas');
         
@@ -259,29 +259,7 @@ class AdminController extends Controller
             'fotoPerfil'=>['image']
         ]);
 
-        // //compruebo si he subido archiivo
-        // if($request->has('fotoPerfil')){
-        //     $request->validate([
-        //         'fotoPerfil'=>['image']
-        //     ]);
-        //     //Todo bien hemos subido un archivo y es de imagen
-        //     $file=$request->file('fotoPerfil');
-        //     //Creo un nombre
-        //     $nombre='fotoPerfil/'.time().'_'.$file->getClientOriginalName();
-        //     //Guardo el archivo de imagen
-        //     Storage::disk('public')->put($nombre, \File::get($file));
-        //     if(basename($user->fotoPerfil!='default.jpg')){
-        //         unlink($user->fotoPerfil);
-        //     }
-        //     $user->update($request->all());
-        //     $user->update(['fotoPerfil'=>"img/$nombre"]);
-        // }
-        // else{
-        //     $user->update($request->all());
-        // }
-
-       
-        
+    
         $user->nombre = $request['nombre'];
         $user->nombreUsuario = $request['nombreUsuario'];
 

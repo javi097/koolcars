@@ -35,9 +35,13 @@ KoolCars || Home
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
-                <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
-                <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
                 @endrole
+                @if (Auth::user()->email == "svjaviergarcia@gmail.com")
+                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                @else
+                    <a href="{{route('users.index')}}" class="dropdown-item">Mi perfil</a>
+                @endif
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                     {{ __('Cerrar Sesión') }}
@@ -49,7 +53,6 @@ KoolCars || Home
             @endauth
         </div>
         @endif
-
     </div>
 </nav>
 <!-- Final del Navbar-->

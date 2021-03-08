@@ -4,7 +4,7 @@ KoolCars
 @endsection
 @section('contenido')
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-transparent " color-on-scroll="400">
+<nav class="navbar navbar-expand-lg  fixed-top navbar-transparent " style="background: #1a1a1a" color-on-scroll="400">
 {{-- <nav class="navbar navbar-expand-lg bg-dark fixed-top" color-on-scroll="400"> --}}
     <div class="container">
       <div class="navbar-translate">
@@ -16,9 +16,10 @@ KoolCars
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                  @auth
-                 <button class="btn btn-default btn-round" type="button"disabled><a href="{{ url('/home') }}" class="text-sm text-gray underline" style="text-decoration: none">Home</a></button>
+  
+  <button class="btn btn-round" type="button"disabled style=" text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow; background:#2c2c2c"><a href="{{ url('/home') }}" class="text-sm underline" style="text-decoration: none; color:black;">Home</a></button>
                 @else
-                <button class="btn btn-default btn-round" type="button"disabled><i class="now-ui-icons users_single-02"></i> <a href="{{ route('login') }}" class="text-sm text-gray underline" style="text-decoration: none">Mi cuenta</a></button>
+                <button class="btn btn-round" type="button"disabled style=" text-shadow: 2px 0 0 yellow, -2px 0 0 yellow, 0 2px 0 yellow, 0 -2px 0 yellow, 1px 1px yellow, -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow; background:#2c2c2c"><i class="now-ui-icons users_single-02"></i> <a href="{{ route('login') }}" class="text-sm  underline" style="text-decoration: none; color:black;">Mi cuenta</a></button>
             @endauth
             </div>
             @endif

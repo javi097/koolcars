@@ -113,18 +113,11 @@ KoolCars || Home
                             <option>9</option>
                         </select>
                     </div>
-               
-                <div class="form-group">
-                  <div class="col mt-4">
-                    <img src="{{asset($coch->foto)}}" width="50px" height="50px" class="rounded-circle mr-4">
-                      <b>Imagen:</b>&nbsp;<input type='file' name='foto' accept="image/*">
-        
-                  </div>
-                </div>
+                    </div>
                 <div class="form-row mt-3">
                   <div class="col">
-                      <input type='submit' value='Guardar' class='btn btn-success mr-3'>
-                      <a href={{route('admin.coches')}} class='btn btn-info'>Volver</a>
+                      <input type='submit' value='Guardar' id="boton"class='btn btn-dark mr-3'>
+                      <a href={{route('admin.coches')}} id="boton2"class='btn btn-dark'>Volver</a>
                   </div>
               </div>
         </form>

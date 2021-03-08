@@ -6,6 +6,7 @@ use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BuscadorController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Models\Carroceria;
 use App\Models\Coche;
 use App\Models\Marca;
@@ -33,6 +34,7 @@ Auth::routes();
 Route::resource('carrocerias', CarroceriaController::class);
 Route::resource('marcas', MarcaController::class);
 Route::resource('coches', CocheController::class);
+Route::resource('users', UserController::class);
 
 Route::get('/home/coches/buscador', [BuscadorController::class, 'indexBusqueda'])->name('coches.buscador');
 

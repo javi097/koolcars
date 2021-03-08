@@ -61,21 +61,21 @@ KoolCars || Home
         <form name="crearMarca" method='POST' action="{{route('admin.marcas.store')}}" enctype="multipart/form-data">
             @csrf
                     <div class="form-row mt-3">
-                        <div class="col">
+                        <div class="col mt-2 mr-3">
                             <input type="text" class="form-control" placeholder="Nombre" name='nombre' required>
                         </div>
                  
-               
-                <div class="form-group">
-                  <div class="col mt-1">
-                      <b>Logo:</b>&nbsp;<input type='file' name='logo' accept="image/*">
+                        <p id="logoMar"><b>Logo:</b></p>
+                <div class="form-group mr-2">
+                  <div class="col mt-1 mr-3">
+                      &nbsp;<input type='file' name='logo' accept="image/*" id="crearMa" hidden><label for="crearMa" id="editM">Seleccione imagen</label>
                   </div>
                 </div>
                 <div class="form-row mt-1">
                   <div class="col">
-                      <input type='submit' value='Guardar' class='btn btn-success mr-3'>
-                      <input type='reset' value='Limpiar' class='btn btn-warning mr-3'>
-                      <a href={{route('admin.marcas')}} class='btn btn-info'>Volver</a>
+                      <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
+                      <input type='reset' value='Limpiar' id="boton3"class='btn btn-dark mr-3'>
+                      <a href={{route('admin.marcas')}} id="boton2" class='btn btn-dark'>Volver</a>
                   </div>
               </div>
 
