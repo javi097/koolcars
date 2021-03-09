@@ -88,6 +88,8 @@ class CocheController extends Controller
         //
     }
 
+    //Métodos para mostrar los coches por carrocerias
+
     public function mostrarCompactos(){
 
         $coches = Coche::orderBy('modelo','DESC')->where([
@@ -128,6 +130,18 @@ class CocheController extends Controller
         $marcas=Marca::orderBy('nombre')->get();
 
         return view('coches.mono',compact('coches', 'marcas'));
+    }
+
+
+    //Mostrar Mejores Coches
+
+    public function mostrarCoches(){
+
+        $cochec = Coche::orderBy('modelo','DESC')->where([
+            ['modelo','=',"SEAT LEON 1.5 TSI 110kW SS Xcellence"]
+        ])->simplePaginate(1);;
+
+        return view('coches.mejores',compact('cochec'));
     }
 
     //---------------------------------------------------------------------

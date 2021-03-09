@@ -48,6 +48,9 @@ Route::get('/home/coches/familiares', [CocheController::class, 'mostrarFam'])->n
 Route::get('/home/coches/suvs', [CocheController::class, 'mostrarSuv'])->name('coches.suv');
 Route::get('/home/coches/monovolumen', [CocheController::class, 'mostrarMono'])->name('coches.mono');
 
+//Ruta para mostrar los mejores coches
+Route::get('/home/coches/topCoches', [CocheController::class, 'mostrarCoches'])->name('coches.mejores');
+
 
 
 //Ruta para buscar los coches

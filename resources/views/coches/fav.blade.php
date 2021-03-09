@@ -30,7 +30,7 @@ KoolCars || Home
 
             <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->nombreUsuario }}
+                <b id="textoN">{{ Auth::user()->nombreUsuario }}</b>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -60,11 +60,22 @@ KoolCars || Home
 
 {{-- Contenido --}}
 <div id="wrap">
-    
+    <div class="text-center mb-5">
+        <h1 class="text-center" id="textoTi">Mis Favoritos</h1>
+    </div>
     <div id="main" class="container clear-top text-center w-50 mx-auto">
         @foreach ($coches as $coche)
         
                 <div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn " style="max-width: 840px;">
+                    <div class="text-center" id="fav1">
+                    <form action="{{ route('coches.destroyFav', $coche) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-info " data-toggle="tooltip" data-html="true" title="<em>Coche guardado como favorito</em>" onclick="return confirm('¿Deseas borrar el coche de tus favoritos?')">
+                            <i class="far fa-thumbs-up"></i>
+                        </button>
+                    </form>
+                    </div>
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <a href="#">
@@ -115,7 +126,6 @@ KoolCars || Home
     @endforeach
     </div>
 </div>
-{{-- <div class="container text-center">{{ $coches->links() }}</div> --}}
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

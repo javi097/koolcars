@@ -30,7 +30,7 @@ KoolCars || Home
 
             <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->nombreUsuario }}
+                <b id="textoN">{{ Auth::user()->nombreUsuario }}</b>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -90,7 +90,7 @@ KoolCars || Home
                         <form action="{{ route('coches.destroyFav', $coch) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-outline-info btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-html="true" title="<em>Coche guardado como favorito</em>" onclick="return confirm('¿Deseas borrar el coche de tus favoritos?')">
+                            <button class="btn btn-info btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-html="true" title="<em>Coche guardado como favorito</em>" onclick="return confirm('¿Deseas borrar el coche de tus favoritos?')">
                                 <i class="far fa-thumbs-up"></i>
                             </button>
                         </form>
@@ -149,7 +149,7 @@ KoolCars || Home
                             </div>
                         </div>
                     </div>
-                </div>
+            </div>
 @endforeach
 </div>
 </div>

@@ -140,9 +140,9 @@ class UserController extends Controller
     public function deleteFav(Coche $coch){
 
         $user = auth()->user();
-        $user->remoteFavorite($coch);
-        Alert::success('Favorito creado', 'El coche se ha guardado como favorito');
+        $user->removeFavorite($coch);
+        Alert::success('Favorito borrado', 'El coche se ha borrado de favoritos');
 
-        return redirect()->route('');
+        return \Redirect::back();
     }
 }

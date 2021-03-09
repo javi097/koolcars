@@ -29,8 +29,7 @@ KoolCars || Home
             @auth
 
             <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->nombreUsuario }}
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><b id="textoN">{{ Auth::user()->nombreUsuario }}</b>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -66,17 +65,19 @@ KoolCars || Home
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="{{route('marcas.index')}}">
-                            <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches.jpg')}}" alt="First slide"
+                            <img class="d-block w-100" src="{{asset('img/fotosCarousel/lista_coches.jpg')}}" alt="First slide"
                                 style="border-radius: 10px; ">
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide"
-                            alt="Second slide">
+                        <a href="{{route('coches.mejores')}}">
+                            <img class="d-block w-100" src="{{asset('img/fotosCarousel/mejor_coches.jpg')}}"
+                                alt="Second slide" style="border-radius: 10px; ">
+                        </a>    
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide"
-                            alt="Third slide">
+                        <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches_vintage.jpg')}}"
+                            alt="Third slide"  style="border-radius: 10px; ">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -135,7 +136,7 @@ KoolCars || Home
                     <img src="{{asset('img/fotosTipo/monovolumen.png')}}" class="rounded float-left" id="mono">
                     <p id="tipoCoche">MONOVOLÚMENES</p>
                     <div class="text-center">
-                        <a class="btn btn-dark " id="boton" href="{{route('coches.mono')}}" role="button">Ver todos</a>
+                        <a class="btn btn-dark " id="boton"  href="{{route('coches.mono')}}" role="button">Ver todos</a>
                     </div>
                 </td>
             </tr>

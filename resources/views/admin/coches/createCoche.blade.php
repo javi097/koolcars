@@ -30,7 +30,7 @@ KoolCars || Home
 
             <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->nombreUsuario }}
+                <b id="textoN">{{ Auth::user()->nombreUsuario }}</b>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -122,10 +122,10 @@ KoolCars || Home
                         </div>
                    
                     </div>
-                    
+                    <p id="textoCo"><b>Imagen: </b></p>
                 <div class="form-group">
-                  <div class="col mt-3">
-                      <b>Imagen:</b>&nbsp;<input type='file' name='foto' accept="image/*" hidden id="crearC"><label for="crearC" id="editC">Seleccione imagen</label>
+                  <div class="col mt-4">
+                     &nbsp;<input type='file' name='foto' accept="image/*" hidden id="crearC"><label for="crearC" id="editC">Seleccione imagen</label>
                   </div>
                 </div>
                 <div class="form-row" id="botonesCo">

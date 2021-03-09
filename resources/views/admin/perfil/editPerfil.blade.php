@@ -30,7 +30,7 @@ KoolCars || Home
 
             <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->nombreUsuario }}
+                <b id="textoN">{{ Auth::user()->nombreUsuario }}</b>
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
