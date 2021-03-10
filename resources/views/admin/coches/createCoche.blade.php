@@ -55,7 +55,7 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
 
         <form name="crearCoche" method='POST' action="{{route('admin.coches.store')}}" enctype="multipart/form-data">
@@ -129,6 +129,93 @@ KoolCars || Home
                   </div>
                 </div>
                 <div class="form-row" id="botonesCo">
+                  <div class="col">
+                      <input type='submit' value='Guardar' id="boton"class='btn btn-dark mr-3'>
+                      <input type='reset' value='Limpiar' id="boton3"class='btn btn-dark mr-3'>
+                      <a href={{route('admin.coches')}} id="boton2"class='btn btn-dark'>Volver</a>
+                  </div>
+              </div>
+        </form>
+    </div>
+</div>
+
+
+
+{{-- Contenido para movil --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <div class="container clear-top text-center">
+
+        <form name="crearCoche" method='POST' action="{{route('admin.coches.store')}}" enctype="multipart/form-data">
+            @csrf
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Modelo" name='modelo' required>
+                        </div>
+                        
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre" name='nombre' required>
+                          </div>
+                    </div>
+
+                    <div class="form-row mt-3">
+                        <div class="col ml-3"><b>Marca:</b>&nbsp;
+                            <select name="marca_id" class="form-control">
+                                @foreach ($marcas as $marca)
+                                    <option value="{{$marca->id}}">{{$marca->nombre}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+    
+                        <div class="col ml-3"><b>Carroceria:</b>&nbsp;
+                            <select name="carroceria_id" class="form-control">
+                                @foreach ($carrocerias as $carroceria)
+                                    <option value="{{$carroceria->id}}">{{$carroceria->nombre}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+    
+                        <div class="col ml-3"><b>Combustible:</b>&nbsp;
+                            <select name="combustible" class="form-control">
+                                <option selected>Gasolina</option>
+                                <option>Diesel</option>
+                            </select>
+                        </div>
+    
+                        <div class="col ml-3"><b>Cambio:</b>&nbsp;
+                            <select name="cambio" class="form-control">
+                                <option selected>Manual</option>
+                                <option>Automatico</option>
+                            </select>
+                        </div>
+    
+                        <div class="col ml-3"><b>Potencia:</b>&nbsp;
+                            <input type="text" class="form-control" placeholder="Potencia" name='potencia' required>
+                        </div>
+    
+                        <div class="col ml-3"><b>Precio:</b>&nbsp;
+                            <input type="text" class="form-control" placeholder="Precio" name='precio' required>
+                        </div>
+    
+                        <div class="col ml-3"><b>Plazas:</b>&nbsp;
+                            <select name="plazas" class="form-control">
+                                <option selected>5</option>
+                                <option>4</option>
+                                <option>2</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+                        </div>
+                   
+                    </div>
+                    <p id="textoCo"><b>Imagen: </b></p>
+                <div class="form-group">
+                  <div class="col mt-4">
+                     &nbsp;<input type='file' name='foto' accept="image/*" hidden id="crearC"><label for="crearC" id="editC">Seleccione imagen</label>
+                  </div>
+                </div>
+                <div class="form-row">
                   <div class="col">
                       <input type='submit' value='Guardar' id="boton"class='btn btn-dark mr-3'>
                       <input type='reset' value='Limpiar' id="boton3"class='btn btn-dark mr-3'>

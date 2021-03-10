@@ -59,7 +59,7 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
         <div class="row">
             @foreach ($marcas as $marca)
@@ -77,6 +77,27 @@ KoolCars || Home
     </div>
     {{-- Footer --}}
 </div>
+
+{{-- Para móviles --}}
+<div id="wrap" class=" d-block d-sm-block d-md-none">
+    <div class="container clear-top text-center w-50 mx-auto my-auto">
+        <div class="row">
+            @foreach ($marcas as $marca)
+            <div class="col-md-4 mb-5 animate__animated animate__fadeInLeft" fadeInLeft>
+                <div class="card shadow p-3 mb-5 bg-white rounded" id="marcaCard">
+                    <a href="{{route('marcas.show', $marca)}}">
+                        <img src="{{ asset($marca->logo) }}" alt=""  width="146" height="89">
+                    </a>
+                    <p>{{$marca->nombre}}</p>
+                </div>
+            </div>
+            @endforeach
+           
+        </div>
+    </div>
+    {{-- Footer --}}
+</div>
+
 <footer class="footer">
     <div class="container">
         <div class="copyright" id="copyright">

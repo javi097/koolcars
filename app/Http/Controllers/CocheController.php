@@ -139,9 +139,29 @@ class CocheController extends Controller
 
         $cochec = Coche::orderBy('modelo','DESC')->where([
             ['modelo','=',"SEAT LEON 1.5 TSI 110kW SS Xcellence"]
-        ])->simplePaginate(1);;
+        ])->simplePaginate(1);
 
-        return view('coches.mejores',compact('cochec'));
+        $cocheco = Coche::orderBy('modelo','DESC')->where([
+            ['modelo','=',"FORD MUSTANG 5.0 TiVCT V8 336kW Mustang GT Fastsb"]
+        ])->simplePaginate(1);
+
+        $cochefa = Coche::orderBy('modelo','DESC')->where([
+            ['modelo','=',"MERCEDES-BENZ CLASE C C 220 d Estate"]
+        ])->simplePaginate(1);
+
+        $cochemo = Coche::orderBy('modelo','DESC')->where([
+            ['modelo','=',"FORD SMAX 2.5 Duratec Atkinson FHEV 140kW Vignale"]
+        ])->simplePaginate(1);
+
+        $cochesuv = Coche::orderBy('modelo','DESC')->where([
+            ['modelo','=',"PEUGEOT 2008 GT Puretech SS EAT8"]
+        ])->simplePaginate(1);
+
+        return view('coches.mejores',compact('cochec','cocheco', 'cochefa', 'cochemo','cochesuv'));
+    }
+
+    public function mostrarVintage(){
+        return view('coches.vintage');
     }
 
     //---------------------------------------------------------------------

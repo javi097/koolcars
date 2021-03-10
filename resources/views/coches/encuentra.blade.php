@@ -58,10 +58,10 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
 
     <div id="main" class="container clear-top text-center w-50 mx-auto">
-        <h2 id="titulo">ENCUENTRA TU COCHE IDEAL</h2><br>
+        <h2 id="titulo1">ENCUENTRA TU COCHE IDEAL</h2><br>
         <form class="form ml-auto" method="GET" action="{{ route('coches.buscador') }}" id="form">
             <div class="input-group">
                 @if ($request->modelo)
@@ -178,6 +178,130 @@ KoolCars || Home
     {!! $coches->appends(Request::only(['modelo','marca_id','carroceria_id']))->render() !!}
 </div>
 </div>
+
+{{-- Contenido para móviles --}}
+{{-- Contenido --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+
+    <div class="container clear-top text-center">
+        <h2 id="titulo1">ENCUENTRA TU COCHE IDEAL</h2><br>
+        <form class="form ml-auto" method="GET" action="{{ route('coches.buscador') }}" id="form">
+            <div class="input-group">
+                @if ($request->modelo)
+                    <input type="text" class="form-control" placeholder="Introduce el modelo del coche..." name="modelo" value = "{{$request->modelo}}"required>
+                @else 
+                    <input type="text" class="form-control" placeholder="Introduce el modelo del coche..." name="modelo" required>
+                @endif
+            </div>
+            <div class="form-row mt-3">
+                <div class="col">
+                    <select name="marca_id" class="form-control">
+                        <option>Seleccione la marca</option>
+                        <option disabled>----------------</option>
+                        @foreach ($marcas as $marca)
+                            <option value="{{$marca->id}}">{{$marca->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                
+                <div class="col">
+                    <select name="carroceria_id" class="form-control">
+                        <option>Seleccione la carroceria</option>
+                        <option disabled>----------------</option>
+                        @foreach ($carrocerias as $carroceria)
+                        <option value="{{$carroceria->id}}">{{$carroceria->nombre}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-row justify-content-center mt-3 mr-4">
+                <div class="text-center">
+                    <input type="submit" class="btn btn-dark ml-5" id="boton"value="Buscar">
+                </div>
+            </div>
+    </form>
+    <br><br>
+
+    @if ($request->modelo)
+    <p class="text-center">Resultados de la búsqueda <b><em>{{ $request->modelo }}</em></b></p>
+    @endif
+    @forelse ($coches as $coch)
+
+    <div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn " style="max-width: 840px;">
+        <div class="text-center">
+            @if ($coch->isFavorited())
+            <form action="{{ route('coches.destroyFav', $coch) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-info " data-toggle="tooltip" data-html="true" title="<em>Coche guardado como favorito</em>" onclick="return confirm('¿Deseas borrar el coche de tus favoritos?')">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+            </form>
+            @else
+            <form action="{{ route('users.fav', $coch) }}" method="POST">
+                @csrf
+                <button class="btn btn-outline-info btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-html="true" title="<em>Guardar coche como favorito</em>" onclick="return confirm('¿Deseas guardar el coche como favorito?')">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+            </form>
+            @endif
+        </div>
+        <div class="row no-gutters">
+            <div class="col-md-4 text-center">
+                <a href="#">
+                    <img src="{{ asset($coch->foto) }}" id="car">
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body ">
+                    <div class="row">
+                        <h5 class="card-title">
+                            <b>{{$coch->modelo}}</b>
+                        </h5>
+                    </div>
+                    <div class="row mb-3">
+                        <h5 class="card-text float-right font-bold">Desde: <span
+                                class="font-weight-bold">{{$coch->precio}}€</span></h5>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                <span class="font-weight-bold">Combustible: </span>{{$coch->combustible}}
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                <span class="font-weight-bold">Caja de cambios: </span>
+                                {{$coch->cambio}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                <span class="font-weight-bold">Nº de plazas: </span>
+                                {{$coch->plazas}}
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                <span class="font-weight-bold">Potencia máxima: </span>
+                                {{$coch->potencia}}CV
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @empty
+    <h3 class="text-center mb-5">No hay coches con el modelo <b><em>{{ $request->modelo }}</em></b></h3>
+    <br><br>
+    @endforelse
+    {!! $coches->appends(Request::only(['modelo','marca_id','carroceria_id']))->render() !!}
+</div>
+</div>
+
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

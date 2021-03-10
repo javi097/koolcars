@@ -35,8 +35,8 @@ KoolCars || Home
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
-                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
-                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -55,11 +55,12 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class=" d-none d-sm-none d-md-block">
     <div id="mainC" class="container clear-top text-center">
-        <a href="{{ route('admin.coches.create') }}" class="btn btn-dark fas fa-plus-square" id="crear1"><b>Crear</b></a>
+        <a href="{{ route('admin.coches.create') }}" class="btn btn-dark fas fa-plus-square"
+            id="crear1"><b>Crear</b></a>
         <table id="tabla2">
-            <tr id="tr1">    
+            <tr id="tr1">
                 <th scope="col" class="align-middle" id="td2">Imagen</th>
                 <th scope="col" class="align-middle" id="td2">Nombre</th>
                 <th scope="col" class="align-middle" id="td2">Potencia</th>
@@ -69,28 +70,71 @@ KoolCars || Home
             </tr>
             <tbody>
                 @foreach ($coches as $coch)
-                    <tr id="tr1">
-                        <td id="td1">
-                            <img src="{{asset($coch->foto)}}" class="rounded-circle" id="fotoMarca">
-                        </td>
-                        <td id="td1">{{$coch->nombre}}</td>
-                        <td id="td1">{{$coch->potencia}} CV</td>
-                        <td id="td1">{{$coch->precio}} €</td>
-                        <td><a href="{{ route('admin.coches.edit',$coch) }}" class="btn btn-dark far fa-edit"></a></td>
-                        <td>
-                            <form name="borrarCoche" method='post' action="{{route('admin.coches.destroy', $coch)}}">
-                                @csrf
-                                @method('Delete')
-                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este coche?')"></button>
-                            </form>
-                        </td>
-                    </tr>
+                <tr id="tr1">
+                    <td id="td1">
+                        <img src="{{asset($coch->foto)}}" class="rounded-circle" id="fotoMarca">
+                    </td>
+                    <td id="td1">{{$coch->nombre}}</td>
+                    <td id="td1">{{$coch->potencia}} CV</td>
+                    <td id="td1">{{$coch->precio}} €</td>
+                    <td><a href="{{ route('admin.coches.edit',$coch) }}" class="btn btn-dark far fa-edit"></a></td>
+                    <td>
+                        <form name="borrarCoche" method='post' action="{{route('admin.coches.destroy', $coch)}}">
+                            @csrf
+                            @method('Delete')
+                            <button type="submit" class="btn btn-dark far fa-trash-alt"
+                                onclick="return confirm('¿Desea borrar este coche?')"></button>
+                        </form>
+                    </td>
+                </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
 </div>
 <br>
+
+
+{{-- Contenido para movil --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <div class="container clear-top text-center">
+        <a href="{{ route('admin.coches.create') }}" class="btn btn-dark fas fa-plus-square"
+            id="crear1"><b>Crear</b></a>
+        <table id="tabla2" class="responsive">
+            <tr id="tr1">
+                <th scope="col" class="align-middle" id="td2">Imagen</th>
+                <th scope="col" class="align-middle" id="td2">Nombre</th>
+                <th scope="col" class="align-middle" id="td2">Potencia</th>
+                <th scope="col" class="align-middle" id="td2">Precio</th>
+                <th scope="col" class="align-middle" id="td2">Editar</th>
+                <th scope="col" class="align-middle" id="td2">Borrar</th>
+            </tr>
+            <tbody>
+                @foreach ($coches as $coch)
+                <tr id="tr1">
+                    <td id="td1">
+                        <img src="{{asset($coch->foto)}}" class="rounded-circle" id="fotoMarca">
+                    </td>
+                    <td id="td1">{{$coch->nombre}}</td>
+                    <td id="td1">{{$coch->potencia}} CV</td>
+                    <td id="td1">{{$coch->precio}} €</td>
+                    <td><a href="{{ route('admin.coches.edit',$coch) }}" class="btn btn-dark far fa-edit mb-1"></a></td>
+                    <td>
+                        <form name="borrarCoche" method='post' action="{{route('admin.coches.destroy', $coch)}}">
+                            @csrf
+                            @method('Delete')
+                            <button type="submit" class="btn btn-dark far fa-trash-alt mb-1"
+                                onclick="return confirm('¿Desea borrar este coche?')"></button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+
 <div class="container text-center">{{ $coches->links() }}</div>
 {{-- Final del Contenido --}}
 {{-- Footer --}}

@@ -283,4 +283,21 @@ class AdminController extends Controller
         return redirect()->route('admin.perfil',compact('user'));
     }
 
+    public function cambioContra(Request $request, User $user){
+
+        $request->validate([
+            'password' => ['required', 'string', 'min:8', 'confirmed']
+        ]);
+
+        $user->password= \Hash::make($request['password']);
+        $user->update();
+        Alert::success('Contraseña cambiada', 'La contraseña ha sido cambiada correctamente');
+        return redirect()->route('admin.edit',$user);
+    }
+
+    public function mostrarContra(User $user){
+
+        return view('admin.perfil.mostrarCon', compact('user'));
+    }
+
 }

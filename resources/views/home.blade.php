@@ -6,13 +6,14 @@ KoolCars || Home
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md fixed-top" id="navbar">
+    
     <div class="navbar-translate" id="logoHome">
         <a href="{{route('welcome')}}">
             <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}">
         </a>
     </div>
     <button class="navbar-toggler" id="textoNavbar" type="button" data-toggle="collapse"
-        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+        data-target="#textoNavbar" aria-controls="navbarsExampleDefault" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -58,7 +59,7 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="col-xl-12 col-md-12 col-lg-4">
     <div  class="container clear-top">
         <div class="container text-center">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -76,8 +77,10 @@ KoolCars || Home
                         </a>    
                     </div>
                     <div class="carousel-item">
+                        <a href="{{route('coches.vintage')}}">
                         <img class="d-block w-100" src="{{asset('img/fotosCarousel/coches_vintage.jpg')}}"
                             alt="Third slide"  style="border-radius: 10px; ">
+                        </a>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

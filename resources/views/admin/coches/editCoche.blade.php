@@ -55,8 +55,80 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
+
+        <form method='POST' action="{{ route('admin.coches.update', $coch) }}" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <input type="text" class="form-control" value="{{$coch->modelo}}" placeholder="Modelo" name='modelo' required>
+                        </div>
+                        
+                        <div class="col">
+                            <input type="text" class="form-control"  value="{{$coch->nombre}}" placeholder="Nombre" name='nombre' required>
+                          </div>
+                    </div>
+
+                    <div class="form-row mt-3">
+
+                    <div class="col ml-3"><b>Combustible:</b>&nbsp;
+                        <select name="combustible" class="form-control">
+                            <option>{{$coch->combustible}}</option>
+                            <option disabled>------------</option>
+                            <option>Gasolina</option>
+                            <option>Diesel</option>
+                        </select>
+                    </div>
+
+                    <div class="col ml-3"><b>Cambio:</b>&nbsp;
+                        <select name="cambio" class="form-control">
+                            <option>{{$coch->cambio}}</option>
+                            <option disabled>------------</option>
+                            <option>Manual</option>
+                            <option>Automatico</option>
+                        </select>
+                    </div>
+
+                    <div class="col ml-3"><b>Potencia:</b>&nbsp;
+                        <input value="{{$coch->potencia}}" type="text" class="form-control" placeholder="Potencia" name='potencia' required>
+                    </div>
+
+                    <div class="col ml-3"><b>Precio:</b>&nbsp;
+                        <input type="text" value="{{$coch->precio}}" class="form-control" placeholder="Precio" name='precio' required>
+                    </div>
+
+                    <div class="col ml-3"><b>Plazas:</b>&nbsp;
+                        <select name="plazas" class="form-control">
+                            <option>{{$coch->plazas}}</option>
+                            <option disabled>------------</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>2</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </div>
+                    </div>
+                <div class="form-row mt-3">
+                  <div class="col">
+                      <input type='submit' value='Guardar' id="boton"class='btn btn-dark mr-3'>
+                      <a href={{route('admin.coches')}} id="boton2"class='btn btn-dark'>Volver</a>
+                  </div>
+              </div>
+        </form>
+    </div>
+</div>
+
+
+
+{{-- Contenido --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <div class="container clear-top text-center">
 
         <form method='POST' action="{{ route('admin.coches.update', $coch) }}" enctype="multipart/form-data">
             @csrf

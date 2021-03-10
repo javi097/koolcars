@@ -40,6 +40,9 @@ Route::resource('users', UserController::class);
 Route::post('/home/coches/{coch}', [UserController::class, 'cochesfav'])->name('users.fav');
 Route::get('/home/users/favoritos', [UserController::class, 'mostrarFav'])->name('coches.fav');
 Route::delete('/home/coches/{coch}', [UserController::class, 'deletefav'])->name('coches.destroyFav');
+Route::put('/home/users/contraseña/{user}', [UserController::class, 'cambioContra'])->name('users.contra');
+Route::get('/home/users/mostrar/{user}', [UserController::class, 'mostrarContra'])->name('users.mostrar');
+
 
 //Ruta para mostrar los coches por carrocerias
 Route::get('/home/coches/compactos', [CocheController::class, 'mostrarCompactos'])->name('coches.compac');
@@ -51,6 +54,8 @@ Route::get('/home/coches/monovolumen', [CocheController::class, 'mostrarMono'])-
 //Ruta para mostrar los mejores coches
 Route::get('/home/coches/topCoches', [CocheController::class, 'mostrarCoches'])->name('coches.mejores');
 
+//Ruta para mostrar los coches vintage
+Route::get('home/coches/cochesVintage', [CocheController::class, 'mostrarVintage'])->name('coches.vintage');
 
 
 //Ruta para buscar los coches
@@ -70,6 +75,8 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/home/admin/perfil', [AdminController::class, 'mostrarPerfil'])->name('admin.perfil');
     Route::get('/home/admin/perfil/{user}', [AdminController::class, 'editPerfil'])->name('admin.edit');
     Route::put('/home/admin/perfil/{user}', [AdminController::class, 'updatePerfil'])->name('admin.update');
+    Route::put('/home/admin/contraseña/{user}', [AdminController::class, 'cambioContra'])->name('admin.contra');
+Route::get('/home/admin/mostrar/{user}', [AdminController::class, 'mostrarContra'])->name('admin.mostrar');
 
     //Rutas para manejar los usuarios
     Route::get('/home/admin/users', [AdminController::class, 'usuList'])->name('admin.users');

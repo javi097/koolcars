@@ -6,4 +6,5 @@
     // or
     window.responsiveTables.init("{some-jquery-selector}");
   });
+
 </script>

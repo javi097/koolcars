@@ -35,8 +35,8 @@ KoolCars || Home
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
-                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
-                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -55,32 +55,65 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <div id="main" class="container clear-top text-center w-50 mx-auto">
 
         <form name="crearMarca" method='POST' action="{{route('admin.marcas.store')}}" enctype="multipart/form-data">
             @csrf
-                    <div class="form-row mt-3">
-                        <div class="col mt-2 mr-3">
-                            <input type="text" class="form-control" placeholder="Nombre" name='nombre' required>
-                        </div>
-                 
-                        <p id="logoMar"><b>Logo:</b></p>
+            <div class="form-row mt-3">
+                <div class="col mt-2 mr-3">
+                    <input type="text" class="form-control" placeholder="Nombre" name='nombre' required>
+                </div>
+
+                <p id="logoMar"><b>Logo:</b></p>
                 <div class="form-group mr-2">
-                  <div class="col mt-1 mr-3">
-                      &nbsp;<input type='file' name='logo' accept="image/*" id="crearMa" hidden><label for="crearMa" id="editM">Seleccione imagen</label>
-                  </div>
+                    <div class="col mt-1 mr-3">
+                        &nbsp;<input type='file' name='logo' accept="image/*" id="crearMa" hidden><label for="crearMa"
+                            id="editM">Seleccione imagen</label>
+                    </div>
                 </div>
                 <div class="form-row mt-1">
-                  <div class="col">
-                      <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
-                      <input type='reset' value='Limpiar' id="boton3"class='btn btn-dark mr-3'>
-                      <a href={{route('admin.marcas')}} id="boton2" class='btn btn-dark'>Volver</a>
-                  </div>
-              </div>
-
+                    <div class="col">
+                        <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
+                        <input type='reset' value='Limpiar' id="boton3" class='btn btn-dark mr-3'>
+                        <a href={{route('admin.marcas')}} id="boton2" class='btn btn-dark'>Volver</a>
+                    </div>
+                </div>
+            </div>
         </form>
-            
+
+    </div>
+</div>
+
+
+{{-- Contenido para movil --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <div class="container clear-top text-center">
+
+        <form name="crearMarca" method='POST' action="{{route('admin.marcas.store')}}" enctype="multipart/form-data">
+            @csrf
+            <div class="form-row mt-3">
+                <div class="col mt-2 mr-3">
+                    <input type="text" class="form-control" placeholder="Nombre" name='nombre' required>
+                </div>
+
+                <p id="logoMar"><b>Logo:</b></p>
+                <div class="form-group mr-2">
+                    <div class="col mt-1 mr-3">
+                        &nbsp;<input type='file' name='logo' accept="image/*" id="crearMa" hidden><label for="crearMa"
+                            id="editM">Seleccione imagen</label>
+                    </div>
+                </div>
+                <div class="form-row mt-1">
+                    <div class="col">
+                        <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
+                        <input type='reset' value='Limpiar' id="boton3" class='btn btn-dark mr-3'>
+                        <a href={{route('admin.marcas')}} id="boton2" class='btn btn-dark'>Volver</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+
     </div>
 </div>
 

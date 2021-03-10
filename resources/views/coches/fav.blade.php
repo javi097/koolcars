@@ -59,9 +59,9 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <div class="text-center mb-5">
-        <h1 class="text-center" id="textoTi">Mis Favoritos</h1>
+        <h1 class="text-center" id="titulo1">Mis Favoritos</h1>
     </div>
     <div id="main" class="container clear-top text-center w-50 mx-auto">
         @foreach ($coches as $coche)
@@ -126,6 +126,77 @@ KoolCars || Home
     @endforeach
     </div>
 </div>
+
+
+{{-- Contenido para moviles --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <div class="text-center mb-5">
+        <h1 class="text-center" id="titulo1">Mis Favoritos</h1>
+    </div>
+    <div class="container clear-top text-center">
+        @foreach ($coches as $coche)
+        
+                <div class="card mb-3 text-left shadow p-3 mb-5 bg-white rounded animate__animated animate__zoomIn " style="max-width: 840px;">
+                    <div class="text-center">
+                    <form action="{{ route('coches.destroyFav', $coche) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-info " data-toggle="tooltip" data-html="true" title="<em>Coche guardado como favorito</em>" onclick="return confirm('¿Deseas borrar el coche de tus favoritos?')">
+                            <i class="far fa-thumbs-up"></i>
+                        </button>
+                    </form>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-4 text-center">
+                            <a href="#">
+                                <img src="{{ asset($coche->foto) }}" id="car">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <h5 class="card-title">
+                                        <b>{{$coche->modelo}}</b>
+                                    </h5>
+                                </div>
+                                <div class="row mb-3">
+                                    <h5 class="card-text float-right font-bold">Desde: <span class="font-weight-bold">{{$coche->precio}}€</span></h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            <span class="font-weight-bold">Combustible: </span>{{$coche->combustible}}
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                    <p>
+                                        <span class="font-weight-bold">Caja de cambios: </span>
+                                        {{$coche->cambio}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            <span class="font-weight-bold">Nº de plazas: </span>
+                                            {{$coche->plazas}}
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                    <p>
+                                        <span class="font-weight-bold">Potencia máxima: </span>
+                                        {{$coche->potencia}}CV
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    @endforeach
+    </div>
+</div>
+
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

@@ -35,8 +35,8 @@ KoolCars || Home
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
-                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
-                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -55,32 +55,68 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <div id="main" class="container clear-top text-center ">
-        <form name="editMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}" enctype="multipart/form-data">
+        <form name="editMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}"
+            enctype="multipart/form-data">
             @csrf
             @method('PUT')
-                    <div class="form-row mt-3">
-                        <div class="col mt-2">
-                            <input type="text" class="form-control" value="{{$marca->nombre}}" placeholder="Nombre" name='nombre' required>
-                        </div>
-                 
+            <div class="form-row mt-3">
+                <div class="col mt-2">
+                    <input type="text" class="form-control" value="{{$marca->nombre}}" placeholder="Nombre"
+                        name='nombre' required>
+                </div>
+
                 <div class="form-group">
-                  <div class="col mt-1">
-                    <img src="{{asset($marca->logo)}}" width="80px" height="50px" class="rounded-circle mr-1 mb-2">
-                      &nbsp;<input type='file' name='logo' id="subirL" accept="image/*" hidden><label for="subirL" id="editM">Seleccione imagen</label>
-                  </div>
+                    <div class="col mt-1">
+                        <img src="{{asset($marca->logo)}}" width="80px" height="50px" class="rounded-circle mr-1 mb-2">
+                        &nbsp;<input type='file' name='logo' id="subirL" accept="image/*" hidden><label for="subirL"
+                            id="editM">Seleccione imagen</label>
+                    </div>
                 </div>
                 <div class="form-row mt-1">
-                  <div class="col ml-5">
-                      <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
-                      <a href={{route('admin.marcas')}} id="boton2"class='btn btn-dark'>Volver</a>
-                  </div>
-              </div>
-
+                    <div class="col ml-5">
+                        <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
+                        <a href={{route('admin.marcas')}} id="boton2" class='btn btn-dark'>Volver</a>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </div>
+
+
+{{-- Contenido para movil--}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <div class="container clear-top text-center ">
+        <form name="editMarca" method='POST' action="{{route('admin.marcas.update', $marca)}}"
+            enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <div class="form-row mt-3">
+                <div class="col mt-2">
+                    <input type="text" class="form-control" value="{{$marca->nombre}}" placeholder="Nombre"
+                        name='nombre' required>
+                </div>
+
+                <div class="form-group">
+                    <div class="col mt-1">
+                        <img src="{{asset($marca->logo)}}" width="80px" height="50px" class="rounded-circle mr-1 mb-2">
+                        &nbsp;<input type='file' name='logo' id="subirL" accept="image/*" hidden><label for="subirL"
+                            id="editM">Seleccione imagen</label>
+                    </div>
+                </div>
+                <div class="form-row mt-1">
+                    <div class="col ml-5">
+                        <input type='submit' value='Guardar' id="boton" class='btn btn-dark mr-3'>
+                        <a href={{route('admin.marcas')}} id="boton2" class='btn btn-dark'>Volver</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 {{-- Final del Contenido --}}
 {{-- Footer --}}

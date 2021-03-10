@@ -35,8 +35,8 @@ KoolCars || Home
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
-                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
-                    <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
+                <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
                 @endrole
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
@@ -55,12 +55,12 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     <a href="{{ route('admin.marcas.create') }}" class="btn btn-dark fas fa-plus-square" id="crear2"><b> Crear</b></a>
 
-    <div id="mainM" class="container clear-top text-center"> 
-        <table id="tabla2">
-            <tr id="tr1">    
+    <div id="mainM" class="container clear-top text-center">
+        <table id="tabla2" class="responsive">
+            <tr id="tr1">
                 <th scope="col" class="align-middle" id="td2">Imagen</th>
                 <th scope="col" class="align-middle" id="td2">Nombre</th>
                 <th scope="col" class="align-middle" id="td2">Editar</th>
@@ -68,26 +68,65 @@ KoolCars || Home
             </tr>
             <tbody>
                 @foreach ($marcas as $marca)
-                    <tr id="tr1">
-                        <td class="align-middle" id="td1">
-                            <img src="{{asset($marca->logo)}}" class="rounded-circle" id="fotoMarca">
-                        </td>
-                        <td class="align-middle" id="td1">{{$marca->nombre}}</td>
-                        <td><a href="{{ route('admin.marcas.edit', $marca) }}" class="btn btn-dark far fa-edit"></a></td>
-                        <td class="align-middle" id="td1">
-                            <form name="borrarMarca" method='post' action="{{route('admin.marcas.destroy', $marca)}}">
-                                @csrf
-                                @method('Delete')
-                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar esta marca?')"></button>
-                            </form>
-                        </td>
-                    </tr>
+                <tr id="tr1">
+                    <td class="align-middle" id="td1">
+                        <img src="{{asset($marca->logo)}}" class="rounded-circle" id="fotoMarca">
+                    </td>
+                    <td class="align-middle" id="td1">{{$marca->nombre}}</td>
+                    <td><a href="{{ route('admin.marcas.edit', $marca) }}" class="btn btn-dark far fa-edit"></a></td>
+                    <td class="align-middle" id="td1">
+                        <form name="borrarMarca" method='post' action="{{route('admin.marcas.destroy', $marca)}}">
+                            @csrf
+                            @method('Delete')
+                            <button type="submit" class="btn btn-dark far fa-trash-alt"
+                                onclick="return confirm('¿Desea borrar esta marca?')"></button>
+                        </form>
+                    </td>
+                </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
 </div>
 <br>
+
+{{-- Contenido para movil --}}
+
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    <a href="{{ route('admin.marcas.create') }}" class="btn btn-dark fas fa-plus-square" id="crear2"><b> Crear</b></a>
+
+    <div class="container clear-top text-center">
+        <table id="tabla2" class="responsive">
+            <tr id="tr1">
+                <th scope="col" class="align-middle" id="td2">Imagen</th>
+                <th scope="col" class="align-middle" id="td2">Nombre</th>
+                <th scope="col" class="align-middle" id="td2">Editar</th>
+                <th scope="col" class="align-middle" id="td2">Borrar</th>
+            </tr>
+            <tbody>
+                @foreach ($marcas as $marca)
+                <tr id="tr1">
+                    <td class="align-middle" id="td1">
+                        <img src="{{asset($marca->logo)}}" class="rounded-circle" id="fotoMarca">
+                    </td>
+                    <td class="align-middle" id="td1">{{$marca->nombre}}</td>
+                    <td><a href="{{ route('admin.marcas.edit', $marca) }}" class="btn btn-dark far fa-edit mb-1"></a></td>
+                    <td class="align-middle" id="td1">
+                        <form name="borrarMarca" method='post' action="{{route('admin.marcas.destroy', $marca)}}">
+                            @csrf
+                            @method('Delete')
+                            <button type="submit" class="btn btn-dark far fa-trash-alt mb-1"
+                                onclick="return confirm('¿Desea borrar esta marca?')"></button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+
 <div class="container text-center">{{ $marcas->links() }}</div>
 {{-- Final del Contenido --}}
 {{-- Footer --}}

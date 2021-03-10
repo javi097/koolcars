@@ -35,7 +35,7 @@ KoolCars || Home
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 @role('admin')
-                <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
+                    <a href="{{route('admin.panel')}}" class="dropdown-item">Admin</a>
                 @endrole
                 @if (Auth::user()->email == "svjaviergarcia@gmail.com")
                     <a href="{{route('admin.perfil')}}" class="dropdown-item">Mi perfil</a>
@@ -59,50 +59,47 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap" class="d-none d-sm-none d-md-block">
-    
-    <div id="mainU" class="container clear-top text-center">
-        <div class="row">
-            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
-                <h1 id="titulo1">Mi Perfil</h1><br>
-                <div class="card  p-3 mb-5  rounded" id="userCard">
-                    <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" width="286" height="286"><br> 
-                    <h3><b>{{Auth::user()->nombre}}</b></h3>
-                    <p>{{Auth::user()->nombreUsuario}}</p><br>
-                    <a class="btn btn-dark " id="boton2" href="{{route('coches.fav')}}" role="button">Favoritos</a><br>
-                    <a class="btn btn-dark " id="boton" href="{{route('users.edit',Auth::user())}}" role="button">Editar Perfil</a>
-                </div>
-            </div>
-         
+<div id="wrap">
+    <div class="text-center mb-5">
+        <h1 class="text-center" id="titulo1">Coches Vintage</h1>
+    </div>
+    <div id="main" class="container clear-top text-center mx-auto">
+        <div class="col-md-6 col-lg-4 col-xl-12">
+            <img class="d-block w-100" src="{{asset('img/fotosVintage/citroen_1963.jpg')}}"
+            style="border-radius: 10px; " ><br><h4 id="titulo3">Citroën 2CV – 1936</h4><br>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-12">
+            <p id="textoV">Este clásico francés, que debe su nombre a los dos cilindros opuestos que le permiten moverse, 
+                fue todo un éxito de ventas. Cuando a mediados de los años 50 se comercializó su versión furgoneta, 
+                volvió a repetir dicha hazaña. Podemos destacar de él que es uno de los coches antiguos más valorados 
+                pero más baratos que puedes encontrar.
+            </p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-12">
+            <img class="d-block w-100" src="{{asset('img/fotosVintage/volkswagen_1938.jpg')}}"
+            style="border-radius: 10px; " ><br><h4 id="titulo3">Volkswagen Escarabajo – 1938</h4><br>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-12">
+            <p id="textoV">Este modelo tan icónico de Volkswagen marcó, sin lugar a dudas, un antes y un después en la historia 
+                del automóvil gracias, en gran parte, a la originalidad de su diseño que no le permitió pasar desapercibido. Además, 
+                a todas sus versiones posteriores tampoco les ha costado hacerse un hueco en el mercado.
+            </p>
+        </div><br>
+        <br>
+        <br>
+        <div class="col-md-6 col-lg-4 col-xl-12">
+            <img class="d-block w-100" src="{{asset('img/fotosVintage/porsche_1964.jpg')}}"
+            style="border-radius: 10px; "><br><h4 id="titulo3">Porsche 911 – 1964</h4><br>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-12">
+            <p id="textoV">Hace algunos años, aún podríamos haberlo intentado, pero hoy en día es imposible encontrar un 911 cuyo precio 
+                sea más o menos asequible. Además, los primeros refrigerados por agua llegan, incluso, a situar su precio por encima del 
+                de las versiones más modernas.
+            </p>
         </div>
     </div>
+
 </div>
-<br>
-
-
-
-
-{{-- Contenido para moviles --}}
-<div id="wrap" class="d-block d-sm-block d-md-none">
-    
-    <div class="container clear-top text-center">
-        <div class="row">
-            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
-                <h1 id="titulo1">Mi Perfil</h1><br>
-                <div class="card  p-3 mb-5  rounded" id="userCard">
-                    <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" width="286" height="286"><br> 
-                    <h3><b>{{Auth::user()->nombre}}</b></h3>
-                    <p>{{Auth::user()->nombreUsuario}}</p><br>
-                    <a class="btn btn-dark " id="boton2" href="{{route('coches.fav')}}" role="button">Favoritos</a><br>
-                    <a class="btn btn-dark " id="boton" href="{{route('users.edit',Auth::user())}}" role="button">Editar Perfil</a>
-                </div>
-            </div>
-         
-        </div>
-    </div>
-</div>
-<br>
-
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">

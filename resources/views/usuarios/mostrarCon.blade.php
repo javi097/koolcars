@@ -64,37 +64,25 @@ KoolCars || Home
     <div id="mainU" class="container clear-top text-center">
         <div class="row">
             <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
-                <h1 id="titulo1">Mi Perfil</h1><br>
 
 
-                <form name="editPerfil" method='POST' action="{{route('users.update', Auth::user())}}"
+                <form name="editContra" method='POST' action="{{route('users.contra', Auth::user())}}"
                     enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="card  p-3 mb-5  rounded" id="userCard">
-                        <div class="wrap">
-                            <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="main-profile-img"><input type='file'
-                                accept="image/*" id="subir" name="fotoPerfil" hidden><label id="editP" for="subir"><i
-                                    id="botonI" class="fas fa-edit"></i></label>
-                            <br><br>
-                            <br>
-                            <br>
-                        </div>
-                        <div class="col">Nombre:
-                            <input type="text" class="form-control" value="{{Auth::user()->nombre}}"
-                                placeholder="Nombre" name='nombre' required>
-                        </div><br>
-                        <div class="col">Nombre de Usuario:
-                            <input type="text" class="form-control" value="{{Auth::user()->nombreUsuario}}"
-                                placeholder="Nombre de Usuario" name='nombreUsuario' required>
-                        </div><br>
-                        <div class="col">Cambiar contraseña:
-                            <a class="btn btn-dark " id="boton3" href="{{route('users.mostrar',Auth::user())}}"
-                                role="button">cambiar</a>
-                        </div><br>
-                        <div class="col">
-                            <input type='submit' id="boton" value='Guardar Perfil' class='btn btn-dark mr-3'>
-                            <a href={{route('users.index')}} class='btn btn-dark' id="boton2">Volver</a>
+                        <h3 id="titulo1">Cambiar Contraseña</h3>
+                        <div class="col">Contraseña Nueva:
+                            <input type="password" placeholder="Contraseña" class="form-control" name="password"
+                                required>
+                            <div class="col">Confirmar Contraseña:
+                                <input type="password" placeholder="Confirmar Contraseña" class="form-control"
+                                    name="password_confirmation" required>
+                            </div><br>
+                            <div class="col">
+                                <input type='submit' id="boton" value='Cambiar' class='btn btn-dark mr-3'>
+                                <a href={{route('users.index')}} class='btn btn-dark' id="boton2">Volver</a>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -107,43 +95,37 @@ KoolCars || Home
 <br>
 
 
-
-{{-- Contenido para moviles--}}
+{{-- Contenido para movil --}}
 <div id="wrap" class="d-block d-sm-block d-md-none">
-    
-    <div class="container text-center">
+
+    <div class="container clear-top text-center">
         <div class="row">
             <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
-                <h1 id="titulo1">Mi Perfil</h1><br>    
-                    <form name="editPerfil" method='POST' action="{{route('users.update', Auth::user())}}" enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
+
+                <form name="editContra" method='POST' action="{{route('users.contra', Auth::user())}}"
+                    enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
                     <div class="card  p-3 mb-5  rounded" id="userCard">
-                        <div class="wrap">
-                            <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="main-profile-img" ><input type='file' accept="image/*" id="subir" name="fotoPerfil"hidden><label id="editP"for="subir" ><i id="botonI"class="fas fa-edit"></i></label>
-                            <br><br>
-                            <br>
-                            <br>
+                        <h3 id="titulo1">Cambiar Contraseña</h3>
+                        <div class="col">Contraseña Nueva:
+                            <input type="password" placeholder="Contraseña" class="form-control" name="password"
+                                required>
+                            <div class="col">Confirmar Contraseña:
+                                <input type="password" placeholder="Confirmar Contraseña" class="form-control"
+                                    name="password_confirmation" required>
+                            </div><br>
+                            <div class="col">
+                                <input type='submit' id="boton" value='Cambiar' class='btn btn-dark mr-3'>
+                                <a href={{route('users.index')}} class='btn btn-dark' id="boton2">Volver</a>
+                            </div>
                         </div>
-                        <div class="col">Nombre:
-                            <input type="text" class="form-control" value="{{Auth::user()->nombre}}" placeholder="Nombre" name='nombre' required>
-                        </div><br>
-                        <div class="col">Nombre de Usuario:
-                            <input type="text" class="form-control" value="{{Auth::user()->nombreUsuario}}" placeholder="Nombre de Usuario" name='nombreUsuario' required>
-                        </div><br>
-                        <div class="col">Cambiar contraseña:
-                            <a class="btn btn-dark " id="boton3" href="{{route('users.mostrar',Auth::user())}}" role="button">cambiar</a>
-                        </div><br>
-                        <div class="col">
-                            <input type='submit' id="boton" value='Guardar Perfil' class='btn btn-dark mr-3'>
-                            <a href={{route('users.index')}} class='btn btn-dark' id="boton2">Volver</a>
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
-         
         </div>
+
     </div>
+</div>
 
 {{-- Final del Contenido --}}
 {{-- Footer --}}

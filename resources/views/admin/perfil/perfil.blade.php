@@ -55,12 +55,12 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     
     <div id="mainU" class="container clear-top text-center">
         <div class="row">
             <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
-                <h1 id="titulo">Mi Perfil</h1><br>
+                <h1 id="titulo1">Mi Perfil</h1><br>
                 <div class="card  p-3 mb-5  rounded" id="userCard">
                     <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" id="perfilAdmin" width="286" height="286"><br> 
                     <h3><b>{{Auth::user()->nombre}}</b></h3>
@@ -74,6 +74,29 @@ KoolCars || Home
     </div>
 </div>
 <br>
+
+
+{{-- Contenido para movil--}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    
+    <div class="container clear-top text-center">
+        <div class="row">
+            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
+                <h1 id="titulo1">Mi Perfil</h1><br>
+                <div class="card  p-3 mb-5  rounded" id="userCard">
+                    <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" id="perfilAdmin" width="286" height="286"><br> 
+                    <h3><b>{{Auth::user()->nombre}}</b></h3>
+                    <p>{{Auth::user()->nombreUsuario}}</p><br>
+                    <a class="btn btn-dark " id="boton2" href="{{route('coches.fav')}}" role="button">Favoritos</a><br>
+                    <a class="btn btn-dark " id="boton" href="{{route('admin.edit',Auth::user())}}" role="button">Editar Perfil</a>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</div>
+<br>
+
 
 {{-- Final del Contenido --}}
 {{-- Footer --}}
