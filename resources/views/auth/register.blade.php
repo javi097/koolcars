@@ -226,7 +226,8 @@ KoolCars
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                              <a href="javascript:iniciarTodo();" type="submit" style="color:black"class="btn btn-warning btn-round btn-lg btn-block">Crear Cuenta</a>
+                            <input type="submit" value="Crear Cuenta" style="color: black" class="btn btn-warning btn-round btn-lg btn-block">
+                              {{-- <a href="javascript:iniciarTodo();" type="submit" style="color:black"class="btn btn-warning btn-round btn-lg btn-block">Crear Cuenta</a> --}}
                             <div class="pull-center">
                                 <a href="{{route('login')}}" class="link" style="color: white">Iniciar Sesión</a>
                             </div>

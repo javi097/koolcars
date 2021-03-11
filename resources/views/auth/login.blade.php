@@ -68,7 +68,7 @@ KoolCars
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                              <a href="javascript:validarLogin();" type="submit" style="color: black" class="btn btn-warning btn-round btn-lg btn-block">{{ __('Iniciar Sesión') }}</a>
+                            <a href="javascript:validarLogin();" type="submit" style="color: black" class="btn btn-warning btn-round btn-lg btn-block">{{ __('Iniciar Sesión') }}</a> 
                             <div class="pull-center">
                                 <a href="{{route('register')}}" class="link" style="color: white">Crear Cuenta</a>
                             </div>
@@ -134,7 +134,8 @@ KoolCars
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                              <a href="javascript:validarLogin();" type="submit" style="color: black" class="btn btn-warning btn-round btn-lg btn-block">{{ __('Iniciar Sesión') }}</a>
+                            <input type="submit" value="Iniciar Sesión" style="color: black" class="btn btn-warning btn-round btn-lg btn-block">
+                              {{-- <a href="javascript:validarLogin();" type="submit" style="color: black" class="btn btn-warning btn-round btn-lg btn-block">{{ __('Iniciar Sesión') }}</a> --}}
                             <div class="pull-center">
                                 <a href="{{route('register')}}" class="link" style="color: white">Crear Cuenta</a>
                             </div>
