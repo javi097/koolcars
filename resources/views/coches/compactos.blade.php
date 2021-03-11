@@ -11,10 +11,13 @@ KoolCars || Home
             <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}">
         </a>
     </div>
-    <button class="navbar-toggler" id="textoNavbar" type="button" data-toggle="collapse"
-        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button style="border:2px solid #ccff33" class="navbar-toggler navbar-toggler-right" 
+    type="button" data-toggle="collapse" 
+    data-target="#textoNavbar" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation"> 
+    <span class="navbar-toggler-icon"><i class="fa fa-navicon" style="color:#ccff33;font-size:28px;"></i></span> 
     </button>
 
     <div class="collapse navbar-collapse" id="textoNavbar">
@@ -151,7 +154,7 @@ KoolCars || Home
                     </div>
             </div>
             @empty
-            <h3 class="text-center mb-5">No hay compactos de la marca seleccionada</h3>
+            <h3 class="text-center mb-5">No hay <b>compactos</b> de la marca seleccionada</h3>
             <br><br>
     @endforelse
 </div>
@@ -226,7 +229,7 @@ KoolCars || Home
                 </div>
         </div>
         @empty
-        <h3 class="text-center mb-5">No hay compactos de la marca seleccionada</h3>
+        <h3 class="text-center mb-5">No hay <b>compactos</b> de la marca seleccionada</h3>
         <br><br>
 @endforelse
 </div>

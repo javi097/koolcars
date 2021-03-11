@@ -11,10 +11,13 @@ KoolCars || Home
             <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}">
         </a>
     </div>
-    <button class="navbar-toggler" id="textoNavbar" type="button" data-toggle="collapse"
-        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button style="border:2px solid #ccff33" class="navbar-toggler navbar-toggler-right" 
+    type="button" data-toggle="collapse" 
+    data-target="#textoNavbar" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation"> 
+    <span class="navbar-toggler-icon"><i class="fa fa-navicon" style="color:#ccff33;font-size:28px;"></i></span> 
     </button>
 
     <div class="collapse navbar-collapse" id="textoNavbar">
@@ -87,7 +90,7 @@ KoolCars || Home
     
     <div class="container clear-top text-center">
         <div class="row">
-            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
+            <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn"  fadeInLeft>
                 <h1 id="titulo1">Mi Perfil</h1><br>
                 <div class="card  p-3 mb-5  rounded" id="userCard">
                     <img src="{{ asset(Auth::user()->fotoPerfil) }}" class="border-0" width="286" height="286"><br> 

@@ -20,6 +20,8 @@
     <script src="{{asset('kitUI/assets/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('kitUI/assets/js/plugins/nouislider.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('kitUI/assets/js/now-ui-kit.js?v=1.2.0')}}" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{asset('js/mijs.js')}}"></script>
 </body>
 
 </html>

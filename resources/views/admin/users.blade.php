@@ -11,10 +11,13 @@ KoolCars || Home
             <img class="navbar-brand" src="{{asset('img/fotosWelcome/logo_letra.png')}}">
         </a>
     </div>
-    <button class="navbar-toggler" id="textoNavbar" type="button" data-toggle="collapse"
-        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button style="border:2px solid #ccff33" class="navbar-toggler navbar-toggler-right" 
+    type="button" data-toggle="collapse" 
+    data-target="#textoNavbar" 
+    aria-controls="navbarSupportedContent" 
+    aria-expanded="false" 
+    aria-label="Toggle navigation"> 
+    <span class="navbar-toggler-icon"><i class="fa fa-navicon" style="color:#ccff33;font-size:28px;"></i></span> 
     </button>
 
     <div class="collapse navbar-collapse" id="textoNavbar">
@@ -55,7 +58,7 @@ KoolCars || Home
 <!-- Final del Navbar-->
 
 {{-- Contenido --}}
-<div id="wrap">
+<div id="wrap" class="d-none d-sm-none d-md-block">
     
     <div id="mainU" class="container clear-top text-center">
         <table id="tabla3" class="responsive">
@@ -92,6 +95,46 @@ KoolCars || Home
 </div>
 <br>
 <div class="container text-center">{{ $usuarios->links() }}</div>
+
+{{-- Contenido para moviles --}}
+<div id="wrap" class="d-block d-sm-block d-md-none">
+    
+    <div class="container clear-top text-center">
+        <table id="tabla3" class="responsive">
+            <thead>
+                <tr id="tr1">    
+                    <th scope="col" class="align-middle" id="td2">Foto de Perfil</th>
+                    <th scope="col" class="align-middle" id="td2">Nombre</th>
+                    <th scope="col" class="align-middle" id="td2">Nombre de Usuario</th>
+                    <th scope="col" class="align-middle" id="td2">Email</th>
+                    <th scope="col" class="align-middle" id="td2">Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($usuarios as $user)
+                    <tr id="tr1">
+                        <td id="tr1">
+                            <img src="{{asset($user->fotoPerfil)}}" class="rounded-circle" id="fotoPerfil1">
+                        </td>
+                        <td id="tr1">{{$user->nombre}}</td>
+                        <td id="tr1">{{$user->nombreUsuario}}</td>
+                        <td id="tr1">{{$user->email}}</td>
+                        <td id="tr1">
+                            <form name="borrarUsu" method='post' action="{{route('admin.users.destroy', $user)}}">
+                                @csrf
+                                @method('Delete')
+                                <button type="submit" class="btn btn-dark far fa-trash-alt" onclick="return confirm('¿Desea borrar este usuario?')"></button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
+<div class="container text-center">{{ $usuarios->links() }}</div>
+
 {{-- Final del Contenido --}}
 {{-- Footer --}}
 <footer class="footer">
