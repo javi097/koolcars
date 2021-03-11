@@ -10,6 +10,7 @@
     {{-- Link para librería Animate.css --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>@yield('titulo')</title>
+    <link rel="icon" href="{{ URL::asset('/img/favicon.png') }}" type="image/x-icon"/>
 </head>
 
 <body style="background-color:  #1a1a1a">
