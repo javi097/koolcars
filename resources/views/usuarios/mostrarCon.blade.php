@@ -69,21 +69,24 @@ KoolCars || Home
             <div class="col-md-4 mb-5 rounded animate__animated animate__zoomIn" id="cardPerfil" fadeInLeft>
 
 
-                <form name="editContra" method='POST' action="{{route('users.contra', Auth::user())}}"
+                <form name="editContra" id="editContra" method='POST' action="{{route('users.contra', Auth::user())}}"
                     enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="card  p-3 mb-5  rounded" id="userCard">
                         <h3 id="titulo1">Cambiar Contraseña</h3>
                         <div class="col">Contraseña Nueva:
-                            <input type="password" placeholder="Contraseña" class="form-control" name="password"
+                            <input type="password" placeholder="Contraseña" class="form-control" name="password" id="password"
                                 required>
+                                <div class="text-center mb-2">
+                                    <span class="invalid-feedback text-center" role="alert" id="msgPassword"></span>                                
+                                </div>
                             <div class="col">Confirmar Contraseña:
                                 <input type="password" placeholder="Confirmar Contraseña" class="form-control"
-                                    name="password_confirmation" required>
+                                    name="password_confirmation" id="password-confirm" required>
                             </div><br>
                             <div class="col">
-                                <input type='submit' id="boton" value='Cambiar' class='btn btn-dark mr-3'>
+                                <a href="javascript:validarContra();" type='submit' id="boton" class='btn btn-dark mr-3'>Cambiar</a>
                                 <a href={{route('users.index')}} class='btn btn-dark' id="boton2">Volver</a>
                             </div>
                         </div>

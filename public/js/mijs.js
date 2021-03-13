@@ -179,3 +179,54 @@ function validar(e){
     }
 
 }
+
+//Validar contraseña cambio
+
+function validarContraseñaUsu()
+{
+    let password = document.getElementById('password').value;
+    let passwordConfirm = document.getElementById('password-confirm').value;
+    let msgPassword = document.getElementById('msgPassword');
+
+    if (password.trim()=="" || passwordConfirm.trim()=="") {
+        msgPassword.innerHTML = "";
+        msgPassword.innerHTML += "Debes introducir ambas contraseñas";
+        $('#msgPassword').show();
+        msgPassword.onmouseover = () => {
+            $('#msgPassword').hide();
+        }
+        return false;
+    }else if(password.length<8 || passwordConfirm.length<8){
+        msgPassword.innerHTML = "";
+        msgPassword.innerHTML += "Mínimo de caracteres permitidos: 8";
+        $('#msgPassword').show();
+        msgPassword.onmouseover = () => {
+            $('#msgPassword').hide();
+        }
+        return false;
+    }else if(!(password == passwordConfirm))
+    {
+        msgPassword.innerHTML = "";
+        msgPassword.innerHTML += "Las contraseñas no coinciden";
+        $('#msgPassword').show();
+        msgPassword.onmouseover = () => {
+            $('#msgPassword').hide();
+        }
+        return false;
+    }else{
+        msgPassword.innerHTML = "";
+        $('#msgPassword').hide();
+    }
+    return true;
+
+}
+function comprobarContra(e) {
+    if(validarContraseñaUsu()){
+        document.getElementById('editContra').submit();
+    }else{
+        e.preventDefault();
+    }
+}
+function validarContra() {
+    comprobarContra();
+}

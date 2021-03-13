@@ -178,18 +178,12 @@ class AdminController extends Controller
         //Nombre
         $marca->nombre=$datos['nombre'];
         //Logo
-
-        
-        
         if(isset($datos['logo']) && $datos['logo']!=null){
 
             $file = $datos['logo'];
              $nom = 'logoMarca/marcaNuevo/'.time().'_'.$file->getClientOriginalName();
             \Storage::disk('public')->put($nom, \File::get($file));
              $marca->logo="img/$nom";
-
-            
-        
         }
 
         $marca->save();
@@ -282,6 +276,8 @@ class AdminController extends Controller
         Alert::success('Usuario modificado', 'El perfil se ha actualizado correctamente');
         return redirect()->route('admin.perfil',compact('user'));
     }
+
+    //Método para cambiar la contraseña
 
     public function cambioContra(Request $request, User $user){
 
